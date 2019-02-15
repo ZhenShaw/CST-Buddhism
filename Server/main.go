@@ -1,6 +1,7 @@
 package main
 
 import (
+	"./psql"
 	"./route"
 	"fmt"
 	"log"
@@ -8,6 +9,10 @@ import (
 )
 
 func main() {
+
+	psql.TestDB()
+
+
 	mux := http.NewServeMux()
 
 	//路由列表

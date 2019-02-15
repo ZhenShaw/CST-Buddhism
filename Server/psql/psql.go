@@ -2,6 +2,7 @@ package psql
 
 import (
 	"database/sql"
+	"fmt"
 
 	_ "github.com/lib/pq"
 )
@@ -22,8 +23,14 @@ const (
 func init() {
 	var err error
 	//打开数据库
-	db, err = sql.Open("postgres", "user=postgres password=postgres dbname=postgres sslmode=disable")
+	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
+		"password=%s dbname=%s sslmode=disable",
+		host, port, user, password, dbname)
+	db, err = sql.Open("postgres", psqlInfo)
+
+	err = db.Ping()
 	checkError(err)
+	fmt.Println("Successfully connected!")
 }
 
 //关闭数据库
@@ -36,4 +43,9 @@ func checkError(err error) {
 	if err != nil {
 		panic(err)
 	}
+}
+
+
+func TestDB(){
+	fmt.Print("数据库连接测试完成\n")
 }
