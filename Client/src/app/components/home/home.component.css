@@ -1,0 +1,13 @@
+.body {
+    background-image: url("../../../assets/home-bg.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}

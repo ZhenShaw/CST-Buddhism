@@ -5,6 +5,7 @@
 $ su postgres
 $ createdb buddhism
 # 或者 sudo -u postgres createdb busshism
+# 又或者 createdb buddhism --owner=postgres
 
 $ psql buddhism
 ```
@@ -16,7 +17,7 @@ ALTER USER postgres WITH PASSWORD 'postgres';
 
 创建数据表文件 table.sql
 ```sql
-create table users (
+create table tablename (
     uid serial primary key,
     wechatID varchar(50) not  null,
     created_at timestamp default 'now()'
