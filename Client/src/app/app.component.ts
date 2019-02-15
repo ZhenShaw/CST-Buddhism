@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Client';
+  constructor() {
+    // 设置body高度为窗口高度
+    document.body.style.height = String(window.innerHeight) + "px"
+  }
 }

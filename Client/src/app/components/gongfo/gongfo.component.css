@@ -1,0 +1,27 @@
+.bg{
+    background-image: url("../../../assets/bg_provider2.jpg");
+    background-repeat: no-repeat;
+    position: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.fo{
+    border: 1px solid white;
+    margin: 20%;
+    background-image: url("http://api10.buddhaheart.cn/webfiles/sys/201710/171015001922d66c.png");
+    background-repeat: no-repeat;
+    position: fixed;
+    background-size: cover;
+    height: 50%;
+    width: 65%;
+}
+
+.desk{
+    border: 1px solid white;
+    line-height: 70%;
+    height: 35%;
+    width: 100%;
+}
