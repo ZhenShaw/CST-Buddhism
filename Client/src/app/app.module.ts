@@ -9,6 +9,7 @@ import { BaziComponent } from './components/bazi/bazi.component';
 import { GongfoComponent } from './components/gongfo/gongfo.component';
 import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
+import { XindeComponent } from './components/xiuxing/xinde/xinde.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GongdeComponent } from './components/gongde/gongde.component';
     BaziComponent,
     GongfoComponent,
     XiuxingComponent,
-    GongdeComponent
+    GongdeComponent,
+    XindeComponent
   ],
   imports: [
     BrowserModule,
