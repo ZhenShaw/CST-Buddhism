@@ -16,7 +16,10 @@ import { LibraryComponent } from './components/xiuxing/library/library.component
 import { FojingComponent } from './components/xiuxing/library/fojing/fojing.component';
 import { FozhouComponent } from './components/xiuxing/library/fozhou/fozhou.component';
 import { DetailComponent } from './components/bazi/detail/detail.component';
-
+import { ZhouGeneralComponent } from './components/xiuxing/library/fozhou/zhou-general/zhou-general.component';
+import { JingGeneralComponent } from './components/xiuxing/library/fojing/jing-general/jing-general.component';
+import { JingyuanwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyuanwen/jingyuanwen.component';
+import { JingyiwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyiwen/jingyiwen.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -41,7 +44,10 @@ const routes: Routes = [
     ]
   },
   { path: 'detail', component:DetailComponent},
-
+  { path: 'zhouGeneral',component: ZhouGeneralComponent},
+  { path: 'jngGeneral',component: JingGeneralComponent},
+  { path: 'jingyuanwen',component: JingyuanwenComponent},
+  { path: 'jingyiwen',component: JingyiwenComponent}
 ];
 
 @NgModule({

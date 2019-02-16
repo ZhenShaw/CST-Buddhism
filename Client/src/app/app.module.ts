@@ -20,6 +20,10 @@ import { DialogComponent } from './components/gongfo/dialog/dialog.component';
 import { LibraryComponent } from './components/xiuxing/library/library.component';
 import { FozhouComponent } from './components/xiuxing/library/fozhou/fozhou.component';
 import { FojingComponent } from './components/xiuxing/library/fojing/fojing.component';
+import { ZhouGeneralComponent } from './components/xiuxing/library/fozhou/zhou-general/zhou-general.component';
+import { JingGeneralComponent } from './components/xiuxing/library/fojing/jing-general/jing-general.component';
+import { JingyuanwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyuanwen/jingyuanwen.component';
+import { JingyiwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyiwen/jingyiwen.component';
 
 
 @NgModule({
@@ -43,7 +47,11 @@ import { FojingComponent } from './components/xiuxing/library/fojing/fojing.comp
     DialogComponent,
     LibraryComponent,
     FozhouComponent,
-    FojingComponent
+    FojingComponent,
+    ZhouGeneralComponent,
+    JingGeneralComponent,
+    JingyuanwenComponent,
+    JingyiwenComponent
   ],
   imports: [
     BrowserModule,
