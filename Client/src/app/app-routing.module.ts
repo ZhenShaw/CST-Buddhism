@@ -10,7 +10,7 @@ import { XindeComponent } from './components/xiuxing/xinde/xinde.component'
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component'
 import { DialogComponent } from './components/gongfo/dialog/dialog.component'
 import { LibraryComponent } from './components/xiuxing/library/library.component';
-
+import { DetailComponent } from './components/bazi/detail/detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'xiuxing/xinde', component:XindeComponent},
   { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent},
   { path: 'gongfo/dialog', component:DialogComponent},
-  { path: 'library',component:LibraryComponent }
+  { path: 'library',component:LibraryComponent },
+  { path: 'detail', component:DetailComponent},
 ];
 
 @NgModule({
