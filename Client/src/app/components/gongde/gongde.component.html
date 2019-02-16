@@ -1,4 +1,19 @@
-<p>
-  gongde works!
-</p>
-<a routerLink="/gongde/zhuyinjingshu">助印经书</a>
+
+<div class="body">
+  <div class="nav">
+    <div class="nav-line">
+      <a [routerLink]="[ '/gongde/zhuyinjingshu' ]">
+        <button>
+          <div>助印经书</div>
+        </button>
+      </a>
+      <!-- 增添香火功能可以在下面自行修改路由 -->
+      <a [routerLink]="[ '' ]">
+        <button>
+          <div>增添香火</div>
+        </button>
+      </a>
+    </div>
+
+  </div>
+</div>
