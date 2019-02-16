@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';//路由
 
 @Component({
   selector: 'app-gongfo',
@@ -7,12 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GongfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   hua(){
-    alert(1)
+    this.router.navigateByUrl("/gongfo/modal")
+  }
+
+  fo(){
+   this.router.navigateByUrl("/gongfo/modal")
+  }
+
+  xiang(){
+    this.router.navigateByUrl("/gongfo/modal")
+  }
+
+  fruit(){
+    this.router.navigateByUrl("/gongfo/modal")
   }
 }

@@ -10,6 +10,7 @@ import { GongfoComponent } from './components/gongfo/gongfo.component';
 import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
 import { XindeComponent } from './components/xiuxing/xinde/xinde.component';
+import { ModalComponent } from './components/gongfo/modal/modal.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { XindeComponent } from './components/xiuxing/xinde/xinde.component';
     GongfoComponent,
     XiuxingComponent,
     GongdeComponent,
-    XindeComponent
+    XindeComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
