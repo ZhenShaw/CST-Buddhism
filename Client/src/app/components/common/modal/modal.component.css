@@ -1,0 +1,76 @@
+/* 背景遮罩层 */
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(8, 8, 8, 0.3);
+  z-index: 1001;
+}
+
+/* 模态弹窗区域 */
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 70%;
+  height: 25%;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgb(236, 239, 240);
+  z-index: 1002;
+  overflow: auto;
+  animation: scaleIn .3s;
+}
+
+/* 从上往下淡入 */
+
+@keyframes fadeInDown {
+  0% {
+    transform: translate3d(0, -20%, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+/* 缩放淡入 */
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* 缩放淡出 */
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
