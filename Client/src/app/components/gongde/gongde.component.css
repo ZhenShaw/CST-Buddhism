@@ -4,12 +4,16 @@
     width: 100%;
     background-size: 100%;
   }
+  /*标题*/
+  .nav h1{
+    text-align:center;
+    color: rgb(114, 109, 105);
+  }
   
-  /* 底部功能按键 */
+  /* 功能按键 */
   .nav {
     display: flex;
     flex-direction: column;
-    position: fixed;
     bottom: 3%;
     width: 100%;
   }
@@ -23,7 +27,7 @@
   .nav-line a {
     display: flex;
     justify-content: center;
-    padding: 5px;
+    padding: 35px;
     width: 35%;
   }
   
@@ -34,7 +38,7 @@
     margin: 0 5px;
     font-size: 20px;
     font-weight: 700;
-    color: #666666;
+    color: rgb(238, 212, 191);
     /* 去除button默认外边框 */
     outline: 0;
     border: 1px solid rgb(197, 97, 16);
@@ -42,21 +46,5 @@
     box-shadow: 5px 5px 5px rgb(156, 156, 156)
   }
   
-  /* 弹窗 */
-  app-modal .modal-context {
-    height: 100%;
-    display: flex;
-    align-items: center
-  }
-  
-  .modal-context div {
-    width: 100%
-  }
-  
-  app-modal div a {
-    width: 100%;
-    margin: 15px auto;
-    display: flex;
-    justify-content: center;
-  }
+
   
