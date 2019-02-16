@@ -11,6 +11,9 @@ import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
 import { XindeComponent } from './components/xiuxing/xinde/xinde.component';
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component';
+import { ResultComponent } from './components/bazi/result/result.component';
+import { DetailComponent } from './components/bazi/detail/detail.component';
+import { Detail2Component } from './components/bazi/detail2/detail2.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyin
     XiuxingComponent,
     GongdeComponent,
     XindeComponent,
-    ZhuyinjingshuComponent
+    ZhuyinjingshuComponent,
+    ResultComponent,
+    DetailComponent,
+    Detail2Component
   ],
   imports: [
     BrowserModule,
