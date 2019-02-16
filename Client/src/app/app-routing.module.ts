@@ -7,7 +7,7 @@ import { GongfoComponent } from './components/gongfo/gongfo.component';
 import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
 import { XindeComponent } from './components/xiuxing/xinde/xinde.component'
-import { ModalComponent } from './components/gongfo/modal/modal.component'
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,7 +19,6 @@ const routes: Routes = [
   { path: 'gongde', component: GongdeComponent },
   // 子页面路由写在下方
   { path: 'xinde', component:XindeComponent},
-  { path: 'gongfo/modal', component:ModalComponent}
 ];
 
 @NgModule({

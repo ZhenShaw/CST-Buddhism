@@ -9,8 +9,12 @@ import { BaziComponent } from './components/bazi/bazi.component';
 import { GongfoComponent } from './components/gongfo/gongfo.component';
 import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
+import { ModalComponent } from './components/common/modal/modal.component';
 import { XindeComponent } from './components/xiuxing/xinde/xinde.component';
-import { ModalComponent } from './components/gongfo/modal/modal.component';
+import { ResultComponent } from './components/bazi/result/result.component';
+import { DetailComponent } from './components/bazi/detail/detail.component';
+import { Detail2Component } from './components/bazi/detail2/detail2.component';
+import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component';
 
 
 @NgModule({
@@ -23,7 +27,13 @@ import { ModalComponent } from './components/gongfo/modal/modal.component';
     XiuxingComponent,
     GongdeComponent,
     XindeComponent,
-    ModalComponent
+    ModalComponent,
+    XindeComponent,
+    ResultComponent,
+    DetailComponent,
+    Detail2Component,
+    XindeComponent,
+    ZhuyinjingshuComponent
   ],
   imports: [
     BrowserModule,

@@ -11,3 +11,13 @@ CREATE TABLE xinde (
     created_at timestamp default 'now()',
     Xinde varchar(1000)
 );
+create table bazi(
+    uid serial primary key,
+    created_at timestamp default 'now()'，
+    YinLi date not null,
+    NianMing varchar(255),
+    TianYun varchar(255),
+    ShengXiao varchar(100),
+    BenMing varchar(100),
+    MingGua varchar(100)
+);
