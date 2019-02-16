@@ -12,4 +12,7 @@ export class GongfoComponent implements OnInit {
   ngOnInit() {
   }
 
+  hua(){
+    alert(1)
+  }
 }

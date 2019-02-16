@@ -5,23 +5,67 @@
     background-size: cover;
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
 }
+
+.top{
+    height: 10%;
+    width: 100%;
+}
+
 .fo{
-    border: 1px solid white;
-    margin: 20%;
-    background-image: url("http://api10.buddhaheart.cn/webfiles/sys/201710/171015001922d66c.png");
-    background-repeat: no-repeat;
-    position: fixed;
-    background-size: cover;
-    height: 50%;
-    width: 65%;
+    height: 55%;
+    width: 70%;
 }
 
 .desk{
-    border: 1px solid white;
-    line-height: 70%;
-    height: 35%;
+    height: 32%; 
     width: 100%;
+    position: fixed;
+    bottom: 10%;
+    left: 0;
+
+}
+
+.lazhu{
+    transform: scale(0.5);
+}
+
+.lazhuset{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 20%; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.xiang{ 
+    transform: scale(0.5);
+}
+
+.hua{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 5%; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.huaset{
+    transform: scale(0.5);
+}
+
+.fruit{
+    transform: scale(0.5);
+}
+
+button{
+}
+
+.button{
+    align-items: center;
 }

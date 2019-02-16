@@ -10,6 +10,7 @@ import { GongfoComponent } from './components/gongfo/gongfo.component';
 import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,7 @@ import { GongdeComponent } from './components/gongde/gongde.component';
     BaziComponent,
     GongfoComponent,
     XiuxingComponent,
-    GongdeComponent
+    GongdeComponent,
   ],
   imports: [
     BrowserModule,
