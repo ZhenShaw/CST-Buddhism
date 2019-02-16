@@ -12,6 +12,8 @@ CREATE TABLE xinde (
     Xinde varchar(1000)
 );
 create table bazi(
+    uid serial primary key,
+    created_at timestamp default 'now()'，
     YinLi date not null,
     NianMing varchar(255),
     TianYun varchar(255),
