@@ -9,6 +9,7 @@ import { GongdeComponent } from './components/gongde/gongde.component';
 import { XindeComponent } from './components/xiuxing/xinde/xinde.component'
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component'
 import { DialogComponent } from './components/gongfo/dialog/dialog.component'
+import { LibraryComponent } from './components/xiuxing/library/library.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'xinde', component:XindeComponent},
   { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent},
   { path: 'gongfo/dialog', component:DialogComponent},
+  { path: 'library',component:LibraryComponent }
 ];
 
 @NgModule({
