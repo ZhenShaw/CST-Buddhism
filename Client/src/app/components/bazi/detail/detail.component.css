@@ -1,0 +1,46 @@
+body{
+    background-color: #E6E6A0;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.titlefont{
+    font-family: "楷体";
+
+    color: #333399;
+    font-size: 28px;
+}
+
+#quanjie{
+    text-align: center;
+    font-weight: bold;
+}
+
+hr{
+    margin: 0% 100% 0% 0%;
+    height: 1px;
+    width:50%;
+    border:none;
+}
+
+#hra{
+    background-color: red;
+}
+
+#hrb{
+    background-color: green;
+}
+
+#hrc{
+    background-color: yellow;
+}
+
+#hrd{
+    background-color: pink;
+}
+
+.longtext{
+    word-wrap: break-word;
+    word-break: normal;
+}
