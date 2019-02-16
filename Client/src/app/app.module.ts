@@ -15,6 +15,7 @@ import { ResultComponent } from './components/bazi/result/result.component';
 import { DetailComponent } from './components/bazi/detail/detail.component';
 import { Detail2Component } from './components/bazi/detail2/detail2.component';
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component';
+import { SuanmingComponent } from './components/bazi/suanming/suanming.component';
 import { DialogComponent } from './components/gongfo/dialog/dialog.component';
 import { LibraryComponent } from './components/xiuxing/library/library.component';
 import { FozhouComponent } from './components/xiuxing/library/fozhou/fozhou.component';
@@ -38,6 +39,7 @@ import { FojingComponent } from './components/xiuxing/library/fojing/fojing.comp
     Detail2Component,
     XindeComponent,
     ZhuyinjingshuComponent,
+    SuanmingComponent,
     DialogComponent,
     LibraryComponent,
     FozhouComponent,
