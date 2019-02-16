@@ -15,6 +15,7 @@ import { ResultComponent } from './components/bazi/result/result.component';
 import { DetailComponent } from './components/bazi/detail/detail.component';
 import { Detail2Component } from './components/bazi/detail2/detail2.component';
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component';
+import { DialogComponent } from './components/gongfo/dialog/dialog.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyin
     DetailComponent,
     Detail2Component,
     XindeComponent,
-    ZhuyinjingshuComponent
+    ZhuyinjingshuComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

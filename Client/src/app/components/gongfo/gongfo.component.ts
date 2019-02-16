@@ -14,18 +14,18 @@ export class GongfoComponent implements OnInit {
   }
 
   hua(){
-    this.router.navigateByUrl("/gongfo/modal")
+    this.router.navigateByUrl("/gongfo/dialog")
   }
 
   fo(){
-   this.router.navigateByUrl("/gongfo/modal")
+   this.router.navigateByUrl("/gongfo/dialog")
   }
 
   xiang(){
-    this.router.navigateByUrl("/gongfo/modal")
+    this.router.navigateByUrl("/gongfo/dialog")
   }
 
   fruit(){
-    this.router.navigateByUrl("/gongfo/modal")
+    this.router.navigateByUrl("/gongfo/dialog")
   }
 }
