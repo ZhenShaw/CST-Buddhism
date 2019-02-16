@@ -1,0 +1,74 @@
+.bg{
+    background-image: url("../../../assets/bg_provider2.jpg");
+    background-repeat: no-repeat;
+    position: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.top{
+    height: 10%;
+    width: 100%;
+}
+
+.fo{
+    height: 55%;
+    width: 70%;
+}
+
+.desk{
+    height: 32%; 
+    width: 100%;
+    position: fixed;
+    bottom: 10%;
+    left: 0;
+
+}
+
+.lazhu{
+    transform: scale(0.5);
+}
+
+.lazhuset{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 40%; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 0;
+}
+
+.xiang{ 
+    transform: scale(0.5);
+}
+
+.hua{
+    height: 0;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 40%; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.huaset{
+    transform: scale(0.5);
+}
+
+.fruit{
+    transform: scale(0.5);
+    z-index: 100;
+}
+
+button{
+}
+
+.button{
+    align-items: center;
+}

@@ -8,6 +8,8 @@ import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
 import { XindeComponent } from './components/xiuxing/xinde/xinde.component'
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component'
+import { DialogComponent } from './components/gongfo/dialog/dialog.component'
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,6 +22,7 @@ const routes: Routes = [
   // 子页面路由写在下方
   { path: 'xinde', component:XindeComponent},
   { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent}
+  { path: 'gongfo/dialog', component:DialogComponent},
 ];
 
 @NgModule({
