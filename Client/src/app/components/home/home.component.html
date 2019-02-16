@@ -1,11 +1,48 @@
-<div class="body">
-
-    <div class="list">
-        <a [routerLink]="[ '/bazi' ]">八字</a>
-        <a [routerLink]="[ '/qiuqian' ]">求签</a>
-        <a [routerLink]="[ '/gongfo' ]">供佛</a>
-        <a [routerLink]="[ '/xiuxing' ]">修行</a>
-        <a [routerLink]="[ '/gongde' ]">功德</a>
+<app-modal #modal>
+  <div class="modal-context">
+    <div>
+      <a [routerLink]="[ '/bazi' ]">
+        <button style="width:50%">
+          <div>生辰八字</div>
+        </button>
+      </a>
+      <a [routerLink]="[ '/qiuqian' ]">
+        <button style="width:50%">
+          <div>求签卜卦</div>
+        </button>
+      </a>
     </div>
+  </div>
+</app-modal>
+
+<div class="body">
+  <div class="nav">
+    <div class="nav-line">
+      <a (click)="modal.open()">
+        <button>
+          <div>解惑</div>
+        </button>
+      </a>
+      <a [routerLink]="[ '/gongfo' ]">
+        <button>
+          <div>供佛</div>
+        </button>
+      </a>
+    </div>
+
+    <div class="nav-line">
+      <a [routerLink]="[ '/xiuxing' ]">
+        <button>
+          <div>修行</div>
+        </button>
+      </a>
+      <a [routerLink]="[ '/gongde' ]">
+        <button>
+          <div>积功德</div>
+        </button>
+      </a>
+    </div>
+
+  </div>
 
 </div>
