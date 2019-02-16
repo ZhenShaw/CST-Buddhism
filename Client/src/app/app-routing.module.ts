@@ -6,6 +6,7 @@ import { BaziComponent } from './components/bazi/bazi.component';
 import { GongfoComponent } from './components/gongfo/gongfo.component';
 import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
+import { XindeComponent } from './components/xiuxing/xinde/xinde.component'
 
 
 const routes: Routes = [
@@ -17,7 +18,7 @@ const routes: Routes = [
   { path: 'xiuxing', component: XiuxingComponent },
   { path: 'gongde', component: GongdeComponent },
   // 子页面路由写在下方
-  
+  { path: 'xinde', component:XindeComponent}
 ];
 
 @NgModule({
