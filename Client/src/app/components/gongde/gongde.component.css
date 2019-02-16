@@ -5,9 +5,10 @@
     background-size: 100%;
   }
   /*标题*/
-  .nav h1{
+  .nav h2{
     text-align:center;
-    color: rgb(114, 109, 105);
+    margin: 15% 0%;
+    color: rgb(99, 95, 92);
   }
   
   /* 功能按键 */
@@ -28,7 +29,7 @@
     display: flex;
     justify-content: center;
     padding: 35px;
-    width: 35%;
+    width: 55%;
   }
   
   button {
