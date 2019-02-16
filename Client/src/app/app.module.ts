@@ -17,6 +17,8 @@ import { Detail2Component } from './components/bazi/detail2/detail2.component';
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component';
 import { DialogComponent } from './components/gongfo/dialog/dialog.component';
 import { LibraryComponent } from './components/xiuxing/library/library.component';
+import { FozhouComponent } from './components/xiuxing/library/fozhou/fozhou.component';
+import { FojingComponent } from './components/xiuxing/library/fojing/fojing.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { LibraryComponent } from './components/xiuxing/library/library.component
     XindeComponent,
     ZhuyinjingshuComponent,
     DialogComponent,
-    LibraryComponent
+    LibraryComponent,
+    FozhouComponent,
+    FojingComponent
   ],
   imports: [
     BrowserModule,
