@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'gongde', component: GongdeComponent },
   // 子页面路由写在下方
   { path: 'xinde', component:XindeComponent},
-  { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent}
+  { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent},
   { path: 'gongfo/dialog', component:DialogComponent},
 ];
 
