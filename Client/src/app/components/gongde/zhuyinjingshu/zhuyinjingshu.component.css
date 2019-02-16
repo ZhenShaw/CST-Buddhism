@@ -1,0 +1,39 @@
+/* 进度条 */
+progress
+{
+   color:rgb(190, 121, 64); /*兼容IE10和chorme的已完成进度背景*/
+   border:none;
+   background:rgb(216, 211, 207);/*这个属性也可当作Chrome的已完成进度背景，只不过被下面的::progress-bar覆盖了*/      
+   width:90%;
+   height:3%;
+   overflow: hidden;
+}
+progress::-webkit-progress-bar
+{ 
+    /* 进度条背景颜色 */
+    background:rgb(216, 211, 207); 
+}
+progress::-webkit-progress-value 
+{
+    /* 进度条颜色 */
+    background:rgb(190, 121, 64); 
+}
+
+/* 弹窗 */
+app-modal .modal-context {
+    height: 100%;
+    display: flex;
+    align-items: center
+  }
+  
+  .modal-context div {
+    width: 100%
+  }
+  
+  app-modal div a {
+    width: 100%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+  }
+  

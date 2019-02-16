@@ -1,1 +1,16 @@
-<h1>助印经书</h1>
+<app-modal #modal>
+    <div class="modal-context">
+        <h3>助印经书</h3>
+    </div>
+</app-modal>
+
+
+
+<h1>心经大悲咒合集</h1>
+<!-- 进度条显示进度，max是总任务量，value是已经完成任务量 -->
+<progress max="20000" value="{{pgvalue}}" ></progress>
+<a (click)="modal.open()">
+  <button>点击参与助印</button>
+</a>
+
+
