@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ZhuyinjingshuComponent implements OnInit {
 
+   pgvalue: number;
+   //已达成的经书数量
   constructor() { }
 
   ngOnInit() {
+    this.pgvalue=12777;
   }
+
+
+ 
+ 
 
 }

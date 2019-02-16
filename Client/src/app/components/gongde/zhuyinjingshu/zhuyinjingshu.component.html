@@ -1,3 +1,14 @@
-<p>
-  zhuyinjingshu works!
-</p>
+<!-- ctrl+shift+i整理代码 -->
+<div class="card">
+    <h5>心经大悲咒合集</h5>
+    <!-- 进度条显示进度，max是总任务量，value是已经完成任务量 -->
+    <progress max="20000" value="{{pgvalue}}"></progress>
+
+    <button class="botton1" (click)="modal.open()">点击参与助印</button>
+
+</div>
+<app-modal #modal>
+    <div class="modal-context">
+        <h3>助印经书</h3>
+    </div>
+</app-modal>

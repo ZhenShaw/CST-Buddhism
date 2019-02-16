@@ -15,7 +15,13 @@ import { ResultComponent } from './components/bazi/result/result.component';
 import { DetailComponent } from './components/bazi/detail/detail.component';
 import { Detail2Component } from './components/bazi/detail2/detail2.component';
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component';
+<<<<<<< HEAD
 import { SuanmingComponent } from './components/bazi/suanming/suanming.component';
+=======
+import { DialogComponent } from './components/gongfo/dialog/dialog.component';
+import { LibraryComponent } from './components/xiuxing/library/library.component';
+
+>>>>>>> e797880aff5b2bc1d557c4309defcf8cf8e28454
 
 @NgModule({
   declarations: [
@@ -26,6 +32,7 @@ import { SuanmingComponent } from './components/bazi/suanming/suanming.component
     GongfoComponent,
     XiuxingComponent,
     GongdeComponent,
+    XindeComponent,
     ModalComponent,
     XindeComponent,
     ResultComponent,
@@ -33,7 +40,12 @@ import { SuanmingComponent } from './components/bazi/suanming/suanming.component
     Detail2Component,
     XindeComponent,
     ZhuyinjingshuComponent,
+<<<<<<< HEAD
     SuanmingComponent
+=======
+    DialogComponent,
+    LibraryComponent
+>>>>>>> e797880aff5b2bc1d557c4309defcf8cf8e28454
   ],
   imports: [
     BrowserModule,

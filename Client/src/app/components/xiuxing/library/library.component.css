@@ -1,0 +1,116 @@
+.body {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    font-family: KaiTi;
+}
+* {
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+.top {
+    flex:0.5;
+}
+.title {
+
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+.central {
+    flex:2.5;
+    background:url("../../../../assets/library-img.jpg") no-repeat;
+    background-size: 100%;
+}
+.sBox {
+    float:right;
+    width:60%;
+    height:15%;
+}
+.sBox input {
+    height:90%;
+    border-radius: 4%;
+    padding-left: 1rem;
+}
+.sBox button {
+    width:20%;
+    height:90%;  
+    border-radius: 10%; 
+}
+ img {
+    width:30%;
+    height:30%; 
+}
+.bottom {
+    flex:5;
+    display:flex;
+    flex-direction: rwo;
+    margin-top:5px;
+}
+.left {
+    float:left;
+    flex:1;
+    text-align: center;
+    margin-right: 2px;
+}
+.bBtn {
+    width:100%;
+    background-color: rgb(152, 152, 235);
+    font-size:2rem;
+    font-family: KaiTi;
+}
+.bBtn:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+.right {
+    float:right;
+    flex:2.5;
+    text-align: center;
+    overflow:hidden;
+    height:90%;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top:1px solid black;
+}
+.right .list li {
+    display:block;
+    width:100%;
+    height:5em;
+   
+}
+.item {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    border-bottom: 0.6px solid grey;
+}
+.iLeft {
+    flex:1;
+   
+}
+.iLeft img {
+    width:100%;
+    height:100%;
+}
+.iMiddle {
+    flex:3;
+
+}
+.bName {
+    height:60%;
+    font-size:1.2em;
+    text-align: center;
+}
+.iRight {
+    flex:0.6;
+    display:flex;
+    align-items: center;
+}
+.iRight p {
+    font-size:3rem; 
+    color:grey;
+}
