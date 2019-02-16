@@ -8,7 +8,7 @@ import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
 import { XindeComponent } from './components/xiuxing/xinde/xinde.component'
 import { SuanmingComponent } from './components/bazi/suanming/suanming.component';
-
+import { ResultComponent } from './components/bazi/result/result.component';
 
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component'
 import { DialogComponent } from './components/gongfo/dialog/dialog.component'
@@ -31,6 +31,7 @@ const routes: Routes = [
   { path: 'gongfo/dialog', component:DialogComponent},
   { path: 'library',component:LibraryComponent },
   { path: 'detail', component:DetailComponent},
+  { path: 'result', component:ResultComponent},
 ];
 
 @NgModule({
