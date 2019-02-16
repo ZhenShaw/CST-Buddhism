@@ -18,6 +18,8 @@ import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyin
 import { SuanmingComponent } from './components/bazi/suanming/suanming.component';
 import { DialogComponent } from './components/gongfo/dialog/dialog.component';
 import { LibraryComponent } from './components/xiuxing/library/library.component';
+import { FozhouComponent } from './components/xiuxing/library/fozhou/fozhou.component';
+import { FojingComponent } from './components/xiuxing/library/fojing/fojing.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { LibraryComponent } from './components/xiuxing/library/library.component
     ZhuyinjingshuComponent,
     SuanmingComponent,
     DialogComponent,
-    LibraryComponent
+    LibraryComponent,
+    FozhouComponent,
+    FojingComponent
   ],
   imports: [
     BrowserModule,

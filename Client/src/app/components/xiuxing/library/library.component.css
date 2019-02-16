@@ -63,7 +63,6 @@
 }
 .bBtn:hover {
     background-color: grey;
-    cursor: pointer;
 }
 .right {
     float:right;
@@ -74,43 +73,4 @@
     border-left: 1px solid black;
     border-bottom: 1px solid black;
     border-top:1px solid black;
-}
-.right .list li {
-    display:block;
-    width:100%;
-    height:5em;
-   
-}
-.item {
-    width:100%;
-    height:100%;
-    display:flex;
-    flex-direction: row;
-    border-bottom: 0.6px solid grey;
-}
-.iLeft {
-    flex:1;
-   
-}
-.iLeft img {
-    width:100%;
-    height:100%;
-}
-.iMiddle {
-    flex:3;
-
-}
-.bName {
-    height:60%;
-    font-size:1.2em;
-    text-align: center;
-}
-.iRight {
-    flex:0.6;
-    display:flex;
-    align-items: center;
-}
-.iRight p {
-    font-size:3rem; 
-    color:grey;
 }

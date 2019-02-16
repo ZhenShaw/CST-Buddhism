@@ -13,7 +13,10 @@ import { ResultComponent } from './components/bazi/result/result.component';
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component'
 import { DialogComponent } from './components/gongfo/dialog/dialog.component'
 import { LibraryComponent } from './components/xiuxing/library/library.component';
+import { FojingComponent } from './components/xiuxing/library/fojing/fojing.component';
+import { FozhouComponent } from './components/xiuxing/library/fozhou/fozhou.component';
 import { DetailComponent } from './components/bazi/detail/detail.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,9 +32,17 @@ const routes: Routes = [
   { path: 'xiuxing/xinde', component:XindeComponent},
   { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent},
   { path: 'gongfo/dialog', component:DialogComponent},
-  { path: 'library',component:LibraryComponent },
+  { 
+    path: 'library',component:LibraryComponent,
+    children:[
+      { path: '',redirectTo: 'fozhou',pathMatch: 'full'},
+      { path: 'fojing',component:FojingComponent },
+      { path: 'fozhou',component:FozhouComponent }
+    ]
+  },
   { path: 'detail', component:DetailComponent},
   { path: 'result', component:ResultComponent},
+
 ];
 
 @NgModule({
