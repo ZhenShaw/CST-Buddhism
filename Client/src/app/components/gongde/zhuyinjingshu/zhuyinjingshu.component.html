@@ -31,10 +31,11 @@
                 <label style="margin-right:30%; font-size:120%; color:rgb(133, 132, 132)">功德芳名</label>
                 <input style="width:170%;"></div>
             <form>
-                <label><input type="radio" name="radio" value="10" checked>10本</label>
-                <label><input type="radio" name="radio" value="20">20本</label>
-                <label><input type="radio" name="radio" value="50">50本</label>
-                <label><input type="radio" name="radio" value="100">100本</label>
+                <label><input type="radio" name="radio" value="10" (click)="select(10)"checked>10本</label>
+                <label><input type="radio" name="radio" value="20" (click)="select(20)">20本</label>
+                <label><input type="radio" name="radio" value="50" (click)="select(50)">50本</label>
+                <label><input type="radio" name="radio" value="100" (click)="select(100)">100本</label>
+                <div>{{booknum}}</div>
             </form>
         </div>
     </div>
