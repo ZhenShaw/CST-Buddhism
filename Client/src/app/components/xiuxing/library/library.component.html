@@ -9,26 +9,13 @@
    </div>
    <div class="bottom">
      <div class="left">     
-       <button class="bBtn">佛咒</button>
-       <button class="bBtn">佛经</button>
+       <button class="bBtn" (click)="fozhou()">佛咒</button>
+       <button class="bBtn" (click)="fojing()">佛经</button>
+       <!-- <a [routerLink]="[ '/library/fozhou' ]" class="bBtn">佛咒</a>
+       <a [routerLink]="[ '/library/fojing' ]" class="bBtn">佛经</a> -->
      </div>
      <div class="right">
-       <ul class="list">
-         <li>
-           <div class="item">
-              <div class="iLeft">
-                  <img src="../../../../assets/book.jpg" >
-               </div>
-               <div class="iMiddle">
-                 <p class="bName">莲花生大师心咒</p>
-                 <p class="rNum">修读人数：12222</p> 
-               </div>
-               <div class="iRight">
-                 <p>></p>
-               </div>
-           </div>
-         </li>
-       </ul> 
+       <router-outlet></router-outlet>
      </div>
    </div>
 </div>
