@@ -1,0 +1,24 @@
+.bg {
+  background-image: url("../../../../assets/gongfo/bg_provider2.jpg");
+  background-repeat: no-repeat;
+  position: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow: auto;
+  z-index: 10;
+  animation: fadeInDown .5s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translate3d(0, -20%, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}

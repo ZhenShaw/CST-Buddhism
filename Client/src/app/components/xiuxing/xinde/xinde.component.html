@@ -24,7 +24,7 @@
                       <h3 class="nav-link"  >心得</h3>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link disabled" href="#"><button class="button button-primary button-circle button-small"><i class="fa fa-plus"></i></button></a>
+                      <a class="nav-link disabled"><button class="button button-primary button-circle button-small" [routerLink]="[ '/xiuxing/xinde/addxinde']"><i class="fa fa-plus"></i></button></a>
                     </li>
                   </ul>
                 </div>
@@ -34,7 +34,7 @@
                     <h5 class="mb-1">{{this.message}}</h5>
                     <small>3 days ago</small>
                   </div>
-                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <p class="mb-1" *ngFor="let item of messagelist" >{{item}}</p>
                   <small>Donec id elit non mi porta.</small>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">

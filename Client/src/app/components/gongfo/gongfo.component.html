@@ -1,23 +1,41 @@
 <div class="bg">
- <img class="top" src="../../../assets/gy_top.png" alt="">
- <img class="desk" src="../../../assets/gy_desk.jpg" alt="">
- <div class="lazhuset">
-    <img class="lazhu" src="../../../assets/gy_lazhu.png" alt="">
-    <img class="xiang" (click)="xiang()" src="http://api10.buddhaheart.cn/webfiles/sys/201710/171013142225d175.png" alt="">
-    <img class="lazhu" src="../../../assets/gy_lazhu.png" alt="">
- </div>
- <div class="hua">
-    <img class="huaset" (click)="hua()" src="http://api10.buddhaheart.cn/webfiles/sys/201710/1710142350470a8e.png" alt="">
-    <img class="huaset" (click)="hua()" src="http://api10.buddhaheart.cn/webfiles/sys/201710/1710142350470a8e.png" alt="">
-</div>
- <img class="fo" (click)="fo()" src="http://api10.buddhaheart.cn/webfiles/sys/201710/171015001922d66c.png" alt="">
- <img class="fruit" (click)="fruit()" src="http://api10.buddhaheart.cn/webfiles/sys/201710/171013142539eb07.png" alt="">
- <div class="button">
+  <img class="top" src="../../../assets/gongfo/gy_top.png" alt="">
+  <img class="desk" src="../../../assets/gongfo/gy_desk.jpg" alt="">
+  <div class="lazhuset">
+    <img class="lazhu" src="../../../assets/gongfo/gy_lazhu.png" alt="">
+
+    <img class="xiang" (click)="dialog.open()" (click)="xiang()" src={{xiang_list[xiang_index].url}} alt="">
+
+    <img class="lazhu" src="../../../assets/gongfo/gy_lazhu.png" alt="">
+  </div>
+  <div class="flower">
+    <img class="flowerset" (click)="dialog.open()" (click)="flower()" src={{flower_list[flower_index].url}} alt="">
+    <img class="flowerset" (click)="dialog.open()" (click)="flower()" src={{flower_list[flower_index].url}} alt="">
+  </div>
+  <img class="fo" (click)="dialog.open()" (click)="fo()" src={{fo_list[fo_index].url}} alt="">
+  <img class="fruit" (click)="dialog.open()" (click)="fruit()" src={{fruit_list[fruit_index].url}} alt="">
+  <div class="button">
     <button (click)="bless()">祈福</button>
- </div>
+  </div>
 </div>
 
-
-
-
-
+<app-dialog #dialog>
+  <div *ngIf="status==1">
+    <img class="fo1" src={{fo_list[fo_index].url}} ngm alt="">
+    <img class="right" (click)="next()" src="../../../assets/gongfo/icon_arrowli.png" alt="">
+    <img class="left" (click)="pre()" src="../../../assets/gongfo/icon_arrowli.png" alt="">
+    <div class="intro">
+      <h3>{{fo_list[fo_index].name}}</h3>
+      <div class="details">{{fo_list[fo_index].details}}</div>
+      <button class="request" (click)="dialog.close()">请佛</button>
+    </div>
+  </div>
+  <div class="dialog2" *ngIf="status==2">
+    <ng-container class="row" *ngFor="let item of flower_list; let i=index">
+      <div class="cp">
+        <img class="flower1" [src]="item.url" alt="">
+        <div class="font">{{item.name}}</div>
+      </div>
+    </ng-container>
+  </div>
+</app-dialog>

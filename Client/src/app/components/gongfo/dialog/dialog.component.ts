@@ -12,4 +12,11 @@ export class DialogComponent implements OnInit {
   ngOnInit() {
   }
 
+  open(){
+    document.getElementById("dialog").style.display='block'
+  }
+
+  close(){
+    document.getElementById("dialog").style.display='none'
+  }
 }
