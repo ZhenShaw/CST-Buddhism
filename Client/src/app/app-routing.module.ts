@@ -20,7 +20,7 @@ import { ZhouGeneralComponent } from './components/xiuxing/library/fozhou/zhou-g
 import { JingGeneralComponent } from './components/xiuxing/library/fojing/jing-general/jing-general.component';
 import { JingyuanwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyuanwen/jingyuanwen.component';
 import { JingyiwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyiwen/jingyiwen.component';
-
+import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxianghuo.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -34,6 +34,7 @@ const routes: Routes = [
   { path: 'suanming', component:SuanmingComponent},
   { path: 'xiuxing/xinde', component:XindeComponent},
   { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent},
+  { path: 'gongde/juanxianghuo', component:JuanxianghuoComponent},
   { path: 'gongfo/dialog', component:DialogComponent},
   { 
     path: 'library',component:LibraryComponent,
