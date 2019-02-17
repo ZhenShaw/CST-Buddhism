@@ -15,8 +15,20 @@ import { ResultComponent } from './components/bazi/result/result.component';
 import { DetailComponent } from './components/bazi/detail/detail.component';
 import { Detail2Component } from './components/bazi/detail2/detail2.component';
 import { ZhuyinjingshuComponent } from './components/gongde/zhuyinjingshu/zhuyinjingshu.component';
+import { SuanmingComponent } from './components/bazi/suanming/suanming.component';
 import { DialogComponent } from './components/gongfo/dialog/dialog.component';
 import { LibraryComponent } from './components/xiuxing/library/library.component';
+import { FozhouComponent } from './components/xiuxing/library/fozhou/fozhou.component';
+import { FojingComponent } from './components/xiuxing/library/fojing/fojing.component';
+import { ZhouGeneralComponent } from './components/xiuxing/library/fozhou/zhou-general/zhou-general.component';
+import { JingGeneralComponent } from './components/xiuxing/library/fojing/jing-general/jing-general.component';
+import { JingyuanwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyuanwen/jingyuanwen.component';
+import { JingyiwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyiwen/jingyiwen.component';
+import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxianghuo.component';
+import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
+import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
+import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
+import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
 
 
 @NgModule({
@@ -36,8 +48,20 @@ import { LibraryComponent } from './components/xiuxing/library/library.component
     Detail2Component,
     XindeComponent,
     ZhuyinjingshuComponent,
+    SuanmingComponent,
     DialogComponent,
-    LibraryComponent
+    LibraryComponent,
+    FozhouComponent,
+    FojingComponent,
+    ZhouGeneralComponent,
+    JingGeneralComponent,
+    JingyuanwenComponent,
+    JingyiwenComponent,
+    JuanxianghuoComponent,
+    SimiaoComponent,
+    SimiaotwoComponent,
+    SimiaothreeComponent,
+    AddxindeComponent
   ],
   imports: [
     BrowserModule,

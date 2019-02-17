@@ -1,0 +1,39 @@
+.class1 {
+    background-color: #CCCC99;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+   
+}
+h2{
+    text-align: center;
+    font-size: 35px;
+    font-family: 楷体;
+    color:yellow;
+}
+ul,ol{
+    list-style-type: none;
+}
+.ziti{
+    font-size: 28px;
+    font-family: 楷体;
+}
+.jiexi{
+    text-indent: 35px;
+    color:red;
+    font-size: 20px;
+    font-family: Arial;
+    
+}
+.class2{
+    width: 40%;
+     float: left; 
+    margin: 10px;
+}
+.class3{
+    
+    width: 49%;
+      float: left; 
+      margin: 1px;
+    
+}

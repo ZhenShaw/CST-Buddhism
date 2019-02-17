@@ -1,14 +1,15 @@
 /* 进度条 */
 progress
 {
+  margin-top: 7%;
    color:rgb(190, 125, 64); /*兼容IE10和chorme的已完成进度背景*/
    margin-left:auto;
    margin-right:auto;
    border:none;
    border-radius: 25px;
    background:rgb(216, 211, 207);/*这个属性也可当作Chrome的已完成进度背景，只不过被下面的::progress-bar覆盖了*/      
-   width:75%;
-   height:8%;
+   width:88%;
+   height:7%;
    overflow: hidden;
 }
 progress::-webkit-progress-bar
@@ -23,24 +24,8 @@ progress::-webkit-progress-value
     background:rgba(158, 111, 50, 0.89); 
 }
 
-/* 弹窗 */
-app-modal .modal-context {
-    height: 100%;
-    display: flex;
-    align-items: center
-  }
-  
-  .modal-context div {
-    width: 100%
-  }
-  
-  app-modal div a {
-    width: 100%;
-    margin: 15px auto;
-    display: flex;
-    justify-content: center;
-  }
-  
+
+ 
 /* 方形按钮 */
   .botton1 {
 
@@ -63,9 +48,108 @@ app-modal .modal-context {
       margin: 5% 2%;
       border-radius: 3px;
       height: 40%;
-      box-shadow: 0px 0px 4px  rgb(156, 156, 156)
+      border:2px #9c9c9c;
+      border-style:none none solid none;
+      box-shadow: 0px 0px 4px  rgb(156, 156, 156);
   }
   /* 标题 */
  h5 {
     text-align:center ;
  }
+ /* 表格 */
+ table {
+   margin: 8% 0%;
+ }
+
+ thead {
+  text-align:center ;
+ }
+
+ td {
+  text-align:center ;
+ }
+
+ /* 不换行 */
+.nowrap {
+  white-space:nowrap;
+  width:25%;
+   margin: 10% 15%; 
+}
+
+
+  /* 背景遮罩层 */
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(8, 8, 8, 0.3);
+  z-index: 1001;
+}
+
+/* 模态弹窗区域 */
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 45%;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgb(245, 234, 220);
+  z-index: 1002;
+  overflow: auto;
+  animation: scaleIn .3s;
+}
+
+/* 从上往下淡入 */
+
+@keyframes fadeInDown {
+  0% {
+    transform: translate3d(0, -20%, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* 缩放淡入 */
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* 缩放淡出 */
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
+
