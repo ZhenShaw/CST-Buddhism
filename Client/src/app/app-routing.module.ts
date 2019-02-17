@@ -6,7 +6,8 @@ import { BaziComponent } from './components/bazi/bazi.component';
 import { GongfoComponent } from './components/gongfo/gongfo.component';
 import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
-import { XindeComponent } from './components/xiuxing/xinde/xinde.component'
+import { XindeComponent } from './components/xiuxing/xinde/xinde.component';
+import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
 import { SuanmingComponent } from './components/bazi/suanming/suanming.component';
 import { ResultComponent } from './components/bazi/result/result.component';
 
@@ -56,6 +57,7 @@ const routes: Routes = [
   { path: 'simiao', component:SimiaoComponent},
   { path: 'simiaotwo', component:SimiaotwoComponent},
   { path: 'simiaothree', component:SimiaothreeComponent},
+  { path:'xiuxing/xinde/addxinde',component:AddxindeComponent},
 ];
 
 @NgModule({
