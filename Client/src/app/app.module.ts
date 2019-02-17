@@ -25,6 +25,9 @@ import { JingGeneralComponent } from './components/xiuxing/library/fojing/jing-g
 import { JingyuanwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyuanwen/jingyuanwen.component';
 import { JingyiwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyiwen/jingyiwen.component';
 import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxianghuo.component';
+import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
+import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
+import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
 
 
 @NgModule({
@@ -53,7 +56,10 @@ import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxian
     JingGeneralComponent,
     JingyuanwenComponent,
     JingyiwenComponent,
-    JuanxianghuoComponent
+    JuanxianghuoComponent,
+    SimiaoComponent,
+    SimiaotwoComponent,
+    SimiaothreeComponent
   ],
   imports: [
     BrowserModule,

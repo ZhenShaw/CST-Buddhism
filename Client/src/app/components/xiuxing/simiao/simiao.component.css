@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+    font-family: "华文新魏";
+}
+
+h3{
+    font-family: "华文行楷"
+}
+
+div{
+    margin:10px;
+}
+
+.square{
+        width: 10px;
+        height: 10px;
+        float: left;
+        margin-right: 20px;
+        
+}
+
+.all{
+    background-color: rgb(245, 217, 141);
+}

@@ -21,6 +21,10 @@ import { JingGeneralComponent } from './components/xiuxing/library/fojing/jing-g
 import { JingyuanwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyuanwen/jingyuanwen.component';
 import { JingyiwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyiwen/jingyiwen.component';
 import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxianghuo.component';
+import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
+import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
+import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -30,7 +34,6 @@ const routes: Routes = [
   { path: 'xiuxing', component: XiuxingComponent },
   { path: 'gongde', component: GongdeComponent },
   // 子页面路由写在下方
-  { path: 'xinde', component:XindeComponent},
   { path: 'suanming', component:SuanmingComponent},
   { path: 'xiuxing/xinde', component:XindeComponent},
   { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent},
@@ -50,7 +53,9 @@ const routes: Routes = [
   { path: 'jingyuanwen',component: JingyuanwenComponent},
   { path: 'jingyiwen',component: JingyiwenComponent},
   { path: 'result', component:ResultComponent},
-
+  { path: 'simiao', component:SimiaoComponent},
+  { path: 'simiaotwo', component:SimiaotwoComponent},
+  { path: 'simiaothree', component:SimiaothreeComponent},
 ];
 
 @NgModule({
