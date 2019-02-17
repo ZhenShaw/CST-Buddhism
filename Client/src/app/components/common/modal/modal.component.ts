@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
+  @Input() height: any  //接收外部传入弹窗高度
 
   constructor() { }
 
   ngOnInit() {
-    // this.open()
+    document.getElementById('modal').style.height = this.height
   }
 
   open() {
