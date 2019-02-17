@@ -1,5 +1,5 @@
 .bg{
-    background-image: url("../../../assets/bg_provider2.jpg");
+    background-image: url("../../../assets/供佛/bg_provider2.jpg");
     background-repeat: no-repeat;
     position: fixed;
     background-size: cover;
@@ -46,7 +46,7 @@
     transform: scale(0.5);
 }
 
-.hua{
+.flower{
     height: 0;
     display: flex;
     flex-direction: row;
@@ -57,7 +57,7 @@
     width: 100%;
 }
 
-.huaset{
+.flowerset{
     transform: scale(0.5);
 }
 
@@ -71,4 +71,89 @@ button{
 
 .button{
     align-items: center;
+}
+
+.fo1{
+    height: 50%;
+    width: 65%;
+    position: absolute;
+    bottom: 45%;
+    left: 18%;
+}
+
+.intro{
+    text-align: center;
+    border: 2px solid rgb(240, 119, 7);
+    background-color: rgb(255, 200, 98);
+    width: 80%;
+    height: 40%;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    border-radius: 1em ;
+}
+
+.details{
+    width: 90%;
+    height: 60%;
+    position: relative;
+    left: 5%;
+    overflow: auto;  
+}
+
+.request{
+    position: relative;
+    width: 65%;
+    height: 16%;
+    margin: 5%;
+    border-radius:1em;  
+    border: 1px solid rgb(241, 154, 24);
+}
+
+.right{
+    position: absolute;
+    bottom: 60%;
+    left: 85%;
+}
+
+.left{
+    position: absolute;
+    bottom: 60%;
+    left: 5%;
+    transform: rotate(180deg);
+}
+
+.flower1{
+    transform: scale(0.4);
+    border: 1px solid red;
+}
+
+.dialog2{
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.cp{
+    border: 1px solid red;
+    width: 20%;
+    height: 20%;
+    display: table-cell;
+}
+
+.row{
+    display: table-row;
+}
+
+.font{
+    background-color: rgb(248, 196, 53);
+    color: rgb(53, 49, 43);
+    width: 50%;
+    height: 5%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
 }
