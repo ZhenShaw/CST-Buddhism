@@ -17,6 +17,7 @@ func main() {
 
 	//路由列表
 	mux.HandleFunc("/test", route.Test)
+	mux.HandleFunc("/yinjingshu", route.Yinjingshu)
 
 	//监听9000端口
 	fmt.Println("Web服务器启动...端口:9000")
