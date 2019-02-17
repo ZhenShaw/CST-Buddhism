@@ -7,10 +7,11 @@ body{
 
 .titlefont{
     font-family: "楷体";
-
     color: #333399;
     font-size: 28px;
 }
+
+
 
 #quanjie{
     text-align: center;
@@ -19,7 +20,7 @@ body{
 
 hr{
     margin: 0% 100% 0% 0%;
-    height: 1px;
+    height: 2px;
     width:50%;
     border:none;
 }
@@ -44,3 +45,55 @@ hr{
     word-wrap: break-word;
     word-break: normal;
 }
+
+#modal{
+    z-index: 1003;
+    position: fixed;
+    left:0%;
+    top:50%;
+    right:0%;
+    bottom: 0%;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(#abe587,#90efb6,#7df6d7,#6ffcf0);
+    opacity:0.5;
+}
+
+#content {
+ 
+    position: absolute;
+    left:0%;
+    top:50%;
+    right:0%;
+    bottom: 0%;
+    padding: 10px;
+    margin:10px;
+    z-index: 1003;
+    overflow: auto;
+
+}
+  
+#lock{
+    z-index: 1003;
+    height: 30%;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    margin: auto;
+   z-index:1003;
+
+}
+
+#text{
+    z-index: 1003;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:75%;
+    text-align: center;
+}
+  

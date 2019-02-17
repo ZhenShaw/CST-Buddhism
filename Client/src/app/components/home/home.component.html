@@ -1,4 +1,5 @@
-<app-modal #modal>
+<!-- 在ts文件定义高度，传入弹窗组件，默认高度为25% -->
+<app-modal [height]="height" #modal>
   <div class="modal-context">
     <div>
       <a [routerLink]="[ '/suanming' ]">
