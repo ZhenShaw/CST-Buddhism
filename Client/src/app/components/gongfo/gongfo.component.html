@@ -1,17 +1,18 @@
 <div class="bg">
   <img class="top" src="../../../assets/gongfo/gy_top.png" alt="">
   <img class="desk" src="../../../assets/gongfo/gy_desk.jpg" alt="">
+
   <div class="lazhuset">
     <img class="lazhu" src="../../../assets/gongfo/gy_lazhu.png" alt="">
-
     <img class="xiang" (click)="dialog.open()" (click)="xiang()" src={{xiang_list[xiang_index].url}} alt="">
-
     <img class="lazhu" src="../../../assets/gongfo/gy_lazhu.png" alt="">
   </div>
+
   <div class="flower">
     <img class="flowerset" (click)="dialog.open()" (click)="flower()" src={{flower_list[flower_index].url}} alt="">
     <img class="flowerset" (click)="dialog.open()" (click)="flower()" src={{flower_list[flower_index].url}} alt="">
   </div>
+  
   <img class="fo" (click)="dialog.open()" (click)="fo()" src={{fo_list[fo_index].url}} alt="">
   <img class="fruit" (click)="dialog.open()" (click)="fruit()" src={{fruit_list[fruit_index].url}} alt="">
   <div class="button">
@@ -20,6 +21,7 @@
 </div>
 
 <app-dialog #dialog>
+
   <div *ngIf="status==1">
     <img class="fo1" src={{fo_list[fo_index].url}} ngm alt="">
     <img class="right" (click)="next()" src="../../../assets/gongfo/icon_arrowli.png" alt="">
@@ -30,12 +32,32 @@
       <button class="request" (click)="dialog.close()">请佛</button>
     </div>
   </div>
-  <div class="dialog2" *ngIf="status==2">
+
+  <div class="dialog" *ngIf="status==2">
     <ng-container class="row" *ngFor="let item of flower_list; let i=index">
       <div class="cp">
-        <img class="flower1" [src]="item.url" alt="">
+        <img (click)="flower_change(i)" (click)="dialog.close()" class="flower1" [src]="item.url" alt="">
         <div class="font">{{item.name}}</div>
       </div>
     </ng-container>
   </div>
+
+  <div class="dialog" *ngIf="status==3">
+    <ng-container class="row" *ngFor="let item of xiang_list; let i=index">
+      <div class="cp">
+        <img (click)="xiang_change(i)" (click)="dialog.close()" class="xiang1" [src]="item.url" alt="">
+        <div class="font">{{item.name}}</div>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="dialog" *ngIf="status==4">
+    <ng-container class="row" *ngFor="let item of fruit_list; let i=index">
+      <div class="fruit_cp">
+        <img (click)="fruit_change(i)" (click)="dialog.close()" class="fruit1" [src]="item.url" alt="">
+        <div class="font">{{item.name}}</div>
+      </div>
+    </ng-container>
+  </div>
+
 </app-dialog>

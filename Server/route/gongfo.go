@@ -31,3 +31,21 @@ func Flower(w http.ResponseWriter, r *http.Request) {
 	response, _ := json.Marshal(listinfo)
 	w.Write(response)
 }
+
+//换香
+func Xiang(w http.ResponseWriter, r *http.Request) {
+	sethead(w)
+	var listinfo []psql.Listinfo
+	listinfo = psql.Search("where status=3")
+	response, _ := json.Marshal(listinfo)
+	w.Write(response)
+}
+
+//换水果
+func Fruit(w http.ResponseWriter, r *http.Request) {
+	sethead(w)
+	var listinfo []psql.Listinfo
+	listinfo = psql.Search("where status=2")
+	response, _ := json.Marshal(listinfo)
+	w.Write(response)
+}

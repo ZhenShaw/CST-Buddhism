@@ -13,7 +13,7 @@ export class DialogComponent implements OnInit {
   }
 
   open(){
-    document.getElementById("dialog").style.display='block'
+    document.getElementById("dialog").style.display='flex'
   }
 
   close(){

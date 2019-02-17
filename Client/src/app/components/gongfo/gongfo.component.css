@@ -123,36 +123,53 @@ button {}
 }
 
 .flower1 {
-  transform: scale(0.4);
-  border: 1px solid red;
+  transform: scale(0.6);
+  width: 100%;
 }
 
-.dialog2 {
-  border: 1px solid red;
+.dialog {
   height: 100%;
   width: 100%;
-  display: table;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .cp {
-  border: 1px solid red;
-  width: 20%;
-  height: 20%;
-  display: table-cell;
+  width: 33%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.row {
-  display: table-row;
-}
 
 .font {
   background-color: rgb(248, 196, 53);
   color: rgb(53, 49, 43);
   width: 50%;
-  height: 5%;
-  margin: auto;
+  height: 8%;
+  margin-bottom: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 1em;
+}
+
+.xiang1{
+  width: 100%;
+}
+
+.fruit1{
+  width: 100%;
+}
+
+.fruit_cp {
+  width: 33%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

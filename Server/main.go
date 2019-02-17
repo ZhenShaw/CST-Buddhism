@@ -20,6 +20,8 @@ func main() {
 
 	mux.HandleFunc("/gongfo/fo", route.Fo)
 	mux.HandleFunc("/gongfo/flower", route.Flower)
+	mux.HandleFunc("/gongfo/xiang", route.Xiang)
+	mux.HandleFunc("/gongfo/fruit", route.Fruit)
 	mux.HandleFunc("/yinjingshu", route.Yinjingshu)
 
 

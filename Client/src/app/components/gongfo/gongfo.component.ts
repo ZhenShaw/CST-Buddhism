@@ -11,7 +11,7 @@ export class GongfoComponent implements OnInit {
 
   constructor() { }
 
-  status:number
+  status:number//记录换什么
   Listlength=0
   fo_index=0
   xiang_index=0
@@ -44,20 +44,6 @@ export class GongfoComponent implements OnInit {
   ngOnInit() {
   }
 
-  next(){
-    this.fo_index++;
-    if(this.fo_index==this.Listlength){
-      this.fo_index=0;
-    }
-  }
-
-  pre(){
-    this.fo_index--;
-    if(this.fo_index<0){
-      this.fo_index=this.Listlength-1;
-    }
-  }
-
   flower(){
     this.status=2;
     var url ="http://localhost:9000/gongfo/flower"
@@ -70,6 +56,10 @@ export class GongfoComponent implements OnInit {
       }
       console.log(this.Listlength)
     })
+  }
+  //换花
+  flower_change(i:number){
+    this.flower_index=i
   }
 
   fo(){
@@ -85,15 +75,55 @@ export class GongfoComponent implements OnInit {
     })
 
   }
+  //下一个佛
+  next(){
+    this.fo_index++;
+    if(this.fo_index==this.Listlength){
+      this.fo_index=0;
+    }
+  }
+  //上一个佛
+  pre(){
+    this.fo_index--;
+    if(this.fo_index<0){
+      this.fo_index=this.Listlength-1;
+    }
+  }
 
   xiang(){
-    this.status=2;
+    this.status=3;
+    var url ="http://localhost:9000/gongfo/xiang"
+    axios.get(url).then(res=>{
+      console.log(res)
+      this.xiang_list=res.data
+      for (var item in res.data) {
+        this.Listlength++;
+      }
+      console.log(this.Listlength)
+    })
+  }
+  //换香
+  xiang_change(i:number){
+    this.xiang_index=i
   }
 
   fruit(){
-    
+    this.status=4;
+    var url ="http://localhost:9000/gongfo/fruit"
+    axios.get(url).then(res=>{
+      console.log(res)
+      this.fruit_list=res.data
+      for (var item in res.data) {
+        this.Listlength++;
+      }
+      console.log(this.Listlength)
+    })
   }
-
+  //换水果
+  fruit_change(i:number){
+    this.fruit_index=i
+  }
+  //祈福
   bless(){
 
   }
