@@ -13,21 +13,9 @@
     
     </body>
 
-<form class="form-horizontal">
-    <fieldset>
-      <div id="legend" class="">
-        <legend class="">表单名</legend>
-      </div>
-    <div class="control-group">
-
-          <!-- Textarea -->
-          <label class="control-label">Textarea</label>
-          <div class="controls">
-            <div class="textarea">
-                  <textarea type="" class=""> </textarea>
-            </div>
-          </div>
-        </div>
-
-    </fieldset>
-  </form>
+<div class="input-group mb-3">
+    <input type="text" [(ngModel)]="this.Message.Xinde" name="Xinde" id="Xinde" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="add()" >添加</button>
+    </div>
+</div>

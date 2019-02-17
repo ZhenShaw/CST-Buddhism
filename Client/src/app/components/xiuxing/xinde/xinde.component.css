@@ -1,0 +1,12 @@
+.pullleft{
+    width: 20%;
+    float: left;
+    position: relative;
+    left: 20px;
+  }
+  
+.pullright{
+    width: 10%;
+    float: right;
+    clear:right;
+}
