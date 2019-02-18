@@ -1,0 +1,15 @@
+<div class="container">
+  <!-- <img  class="img" src="assets/imgs/jieguo.jpg"  > -->
+  <p class="p1">观音灵签</p>
+  <div class="jieguo">
+    <p>您刚才抽得<span style="color:rgb(185, 226, 34)">观音灵签第<span class="span" >{{qiuqian.numbers}}</span>签！</span></p>
+    <p style=" font-weight:bold;">{{qiuqian.types}}</p>
+    <p style="color:rgb(241, 228, 207)">签语：</p>
+    <div class="div1">{{qiuqian.qianyu}}</div>
+    <p style="color:rgb(241, 228, 207)">解签：</p>
+    <div class="div2">{{qiuqian.jieqian}}</div>
+   
+  </div>  
+  <p class="p2" (click)="suanmi()">算一卦</p>
+
+</div>

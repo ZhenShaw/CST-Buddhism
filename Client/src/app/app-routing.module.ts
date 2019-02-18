@@ -6,7 +6,8 @@ import { BaziComponent } from './components/bazi/bazi.component';
 import { GongfoComponent } from './components/gongfo/gongfo.component';
 import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
-import { XindeComponent } from './components/xiuxing/xinde/xinde.component'
+import { XindeComponent } from './components/xiuxing/xinde/xinde.component';
+import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
 import { SuanmingComponent } from './components/bazi/suanming/suanming.component';
 import { ResultComponent } from './components/bazi/result/result.component';
 
@@ -20,6 +21,11 @@ import { ZhouGeneralComponent } from './components/xiuxing/library/fozhou/zhou-g
 import { JingGeneralComponent } from './components/xiuxing/library/fojing/jing-general/jing-general.component';
 import { JingyuanwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyuanwen/jingyuanwen.component';
 import { JingyiwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyiwen/jingyiwen.component';
+import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxianghuo.component';
+import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
+import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
+import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
+import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component'; 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -30,10 +36,10 @@ const routes: Routes = [
   { path: 'xiuxing', component: XiuxingComponent },
   { path: 'gongde', component: GongdeComponent },
   // 子页面路由写在下方
-  { path: 'xinde', component:XindeComponent},
   { path: 'suanming', component:SuanmingComponent},
   { path: 'xiuxing/xinde', component:XindeComponent},
   { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent},
+  { path: 'gongde/juanxianghuo', component:JuanxianghuoComponent},
   { path: 'gongfo/dialog', component:DialogComponent},
   { 
     path: 'library',component:LibraryComponent,
@@ -49,7 +55,11 @@ const routes: Routes = [
   { path: 'jingyuanwen',component: JingyuanwenComponent},
   { path: 'jingyiwen',component: JingyiwenComponent},
   { path: 'result', component:ResultComponent},
-
+  { path: 'simiao', component:SimiaoComponent},
+  { path: 'simiaotwo', component:SimiaotwoComponent},
+  { path: 'simiaothree', component:SimiaothreeComponent},
+  { path:'xiuxing/xinde/addxinde',component:AddxindeComponent},
+  {path:'jieqian',component:JieqianComponent},
 ];
 
 @NgModule({

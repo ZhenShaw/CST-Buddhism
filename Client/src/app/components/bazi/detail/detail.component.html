@@ -1,15 +1,55 @@
-<body id="test">
+<div id="modal" *ngIf="jiaofei==false"></div>
+<div id="content" (click)="money()" *ngIf="jiaofei==false">
+  
+  <img src="../../../../assets/u24.png" id="lock">
+  <div id="text">点击查看所有精解</div>
+</div>
+
+<body>
+  
+
   <div id="quanjie" class="titlefont">命格全解</div>
+  
   <div class="titlefont">财运</div>
   <hr id="hra">
-    <div class="longtext">
-    {{caiyun}}
+    <div class="longtext" [ngSwitch]="jiaofei">
+        <p *ngSwitchCase="true" >
+          {{caiyun}}
+        </p>
+        <p *ngSwitchCase="false">
+          {{caiyun | slice:0:4}}... 
+        </p>
     </div>
+  
   <div class="titlefont">健康</div>
   <hr id="hrb">
+    <div class="longtext" [ngSwitch]="jiaofei">
+      <p *ngSwitchCase="true">
+        {{jiankang}}
+      </p>
+      <p *ngSwitchCase="false">
+        {{jiankang | slice:0:4}}... 
+      </p>
+    </div>
   <div class="titlefont">事业</div>
   <hr id="hrc">
+    <div class="longtext" [ngSwitch]="jiaofei">
+      <p *ngSwitchCase="true">
+       {{shiye}}
+      </p>
+      <p *ngSwitchCase="false">
+        {{shiye | slice:0:4}}... 
+      </p>
+    </div>
   <div class="titlefont">爱情</div>
   <hr id="hrd">
+    <div class="longtext" [ngSwitch]="jiaofei">
+      <p *ngSwitchCase="true">
+        {{aiqing}}
+      </p>
+      <p *ngSwitchCase="false">
+        {{aiqing | slice:0:4}}... 
+      </p>
+    </div>
 </body>
 

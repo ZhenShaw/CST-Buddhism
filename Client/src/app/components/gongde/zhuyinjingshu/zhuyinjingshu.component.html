@@ -3,12 +3,39 @@
     <h5>心经大悲咒合集</h5>
     <!-- 进度条显示进度，max是总任务量，value是已经完成任务量 -->
     <progress max="20000" value="{{pgvalue}}"></progress>
+    <table>
+        <thead>
+            <th>已达成</th>
+            <th>目标</th>
+            <th>参与人数</th>
+        </thead>
+        <tbody>
+            <td>{{pgvalue}}</td>
+            <td>20000</td>
+            <td>{{participants}}</td>
+        </tbody>
+    </table>
 
-    <button class="botton1" (click)="modal.open()">点击参与助印</button>
+    <button class="botton1" (click)="this.open()">点击参与助印</button>
 
 </div>
-<app-modal #modal>
-    <div class="modal-context">
-        <h3>助印经书</h3>
+
+<div>
+    <!-- 遮罩 -->
+    <div id="overlay" class="overlay" (click)="this.close()"></div>
+    <!-- 弹窗 -->
+    <div id="modal" class="modal">
+        <div class="">
+            <h5 style="font-size: 125%;color: rgb(100, 100, 100);font-weight: bold;">助印经书</h5>
+            <div class="nowrap">
+                <label style="margin-right:30%; font-size:120%; color:rgb(133, 132, 132)">功德芳名</label>
+                <input style="width:170%;">
+            </div>
+            <div class="select"><input type="radio" name="radio" value="10" (click)="select(10)" checked>10本</div>
+            <label><input type="radio" name="radio" value="20" (click)="select(20)">20本</label>
+            <label><input type="radio" name="radio" value="50" (click)="select(50)">50本</label>
+            <label><input type="radio" name="radio" value="100" (click)="select(100)">100本</label>
+            <div>{{booknum}}</div>
+        </div>
     </div>
-</app-modal>
+</div>

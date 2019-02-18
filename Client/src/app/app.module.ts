@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -24,6 +26,15 @@ import { ZhouGeneralComponent } from './components/xiuxing/library/fozhou/zhou-g
 import { JingGeneralComponent } from './components/xiuxing/library/fojing/jing-general/jing-general.component';
 import { JingyuanwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyuanwen/jingyuanwen.component';
 import { JingyiwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyiwen/jingyiwen.component';
+import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxianghuo.component';
+import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
+import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
+import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
+import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
+import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
+
+//引入服务，并配置服务
+import { StorageService } from './services/storage.service';
 
 
 @NgModule({
@@ -51,14 +62,24 @@ import { JingyiwenComponent } from './components/xiuxing/library/fojing/jingGene
     ZhouGeneralComponent,
     JingGeneralComponent,
     JingyuanwenComponent,
-    JingyiwenComponent
+    JingyiwenComponent,
+    JuanxianghuoComponent,
+    SimiaoComponent,
+    SimiaotwoComponent,
+    SimiaothreeComponent,
+    AddxindeComponent,
+    JieqianComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
+=======
+    FormsModule,
+>>>>>>> c7b5fec93eaa068b20ab0939f3aaf626ad477699
     HttpClientModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
