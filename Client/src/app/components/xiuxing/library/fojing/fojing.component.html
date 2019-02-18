@@ -1,12 +1,12 @@
 <ul class="list">
   <li>
-    <div class="item">
+    <div class="item" *ngFor="let item of list">
        <div class="iLeft">
            <img src="../../../../assets/book.jpg">
         </div>
         <div class="iMiddle">
-          <p class="bName">莲花生大师心经</p>
-          <p class="rNum">修读人数：41654</p> 
+          <p class="bName">{{item["bookname"]}}</p>
+          <p class="rNum">修读人数：{{item["readnumber"]}}</p> 
         </div>
         <div class="iRight" (click)="readFJ()">
           <a [routerLink]="[ '/jngGeneral' ]" >&gt;</a>
