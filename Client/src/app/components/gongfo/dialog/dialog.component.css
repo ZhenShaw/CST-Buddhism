@@ -3,7 +3,7 @@
   margin: 0px;
   padding: 0px;
   background-repeat: no-repeat;
-  position: fixed;
+  position: absolute;
   background-size: cover;
   height: 100%;
   width: 100%;

@@ -32,6 +32,9 @@ import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiao
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
 import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
 
+//引入服务，并配置服务
+import { StorageService } from './services/storage.service';
+
 
 @NgModule({
   declarations: [
@@ -71,7 +74,7 @@ import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

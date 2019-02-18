@@ -5,18 +5,20 @@
   background-size: cover;
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .top {
   height: 10%;
   width: 100%;
+  top:0px;
 }
 
 .fo {
-  transform: scale(0.4,0.4);
-  position: absolute;
-  bottom: 50px;
-  left: 50px; 
+  height: 350px;
+  width: 250px;
 }
 
 .desk {
@@ -63,17 +65,20 @@
 }
 
 .fruit {
-  transform: scale(0.5);
-  z-index: 100;
+  width: 120px;
+  z-index: 10;
+  margin-top: 4%;
 }
 
 .button {
   align-items: center;
+  z-index: 10;
+  margin-top: 5%;
 }
 
 .fo1 {
-  height: 50%;
-  width: 65%;
+  height: 350px;
+  width: 250px;
   position: absolute;
   bottom: 45%;
   left: 18%;
@@ -122,8 +127,8 @@
 }
 
 .flower1 {
-  transform: scale(0.6);
-  width: 100%;
+  width: 60%;
+  border: 1px solid red ;
 }
 
 .dialog {
@@ -136,11 +141,12 @@
 
 .cp {
   width: 33%;
-  height: 50%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 20%;
 }
 
 
@@ -148,8 +154,8 @@
   background-color: rgb(248, 196, 53);
   color: rgb(53, 49, 43);
   width: 50%;
-  height: 8%;
-  margin-bottom: 50%;
+  height: 10%;
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,7 +177,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+} 
 
 button{
   width: 100px;
