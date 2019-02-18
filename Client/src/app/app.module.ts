@@ -20,6 +20,7 @@ import { DialogComponent } from './components/gongfo/dialog/dialog.component';
 import { LibraryComponent } from './components/xiuxing/library/library.component';
 import { FozhouComponent } from './components/xiuxing/library/fozhou/fozhou.component';
 import { FojingComponent } from './components/xiuxing/library/fojing/fojing.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { FojingComponent } from './components/xiuxing/library/fojing/fojing.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
