@@ -25,6 +25,7 @@ import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxian
 import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
 import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
+import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component'; 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -58,6 +59,7 @@ const routes: Routes = [
   { path: 'simiaotwo', component:SimiaotwoComponent},
   { path: 'simiaothree', component:SimiaothreeComponent},
   { path:'xiuxing/xinde/addxinde',component:AddxindeComponent},
+  {path:'jieqian',component:JieqianComponent},
 ];
 
 @NgModule({

@@ -31,6 +31,7 @@ import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
 import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
 import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
+import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
 
 //引入服务，并配置服务
 import { StorageService } from './services/storage.service';
@@ -66,7 +67,8 @@ import { StorageService } from './services/storage.service';
     SimiaoComponent,
     SimiaotwoComponent,
     SimiaothreeComponent,
-    AddxindeComponent
+    AddxindeComponent,
+    JieqianComponent
   ],
   imports: [
     BrowserModule,

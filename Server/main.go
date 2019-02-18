@@ -24,6 +24,7 @@ func main() {
 	mux.HandleFunc("/gongfo/fruit", route.Fruit)
 	mux.HandleFunc("/yinjingshu", route.Yinjingshu)
 	//mux.HandleFunc("/xiuxing/xinde", route.Xinderoute)
+	mux.HandleFunc("/jieqian", route.Jieqian)
 
 	//监听9000端口
 	fmt.Println("Web服务器启动...端口:9000")
