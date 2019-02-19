@@ -38,6 +38,7 @@ import { QifuComponent } from './components/gongfo/qifu/qifu.component';
 //引入服务，并配置服务
 import { StorageService } from './services/storage.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { FoyinComponent } from './components/xiuxing/foyin/foyin.component';
 
 
 
@@ -73,7 +74,8 @@ import { FlashMessagesService } from 'angular2-flash-messages';
     SimiaothreeComponent,
     AddxindeComponent,
     JieqianComponent,
-    QifuComponent
+    QifuComponent,
+    FoyinComponent
   ],
   imports: [
     BrowserModule,
