@@ -1,29 +1,79 @@
 .body {
-    background-image: url("../../../assets/xiuxing02.jpg");
-    height: 35%;
-    width: 110%;
-    background-size: 100%;
+  background-image: url("../../../assets/xiuxing04.png");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.viewport {
+  /*position: relative;*/
+  overflow: hidden;
+}
+.wrap {
+  position: relative;
+  width: 300vw;
+  overflow: hidden;
+  animation: carousel linear 5s infinite 0s normal;
+}
+.wrap img {
+  display:relative;
+  width: 100vw;
+  height: 280px;
+  float: left;
+}
+@keyframes carousel {
+  0% {
+      left: 0;
   }
+  20% {
+      left: -0vw;
+  }
+  40% {
+      left: -100vw;
+  }
+  60% {
+      left: -100vw;
+  }
+  80% {
+      left: -200vw;
+  }
+  100% {
+      left: -200vw;
+  }
+}
 a{
-
+  overflow: scroll;
   position: relative;
   font-family:"Times New Roman",Georgia,LiSu;
-  font-size: 250%;
-  margin: 0.45in;
-  width: 120px;
-  
-  top:300px;
-  left:10px ;
+  font-size: 220%;
+  width: 200px; 
+  top:30px;
+  left:80px ;
 }
-.left{
+.t-left{
   float: left;
-  color: #6fe26b;
+  color: #3e923b;
 }
-.right{
+.t-right{
+  position: relative;
   color: #e65817;
+  left:90px;
   float: right;
 }
-.bottom{
+.bottoml{
+  position: relative;
+  top:90px;
+  left:80px ;
+  color: #1416bb;
+}
+.bottomr{
+  position: relative;
+  top:85px;
+  left:190px;
+  font-size: 170%;
   color: #000000;
 }
 

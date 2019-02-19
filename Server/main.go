@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-
 	"./psql"
 	"./route"
 )
@@ -17,6 +16,7 @@ func main() {
 
 	//路由列表
 	mux.HandleFunc("/test", route.Test)
+	mux.HandleFunc("/library", route.Library)
 
 	mux.HandleFunc("/gongfo/fo", route.Fo)
 	mux.HandleFunc("/gongfo/flower", route.Flower)

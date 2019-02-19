@@ -1,0 +1,81 @@
+ /*背景*/
+ .body {
+    background-image: url("../../../../assets/juanxianghuo-bg.jpg");
+     height: 100%;
+    width: 100%; 
+    /*背景图垂直，水平居中*/
+    background-position: center center;
+    /*背景图不平铺*/
+    background-repeat: no-repeat;
+    /*基于容器大小伸缩*/
+    background-size: cover;
+
+  } 
+  /*标题*/
+  .nav h2{
+    text-align:center;
+    margin: 15% 0%;
+    color: rgb(99, 95, 92);
+  }
+  
+  /* 功能按键 */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    bottom: 3%;
+    width: 100%;
+  }
+  
+  .nav-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .nav-line a {
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+    width: 55%;
+  }
+  
+  /* button {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(238, 212, 191);
+    /* 去除button默认外边框 */
+    /*outline: 0;
+    border: 1px solid rgb(197, 97, 16);
+    background-color: rgb(197, 97, 16);
+    box-shadow: 5px 5px 5px rgb(156, 156, 156)
+  } */
+
+  .xiang{
+    width: 110px;
+    height: 40px;
+    border-radius: 15px;
+   
+  }
+.xiang_area{
+    width:250px;
+    height:210px;
+    border:0px solid black;
+    display:flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left:30px;
+    top:450px;
+}
+.xuanze{
+  width:78px;
+  height:40px;
+  border-radius: 12px;
+  outline: 0;
+  border: 1px solid rgb(248, 232, 193);
+  background-color: rgb(249, 241, 219);
+  box-shadow: 2px 2px 2px rgb(156, 156, 156)
+}

@@ -13,9 +13,31 @@
     
     </body>
 
-<div class="input-group mb-3">
-    <input type="text" [(ngModel)]="this.Message.Xinde" name="Xinde" id="Xinde" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-    <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" (click)="add()" >添加</button>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">心得标题</span>
+      </div>
+      <input type="text" class="form-control" placeholder="不断学习，随缘度日" aria-label="不断学习，随缘度日" aria-describedby="basic-addon1" name="title" [(ngModel)]="this.Message.Title" >
+    </div>
+    
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">心得</span>
+      </div>
+      <textarea class="form-control" aria-label="With textarea" placeholder="学习永无止境，认识到自己的不足就是一种进步，活到老学到老。" [(ngModel)]="this.Message.Xinde" name="Xinde" id="Xinde" ></textarea>
+    </div>
+
+    <div class="text-center">
+        <button class="btn btn-outline-secondary" type="button" (click)="add()" >添加</button>
     </div>
 </div>
