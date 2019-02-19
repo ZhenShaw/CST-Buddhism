@@ -33,10 +33,12 @@ import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiao
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
 import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
 import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
+import { QifuComponent } from './components/gongfo/qifu/qifu.component';
 
 //引入服务，并配置服务
 import { StorageService } from './services/storage.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
+
 
 
 @NgModule({
@@ -70,7 +72,8 @@ import { FlashMessagesService } from 'angular2-flash-messages';
     SimiaotwoComponent,
     SimiaothreeComponent,
     AddxindeComponent,
-    JieqianComponent
+    JieqianComponent,
+    QifuComponent
   ],
   imports: [
     BrowserModule,
