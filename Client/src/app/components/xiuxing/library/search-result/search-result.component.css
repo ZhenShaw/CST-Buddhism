@@ -1,0 +1,84 @@
+.body {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    font-family: KaiTi;
+}
+ * {
+     margin:0;
+     padding:0;
+     list-style: none;
+ }
+.top {
+    flex:0.6;
+
+}
+.sBox {
+    margin:1rem auto;
+    width:64%;
+    height:50%;
+}
+.sBox input {
+    height:90%;
+    border-radius: 4%;
+    padding-left: 1rem;
+}
+.sBox button {
+    width:20%;
+    height:90%;  
+    border-radius: 10%; 
+    font-weight: bold;
+    background-color: orange;
+}
+.central {
+    flex:0.3;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-bottom: 0.01rem solid grey;
+}
+.bottom {
+    flex:5;
+    text-align: center;
+    overflow:auto;
+    height:60%;
+    border-bottom: 1px solid black;
+}
+.list li {
+    display:block;
+    width:100%;
+    height:5em;
+   
+}
+.item {
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    border-bottom: 0.6px solid grey;
+}
+.iLeft {
+    flex:1;
+   
+}
+.iLeft img {
+    width:100%;
+    height:100%;
+}
+.iMiddle {
+    flex:3;
+
+}
+.bName {
+    height:60%;
+    font-size:1.2em;
+    text-align: center;
+}
+.iRight {
+    flex:0.6;
+    display:flex;
+    align-items: center;
+    font-size:3rem; 
+    background-color: white;
+    border:none;
+}

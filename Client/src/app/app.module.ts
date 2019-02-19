@@ -35,6 +35,7 @@ import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component
 
 //引入服务，并配置服务
 import { StorageService } from './services/storage.service';
+import { SearchResultComponent } from './components/xiuxing/library/search-result/search-result.component';
 
 
 @NgModule({
@@ -68,15 +69,13 @@ import { StorageService } from './services/storage.service';
     SimiaotwoComponent,
     SimiaothreeComponent,
     AddxindeComponent,
-    JieqianComponent
+    JieqianComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
-=======
     FormsModule,
->>>>>>> c7b5fec93eaa068b20ab0939f3aaf626ad477699
     HttpClientModule
   ],
   providers: [StorageService],

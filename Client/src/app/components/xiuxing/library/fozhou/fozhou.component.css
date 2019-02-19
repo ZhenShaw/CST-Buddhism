@@ -37,8 +37,7 @@
     flex:0.6;
     display:flex;
     align-items: center;
-}
-.iRight a {
     font-size:3rem; 
-    color:grey;
+    background-color: white;
+    border:none;
 }

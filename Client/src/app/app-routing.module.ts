@@ -26,6 +26,7 @@ import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
 import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
 import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component'; 
+import { SearchResultComponent } from './components/xiuxing/library/search-result/search-result.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -49,6 +50,7 @@ const routes: Routes = [
       { path: 'fozhou',component:FozhouComponent }
     ]
   },
+  { path: 'searchResult',component:SearchResultComponent},
   { path: 'detail', component:DetailComponent},
   { path: 'zhouGeneral',component: ZhouGeneralComponent},
   { path: 'jngGeneral',component: JingGeneralComponent},
