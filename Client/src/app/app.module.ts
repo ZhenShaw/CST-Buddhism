@@ -73,7 +73,10 @@ import { StorageService } from './services/storage.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
+=======
     FormsModule,
+>>>>>>> c7b5fec93eaa068b20ab0939f3aaf626ad477699
     HttpClientModule
   ],
   providers: [StorageService],
