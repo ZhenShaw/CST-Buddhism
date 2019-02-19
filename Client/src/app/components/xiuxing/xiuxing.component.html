@@ -1,31 +1,17 @@
 
 <div class="body">
-  <div class="nav">
-    <div class="nav-line">
-      <a [routerLink]="[ '/foyin' ]">
-        <button>
-          <div>佛音</div>
-        </button>
-      </a>
-      <a [routerLink]="[ '/xinde' ]">
-        <button>
-          <div>心得</div>
-        </button>
-      </a>
+    <div class="viewport">
+        <div class="wrap">
+            <img src="assets/xiuxing01.jpg" >
+            <img src="assets/xiuxing02.jpg">
+            <img src="assets/xiuxing03.jpg" >
+        </div>
     </div>
+    
+    <a class="t-left" href="/foyin">佛音</a>  
+    <a class="t-right" href="xiuxing/xinde">心得</a>  
 
-    <div class="nav-line">
-      <a [routerLink]="[ '/library' ]">
-        <button>
-          <div>藏经阁</div>
-        </button>
-      </a>
-      <a [routerLink]="[ '/simiao' ]">
-        <button>
-          <div>寺庙</div>
-        </button>
-      </a>
-    </div>
+    <a class="bottoml" href="/library">藏经阁</a>
+    <a class="bottomr" href="/simiao">附近寺庙</a>
 
-  </div>
 </div>

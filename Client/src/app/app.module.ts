@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +30,13 @@ import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxian
 import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
 import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
+import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
+import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
+import { QifuComponent } from './components/gongfo/qifu/qifu.component';
+
+//引入服务，并配置服务
+import { StorageService } from './services/storage.service';
+
 
 
 @NgModule({
@@ -59,13 +68,18 @@ import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/si
     JuanxianghuoComponent,
     SimiaoComponent,
     SimiaotwoComponent,
-    SimiaothreeComponent
+    SimiaothreeComponent,
+    AddxindeComponent,
+    JieqianComponent,
+    QifuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

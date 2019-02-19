@@ -1,46 +1,80 @@
 .body {
-    background-image: url("../../../assets/xiuxing01.jpg");
-    height: 35%;
-    width: 100%;
-    background-size: 100%;
+  background-image: url("../../../assets/xiuxing04.png");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.viewport {
+  /*position: relative;*/
+  overflow: hidden;
+}
+.wrap {
+  position: relative;
+  width: 300vw;
+  overflow: hidden;
+  animation: carousel linear 5s infinite 0s normal;
+}
+.wrap img {
+  display:relative;
+  width: 100vw;
+  height: 280px;
+  float: left;
+}
+@keyframes carousel {
+  0% {
+      left: 0;
   }
-  
-  /* 底部功能按键 */
-  .nav {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    bottom: 40%;
-    width: 100%;
+  20% {
+      left: -0vw;
   }
-  
-  .nav-line {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  40% {
+      left: -100vw;
   }
-  
-  .nav-line a {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    width: 35%;
+  60% {
+      left: -100vw;
   }
-  
-  button {
-    width: 100%;
-    height: 50px;
-    border-radius: 25px;
-    margin: 0 5px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #666666;
-    /* 去除button默认外边框 */
-    outline: 0;
-    border: 1px solid rgba(255, 204, 0, 1);
-    background-color: rgba(255, 204, 0, 1);
-    box-shadow: 5px 5px 5px rgb(156, 156, 156)
+  80% {
+      left: -200vw;
   }
-  
+  100% {
+      left: -200vw;
+  }
+}
+a{
+  overflow: scroll;
+  position: relative;
+  font-family:"Times New Roman",Georgia,LiSu;
+  font-size: 220%;
+  width: 200px; 
+  top:30px;
+  left:80px ;
+}
+.t-left{
+  float: left;
+  color: #3e923b;
+}
+.t-right{
+  position: relative;
+  color: #e65817;
+  left:90px;
+  float: right;
+}
+.bottoml{
+  position: relative;
+  top:90px;
+  left:80px ;
+  color: #1416bb;
+}
+.bottomr{
+  position: relative;
+  top:85px;
+  left:190px;
+  font-size: 170%;
+  color: #000000;
+}
 
   

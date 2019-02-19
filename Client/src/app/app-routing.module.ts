@@ -6,7 +6,8 @@ import { BaziComponent } from './components/bazi/bazi.component';
 import { GongfoComponent } from './components/gongfo/gongfo.component';
 import { XiuxingComponent } from './components/xiuxing/xiuxing.component';
 import { GongdeComponent } from './components/gongde/gongde.component';
-import { XindeComponent } from './components/xiuxing/xinde/xinde.component'
+import { XindeComponent } from './components/xiuxing/xinde/xinde.component';
+import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
 import { SuanmingComponent } from './components/bazi/suanming/suanming.component';
 import { ResultComponent } from './components/bazi/result/result.component';
 
@@ -24,6 +25,8 @@ import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxian
 import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
 import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
+import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component'; 
+import { QifuComponent } from './components/gongfo/qifu/qifu.component'; 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -56,6 +59,9 @@ const routes: Routes = [
   { path: 'simiao', component:SimiaoComponent},
   { path: 'simiaotwo', component:SimiaotwoComponent},
   { path: 'simiaothree', component:SimiaothreeComponent},
+  { path:'xiuxing/xinde/addxinde',component:AddxindeComponent},
+  {path:'jieqian',component:JieqianComponent},
+  {path:'qifu',component:QifuComponent},
 ];
 
 @NgModule({
