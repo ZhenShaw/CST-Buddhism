@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,7 @@ import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component
 
 //引入服务，并配置服务
 import { StorageService } from './services/storage.service';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 
 @NgModule({
