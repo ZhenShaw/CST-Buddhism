@@ -79,9 +79,10 @@ import { FlashMessagesService } from 'angular2-flash-messages';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlashMessagesModule
   ],
-  providers: [StorageService],
+  providers: [StorageService,FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
