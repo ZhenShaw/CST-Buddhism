@@ -13,7 +13,8 @@ export class AddxindeComponent implements OnInit {
 
   public Message:Message={
     WechatID:"asd",
-    Xinde:""
+    Xinde:"",
+    Title:""
   }
   constructor(public http:HttpClient) { }
 
@@ -23,10 +24,10 @@ export class AddxindeComponent implements OnInit {
   add(){
     console.log(this.Message);
     if(this.Message.Xinde == ""){
-      alert("空的信息！");
+      alert("空的信息！请重新填写");
     }
     else{
-      let api = 'https://127.0.0.1:9000';
+      let api = 'http://127.0.0.1:9000/xiuxing/xinde/addxinde';
       const HttpOptions = {
         headers: new HttpHeaders({'Content-Type':'application/json'})
       }
@@ -35,4 +36,5 @@ export class AddxindeComponent implements OnInit {
       })
     }
   }
+
 }
