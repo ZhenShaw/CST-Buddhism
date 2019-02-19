@@ -24,7 +24,7 @@ type Scripture struct {
 type Donator struct {
 	DonatorID				string			`json:"donatorid"`				//捐赠者ID
 	ScriptureName			string			`json:"scripturename"`			//经书名
-	DonateNum				int				`json:"donateNum"`				//捐赠数量
+	DonateNum				int				`json:"donatenum"`				//捐赠数量
 }
 
 
@@ -43,7 +43,6 @@ func YinjingshuInit(scriptureList []Scripture,donatorList []Donator)([]Scripture
 			scriptureList=append(scriptureList,scripture)
 		}
 	}
-	defer rows.Close()
 
 
 
@@ -52,7 +51,6 @@ func YinjingshuInit(scriptureList []Scripture,donatorList []Donator)([]Scripture
 	checkError(err)
 	rows.Next()
 	rows.Scan(&donatorNum)
-	defer rows.Close()
 	if donatorNum<100 {					//捐赠者总数小于100
 		rows, err := db.Query("select wechatID,scriptureName,donateNum from donatorinfo;")
 		for i:=0;i<donatorNum;i++{
@@ -71,6 +69,7 @@ func YinjingshuInit(scriptureList []Scripture,donatorList []Donator)([]Scripture
 			donatorList=append(donatorList,donator)
 		}
 	}
+
 	defer rows.Close()
 
 
