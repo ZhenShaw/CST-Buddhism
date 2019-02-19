@@ -1,0 +1,35 @@
+.p1{
+
+    position:absolute;
+    top:10%;
+    width: 100%;
+    text-align: center;
+    font-size:32px;
+    color:rgb(73, 87, 87);
+    font-family:"STXingkai";
+
+}
+.img{
+    position:absolute;
+    margin-top: 60%;
+    margin-left: 25%;
+    width:220px;
+    height:300px;
+    animation:0;
+}
+@keyframes mymove
+{
+from {transform: translateY(20px) rotate(-35deg);}
+to {transform: translateY(20px) rotate(6deg);}
+}
+.p2{
+    position: absolute;
+    bottom: 2%;
+    left: 30%;
+    width: 40%;
+    text-align: center;
+    font-size:40px;
+    background-color: rgb(15, 166, 236);
+    color:rgb(73, 87, 87);
+    border-radius: 10px;
+}

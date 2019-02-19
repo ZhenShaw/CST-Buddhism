@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
@@ -27,24 +27,10 @@ export class ResultComponent implements OnInit {
     this.router.navigateByUrl("detail");
   }
   ngOnInit() {
-    /*var api = "https://localhost:9000/result";
-    this.http.post(api,"12").subscribe(response=>{
+    const httpOptions = {headers: new HttpHeaders({'Content-Type':'application/json'})}
+    var api = "https://localhost:9000/result";
+    this.http.post(api,{date:'2010/10/01'},httpOptions).subscribe(response=>{
       console.log(response)
-      var result:any = response
-      result.split(" ")
-      this.people.birthday = result[1]
-      this.people.birthday = response
-    }) */
+    }) 
   }
-  /*var result:any = "欧文 女 1999/05/30 不好 很坏 兔 木 八卦";
-  var b:any[] = result.split(' ')
-  this.people.name = b[0]
-  this.people.sex = b[1]
-  this.people.birthday = b[2]
-  this.people.fateforyear = b[3]
-  this.people.luckfromgod = b[4]
-  this.people.animal = b[5]
-  this.people.fate = b[6]
-  this.people.divinesign = b[7]
-  } */
 }

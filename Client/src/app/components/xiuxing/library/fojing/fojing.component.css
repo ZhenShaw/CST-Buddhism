@@ -40,7 +40,7 @@
     display:flex;
     align-items: center;
 }
-.iRight p {
+.iRight a {
     font-size:3rem; 
     color:grey;
 }

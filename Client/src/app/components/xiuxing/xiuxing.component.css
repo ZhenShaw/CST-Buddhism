@@ -1,0 +1,30 @@
+.body {
+    background-image: url("../../../assets/xiuxing02.jpg");
+    height: 35%;
+    width: 110%;
+    background-size: 100%;
+  }
+a{
+
+  position: relative;
+  font-family:"Times New Roman",Georgia,LiSu;
+  font-size: 250%;
+  margin: 0.45in;
+  width: 120px;
+  
+  top:300px;
+  left:10px ;
+}
+.left{
+  float: left;
+  color: #6fe26b;
+}
+.right{
+  color: #e65817;
+  float: right;
+}
+.bottom{
+  color: #000000;
+}
+
+  

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +22,19 @@ import { DialogComponent } from './components/gongfo/dialog/dialog.component';
 import { LibraryComponent } from './components/xiuxing/library/library.component';
 import { FozhouComponent } from './components/xiuxing/library/fozhou/fozhou.component';
 import { FojingComponent } from './components/xiuxing/library/fojing/fojing.component';
-import { HttpClientModule } from '@angular/common/http'
+import { ZhouGeneralComponent } from './components/xiuxing/library/fozhou/zhou-general/zhou-general.component';
+import { JingGeneralComponent } from './components/xiuxing/library/fojing/jing-general/jing-general.component';
+import { JingyuanwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyuanwen/jingyuanwen.component';
+import { JingyiwenComponent } from './components/xiuxing/library/fojing/jingGeneral/jingyiwen/jingyiwen.component';
+import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxianghuo.component';
+import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
+import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
+import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
+import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
+import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
+
+//引入服务，并配置服务
+import { StorageService } from './services/storage.service';
 
 
 @NgModule({
@@ -44,14 +58,25 @@ import { HttpClientModule } from '@angular/common/http'
     DialogComponent,
     LibraryComponent,
     FozhouComponent,
-    FojingComponent
+    FojingComponent,
+    ZhouGeneralComponent,
+    JingGeneralComponent,
+    JingyuanwenComponent,
+    JingyiwenComponent,
+    JuanxianghuoComponent,
+    SimiaoComponent,
+    SimiaotwoComponent,
+    SimiaothreeComponent,
+    AddxindeComponent,
+    JieqianComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

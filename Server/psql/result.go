@@ -1,6 +1,6 @@
 package psql
 
-type result struct {
+type Result struct {
 	NianMing  string
 	TianYun   string
 	ShengXiao string
@@ -8,10 +8,10 @@ type result struct {
 	MingGua   string
 }
 
-func getresult(yinli string) {
-	var user result
-	rows, err := db.Query("select NianMing,TianYun,ShengXiao,BenMing,MingGua from bazi where YinLi=$1", yinli)
+func Getresult(yinli string) Result {
+	var user Result
+	rows, err := db.Query("select nianMing,tianyun,shengxiao,benming,minggua from bazi where yinli=$1", yinli)
 	checkError(err)
 	rows.Scan(&user.NianMing, &user.TianYun, &user.ShengXiao, &user.BenMing, &user.MingGua)
-	return
+	return user
 }
