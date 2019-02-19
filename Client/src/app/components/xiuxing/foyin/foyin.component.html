@@ -1,3 +1,27 @@
-<p>
-  foyin works!
-</p>
+<div class="body">  
+  <div class="play-bar">  
+      <img height="450px" width="300px" src="/assets/foyin/img/foxiang.png" alt="" class="cover" >
+      <h2 class="big-title">{{audio.PlayList()[audio.PlayData().Index].Title}}</h2>
+      
+      <div class="btn1" (click)="audio.Prev()">
+          <img height="75px" src="/assets/foyin/icon/icon_prev.png "  alt="">
+      </div>
+      <div class="btn2" (click)="audio.Toggle()">
+          <img height="75px" 
+          src="{{audio.PlayData().IsPlaying ? '/assets/foyin/icon/icon_pause.png' : '/assets/foyin/icon/icon_play.png'}}" alt="">
+      </div>
+      <div class="btn3" (click)="audio.Next()">
+          <img height="75px"  src="/assets/foyin/icon/icon_next.png" alt="">
+      </div>
+      </div> 
+
+  <div class="play-ctrl">
+          <div class="total" id="audio-total" width="100%"></div> 
+          <div class="data" (click)="Skip($event)"
+          [ngStyle]="{'width': audio.PlayData().Data/audio.PlayData().During * 100 + '%'}"></div>
+          <div class="current" (click)="Skip($event)"
+          [ngStyle]="{'width': audio.PlayData().Current/audio.PlayData().During * 100 + '%'}"></div>
+          
+  </div>
+</div>
+

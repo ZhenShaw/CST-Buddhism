@@ -25,6 +25,7 @@ import { JuanxianghuoComponent } from './components/gongde/juanxianghuo/juanxian
 import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
 import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
+import { FoyinComponent } from './components/xiuxing/foyin/foyin.component';
 import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component'; 
 import { QifuComponent } from './components/gongfo/qifu/qifu.component'; 
 
@@ -39,6 +40,7 @@ const routes: Routes = [
   // 子页面路由写在下方
   { path: 'suanming', component:SuanmingComponent},
   { path: 'xiuxing/xinde', component:XindeComponent},
+  { path: 'xiuxing/foyin', component:FoyinComponent},
   { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent},
   { path: 'gongde/juanxianghuo', component:JuanxianghuoComponent},
   { path: 'gongfo/dialog', component:DialogComponent},
