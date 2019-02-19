@@ -1,29 +1,43 @@
 .body {
-    background-image: url("../../../assets/xiuxing02.jpg");
-    height: 35%;
-    width: 110%;
-    background-size: 100%;
-  }
-a{
+  background-image: url("../../../assets/xiuxing04.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
 
+a{
+  overflow: scroll;
   position: relative;
   font-family:"Times New Roman",Georgia,LiSu;
-  font-size: 250%;
+  font-size: 220%;
   margin: 0.45in;
   width: 120px;
   
-  top:300px;
-  left:10px ;
+  top:265px;
+  left:40px ;
 }
-.left{
+.t-left{
   float: left;
-  color: #6fe26b;
+  color: #3e923b;
 }
-.right{
+.t-right{
   color: #e65817;
   float: right;
 }
-.bottom{
+.bottoml{
+  position: relative;
+  top:280px;
+  color: #1416bb;
+}
+.bottomr{
+  position: relative;
+  top:280px;
+  left:65px;
+  font-size: 180%;
   color: #000000;
 }
 
