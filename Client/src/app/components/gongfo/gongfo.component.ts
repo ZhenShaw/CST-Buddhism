@@ -140,8 +140,4 @@ export class GongfoComponent implements OnInit {
     this.fruit_index = i
     this.storage.set("fruit_index", this.fruit_index)
   }
-  //祈福
-  bless() {
-
-  }
 }

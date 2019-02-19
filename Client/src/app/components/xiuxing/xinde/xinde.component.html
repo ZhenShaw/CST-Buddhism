@@ -17,40 +17,28 @@
           <button class="button button-circle button-tiny"><i class="fa fa-plus"></i></button>
   </div> -->
   
-  <div class="card text-center">
-                  <div class="card-header">
-                    <ul class="nav nav-pills card-header-pills">
-                      <li class="nav-item">
-                        <h3 class="nav-link"  >心得</h3>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled"><button class="button button-primary button-circle button-small" [routerLink]="[ '/xiuxing/xinde/addxinde']"><i class="fa fa-plus"></i></button></a>
-                      </li>
-                    </ul>
+
+<div class="card-header">
+    <header class="blog-header py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1">
+          <h3 class="text-muted">心得</h3>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="nav-link disabled"><button class="button button-primary button-circle button-small" [routerLink]="[ '/xiuxing/xinde/addxinde']"><i class="fa fa-plus"></i></button></a>
+          </div>
+      </div>
+    </header>
+</div>
+                
+<div class="list-group" *ngFor="let item of messagelist">
+                <a class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{item.Title}}</h5>
+                    <small>{{item.Createdat}}</small>
                   </div>
-  <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">{{this.message}}</h5>
-                      <small>3 days ago</small>
-                    </div>
-                    <p class="mb-1" *ngFor="let item of messagelist" >{{item}}</p>
-                    <small>Donec id elit non mi porta.</small>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">List group item heading</h5>
-                      <small class="text-muted">3 days ago</small>
-                    </div>
-                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    <small class="text-muted">Donec id elit non mi porta.</small>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">List group item heading</h5>
-                      <small class="text-muted">3 days ago</small>
-                    </div>
-                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    <small class="text-muted">Donec id elit non mi porta.</small>
-                  </a>
-                </div>
+                  <p class="mb-1" >{{item.Xinde}}</p>
+                </a>
+</div>
+
+
