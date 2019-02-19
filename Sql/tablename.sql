@@ -9,7 +9,8 @@ CREATE TABLE xinde (
     uid serial primary key,
     wechatID varchar(50) not  null,
     created_at timestamp default 'now()',
-    Xinde varchar(1000)
+    Xinde varchar(1000),
+    title VARCHAR(100)
 );
 create table bazi(
     uid serial primary key,
