@@ -3,6 +3,7 @@ import {FormsModule} from '@angular/forms';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { Message } from '../xinde.component';
+import { FlashMessagesService } from 'angular2-flash-messages'
 
 @Component({
   selector: 'app-addxinde',
@@ -16,7 +17,7 @@ export class AddxindeComponent implements OnInit {
     Xinde:"",
     Title:""
   }
-  constructor(public http:HttpClient) { }
+  constructor(public http:HttpClient,public flashMessagesService:FlashMessagesService) { }
 
   ngOnInit() {
   }
@@ -24,7 +25,10 @@ export class AddxindeComponent implements OnInit {
   add(){
     console.log(this.Message);
     if(this.Message.Xinde == ""){
-      alert("空的信息！请重新填写");
+      this.flashMessagesService.show("心得不能为空！",{cssClass:"alert-danger",timeout:3000});
+    }
+    else if (this.Message.Title == ""){
+      this.flashMessagesService.show("心得标题不能为空！",{cssClass:"alert-danger",timeout:3000});
     }
     else{
       let api = 'http://127.0.0.1:9000/xiuxing/xinde/addxinde';
