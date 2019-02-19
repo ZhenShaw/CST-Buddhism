@@ -5,8 +5,9 @@ import { Observable } from 'rxjs'
 export interface Message{
   Uid?:number,
   WechatID:string,
-  Created_at?:string,
-  Xinde:string
+  Createdat?:string,
+  Xinde:string,
+  Title:string
 }
 
 @Component({
@@ -18,16 +19,18 @@ export interface Message{
 
 export class XindeComponent implements OnInit {
 
+  public message:string;
   public messagelist:Message[]=[];
   constructor( public http:HttpClient ) {
    }
 
   ngOnInit() {
     this.getxinde();
+    this.message="标题"
   }
   
   getxinde(){
-    let api = 'https://127.0.0.1:9000';
+    let api = 'http://127.0.0.1:9000/xiuxing/xinde';
     this.http.get<Message[]>(api).subscribe(res=>{
       console.log(res);
       this.addxinde(res);

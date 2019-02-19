@@ -1,0 +1,55 @@
+
+
+.cover{
+    height: 15rem;
+    width:8rem;
+    margin-left: 7rem;
+    margin-top: 5rem;
+}
+
+ .big-title{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin-left: 8rem;
+}
+
+.btn1{
+    margin-left: 5rem;
+    float: left;
+}
+.btn2{
+    float: left;
+}
+.btn3{
+    float: left;
+}
+.play-ctrl{
+    
+    position: relative;margin: 0.3rem 0.5rem;
+    height: 1rem;
+}
+.time{
+    position: absolute;z-index: 8;top: 0.3rem;left: 0.3rem;font-size: 0.3rem;
+}
+.left{
+    position: absolute;z-index: 8;top: 0.3rem;right: 0.3rem;font-size: 0.3rem;
+}
+.total{
+   height: 5px;
+   background: rgb(14, 13, 13);
+   
+}
+.current{
+   top:0;
+    position: absolute;
+    height: 5.5px;
+  background:sienna;
+}
+.data{
+    position: absolute;top: 0;left: 0;z-index: 6;
+    height: 0.15rem;background:  rgb(141, 141, 141);border-radius: 0.1rem;
+}
+
+.item{
+    padding: 0.2rem 0.3rem;color:sienna;
+    font-size: 0.45rem;position: relative;
+}

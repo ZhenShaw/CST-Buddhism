@@ -3,52 +3,52 @@
     color:yellow;
     font-size: 40px;
     font-family: 华文楷体;
-    }
+}
     
-    .res{
+.res{
     height: 100%;
     width: 100%;
     background-size: 100%;
     background-color: #cccc99;
-    }
+}
     
-    .mas{
+.mas{
     width: 60%;
     border: 1px solid black;
     float: left;
     height: 300px;
     font-size: 24px;
-    }
-    button{
+}
+button{
     border-radius: 10px;
     box-shadow: 5px 5px 5px #6600FF;
-    height: 50px;
+    height: 40px;
     width: 90%;
     background-color: #6666FF;
-    }
+}
     
-    .clo{
+.clo{
     color: #0000FF;
-    font-size: 20px;
+    font-size: 110%;
     font-family: 华文宋体;
     font-weight:bold;
-    }
+}
     
-    .cho{
+.cho{
     float: right;
     width: 35%;
     border: 1px solid black;
     text-align: center;
     margin-right: 3px;
     background-color:#ECA646;
-    }
-    .po{
+}
+.po{
     font-family: 华文仿宋;
-    font-size: 130%;
+    font-size: 22x;
     color: #FFFF99;
     font-weight:bold;
-    }
-    
-    .wordsize{
+}
+
+.wordsize{
     font-size: 25px;
-    }
+}
