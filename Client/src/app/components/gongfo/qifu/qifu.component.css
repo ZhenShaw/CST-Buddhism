@@ -1,0 +1,26 @@
+.bg{
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../../assets/gongfo/u154.jpg");
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* textarea{
+    width: 74%;
+    height: 47%;
+    position: absolute;
+    bottom: 13%;
+    left: 13%;
+    background-color: rgb(161, 98, 3);
+    border-radius: 1em;
+    color: black;
+    border: 0px;
+    z-index: -1;
+}
+
+textarea::placeholder{
+    color: rgba(19, 18, 18, 0.884);
+    margin-top: 0%;
+} */

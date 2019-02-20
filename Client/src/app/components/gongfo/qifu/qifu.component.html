@@ -1,9 +1,13 @@
-<button id="startButton">开始录音</button>
+<div class="bg">
+  <!-- <textarea placeholder="向佛祖说出你的愿望。。。"></textarea> -->
+  <button id="startButtonid" (click)="startButton()">开始录音</button>
 
-<button id="convertButton">转换录音(44100 => 16000)</button>
+  <button id="convertButtonid" (click)="convertButton()">转换录音(44100 => 16000)</button>
 
-<button id="replayButton">回放原始录音</button>
+  <button id="replayButtonid" (click)="replayButton()">回放原始录音</button>
 
-<button id="replayConvertedButton">回放转换后录音</button>
+  <button id="replayConvertedButtonid" (click)="replayConvertedButton()">回放转换后录音</button>
 
-<textarea id="logDiv" style="width: 100%"></textarea>
+  <textarea id="logDiv" style="width: 100%"></textarea>
+
+</div>
