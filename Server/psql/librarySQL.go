@@ -8,9 +8,11 @@ type bookInf struct {
 	Yuanwen string `json:"yuanwen"`
 	Yiwen string `json:"yiwen"`
 }
-var AllInf =[]bookInf{} //所有人的信息，切片存储
-func Gain(tp string ){
+var AllInf = []bookInf{} //所有人的信息，切片存储
 
+
+func Gain(tp string ){
+    AllInf = (AllInf)[0:0]
 	var one bookInf
 	if tp=="佛咒" {
 		rows, err := db.Query("select * from public.fozhou")

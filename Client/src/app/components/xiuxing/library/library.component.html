@@ -4,7 +4,7 @@
    </div>
    <div class="central">
      <div class="sBox">
-        <input type="text" placeholder="请输入搜索的书名"><button class="sBtn">搜索</button>
+        <input type="text" placeholder="请输入搜索的书名" [(ngModel)]="searchInf"><button class="sBtn" (click)="search()">搜索</button>
       </div>
    </div>
    <div class="bottom">

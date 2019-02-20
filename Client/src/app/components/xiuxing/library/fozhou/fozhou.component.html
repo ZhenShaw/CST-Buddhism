@@ -1,5 +1,5 @@
 <ul class="list">
-  <li *ngFor="let item of list">
+  <li *ngFor="let item of zhouList">
     <div class="item">
        <div class="iLeft">
            <img src="../../../../assets/book.jpg">
@@ -8,9 +8,7 @@
           <p class="bName">{{item["bookname"]}}</p>
           <p class="rNum">修读人数：{{item["readnumber"]}}</p> 
         </div>
-        <div class="iRight">
-          <a [routerLink]="[ '/zhouGeneral' ]" >&gt;</a>
-        </div>
+        <button class="iRight" (click)="readFZ(item)">&gt;</button>
     </div>
   </li>
 </ul>
