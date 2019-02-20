@@ -7,7 +7,7 @@
     background-size: cover;
 }
 
-textarea{
+/* textarea{
     width: 74%;
     height: 47%;
     position: absolute;
@@ -23,4 +23,4 @@ textarea{
 textarea::placeholder{
     color: rgba(19, 18, 18, 0.884);
     margin-top: 0%;
-}
+} */
