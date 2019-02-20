@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs'
 import { Message } from '../xinde.component';
 import { FlashMessagesService } from 'angular2-flash-messages'
 
