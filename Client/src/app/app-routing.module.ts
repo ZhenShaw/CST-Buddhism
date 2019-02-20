@@ -26,13 +26,13 @@ import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
 import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
 import { FoyinComponent } from './components/xiuxing/foyin/foyin.component';
-import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component'; 
+import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
 import { SearchResultComponent } from './components/xiuxing/library/search-result/search-result.component';
-import { QifuComponent } from './components/gongfo/qifu/qifu.component'; 
+import { QifuComponent } from './components/gongfo/qifu/qifu.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'library', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'bazi', component: BaziComponent },
   { path: 'qiuqian', component: QiuqianComponent },
@@ -40,33 +40,33 @@ const routes: Routes = [
   { path: 'xiuxing', component: XiuxingComponent },
   { path: 'gongde', component: GongdeComponent },
   // 子页面路由写在下方
-  { path: 'suanming', component:SuanmingComponent},
-  { path: 'xiuxing/xinde', component:XindeComponent},
-  { path: 'xiuxing/foyin', component:FoyinComponent},
-  { path: 'gongde/zhuyinjingshu', component:ZhuyinjingshuComponent},
-  { path: 'gongde/juanxianghuo', component:JuanxianghuoComponent},
-  { path: 'gongfo/dialog', component:DialogComponent},
-  { 
-    path: 'library',component:LibraryComponent,
-    children:[
-      { path: '',redirectTo: 'fozhou',pathMatch: 'full'},
-      { path: 'fojing',component:FojingComponent },
-      { path: 'fozhou',component:FozhouComponent }
+  { path: 'suanming', component: SuanmingComponent },
+  { path: 'xiuxing/xinde', component: XindeComponent },
+  { path: 'xiuxing/foyin', component: FoyinComponent },
+  { path: 'gongde/zhuyinjingshu', component: ZhuyinjingshuComponent },
+  { path: 'gongde/juanxianghuo', component: JuanxianghuoComponent },
+  { path: 'gongfo/dialog', component: DialogComponent },
+  {
+    path: 'library', component: LibraryComponent,
+    children: [
+      { path: '', redirectTo: 'fozhou', pathMatch: 'full' },
+      { path: 'fojing', component: FojingComponent },
+      { path: 'fozhou', component: FozhouComponent }
     ]
   },
-  { path: 'searchResult',component:SearchResultComponent},
-  { path: 'detail', component:DetailComponent},
-  { path: 'zhouGeneral',component: ZhouGeneralComponent},
-  { path: 'jngGeneral',component: JingGeneralComponent},
-  { path: 'jingyuanwen',component: JingyuanwenComponent},
-  { path: 'jingyiwen',component: JingyiwenComponent},
-  { path: 'result', component:ResultComponent},
-  { path: 'simiao', component:SimiaoComponent},
-  { path: 'simiaotwo', component:SimiaotwoComponent},
-  { path: 'simiaothree', component:SimiaothreeComponent},
-  { path:'xiuxing/xinde/addxinde',component:AddxindeComponent},
-  {path:'jieqian',component:JieqianComponent},
-  {path:'qifu',component:QifuComponent},
+  { path: 'searchResult', component: SearchResultComponent },
+  { path: 'detail', component: DetailComponent },
+  { path: 'zhouGeneral', component: ZhouGeneralComponent },
+  { path: 'jngGeneral', component: JingGeneralComponent },
+  { path: 'jingyuanwen', component: JingyuanwenComponent },
+  { path: 'jingyiwen', component: JingyiwenComponent },
+  { path: 'result', component: ResultComponent },
+  { path: 'simiao', component: SimiaoComponent },
+  { path: 'simiaotwo', component: SimiaotwoComponent },
+  { path: 'simiaothree', component: SimiaothreeComponent },
+  { path: 'xiuxing/xinde/addxinde', component: AddxindeComponent },
+  { path: 'jieqian', component: JieqianComponent },
+  { path: 'qifu', component: QifuComponent },
 ];
 
 @NgModule({
