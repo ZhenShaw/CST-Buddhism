@@ -28,9 +28,16 @@ export class ResultComponent implements OnInit {
   }
   ngOnInit() {
     const httpOptions = {headers: new HttpHeaders({'Content-Type':'application/json'})}
-    var api = "https://localhost:9000/result";
-    this.http.post(api,{date:'2010/10/01'},httpOptions).subscribe(response=>{
+    var api = "http://127.0.0.1:9000/result";
+    this.http.post(api,{"date":'2010/10/01'},httpOptions).subscribe(response=>{
       console.log(response)
+      var b:any=response
+      var a:any[]=b.split(" ")
+      this.people.fateforyear=a[0]
+      this.people.luckfromgod=a[1]
+      this.people.animal=a[2]
+      this.people.fate=a[3]
+      this.people.divinesign=a[4]
     }) 
   }
 }

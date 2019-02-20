@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3a97fc2-f901-4b93-bab0-7ddd81f95a98" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/psql/search.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/route/search.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/app/components/xiuxing/library/library.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/components/xiuxing/library/library.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/app/components/xiuxing/library/search-result/search-result.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/components/xiuxing/library/search-result/search-result.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/app/components/xiuxing/library/search-result/search-result.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/components/xiuxing/library/search-result/search-result.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/app/components/xiuxing/xinde/addxinde/addxinde.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/components/xiuxing/xinde/addxinde/addxinde.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/app/components/xiuxing/xinde/xinde.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/app/components/xiuxing/xinde/xinde.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>

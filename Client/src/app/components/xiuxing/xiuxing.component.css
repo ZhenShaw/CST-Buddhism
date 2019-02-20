@@ -1,5 +1,5 @@
 .body {
-  background-image: url("../../../assets/xiuxing04.png");
+  background-image: url("../../../assets/xiuxing.jpg");
   height: 100%;
   width: 100%;
   background-size: 100%;
@@ -8,6 +8,7 @@
   background-size: cover;
   overflow: hidden;
 }
+/*轮播图*/
 .viewport {
   /*position: relative;*/
   overflow: hidden;
@@ -16,7 +17,7 @@
   position: relative;
   width: 300vw;
   overflow: hidden;
-  animation: carousel linear 5s infinite 0s normal;
+  animation: lunbo linear 10s infinite 0s normal;
 }
 .wrap img {
   display:relative;
@@ -24,7 +25,7 @@
   height: 280px;
   float: left;
 }
-@keyframes carousel {
+@keyframes lunbo {
   0% {
       left: 0;
   }
@@ -44,6 +45,36 @@
       left: -200vw;
   }
 }
+
+/*字幕滚动条*/
+@keyframes rowup {
+  0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }
+  100% {
+      -webkit-transform: translate3d(0, -307px, 0);
+      transform: translate3d(0, -307px, 0);
+  }
+}
+.list{
+  width: 380px; 
+  height: 200px;
+  border: 5px solid #999;
+  margin: 120px auto;
+  position: relative;
+  overflow: hidden;
+}
+.list .rowup{
+  -webkit-animation: 20s rowup linear infinite normal;
+  animation: 20s rowup linear infinite normal;
+  position: relative;
+}
+.item{
+  font-size: 150%;
+  font-family:"Times New Roman",Georgia,LiSu;
+}
+
 a{
   overflow: scroll;
   position: relative;
