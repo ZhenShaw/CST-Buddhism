@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
-import { HttpClient } from '@angular/common/http'
+import { HttpClient,HttpHeaders } from '@angular/common/http'
 import { StorageService } from '../../../services/storage.service';
 @Component({
   selector: 'app-library',
@@ -9,6 +9,7 @@ import { StorageService } from '../../../services/storage.service';
 })
 export class LibraryComponent implements OnInit {
   public searchInf:any;
+  public list:any[]=[];
   constructor(public router:Router,public http:HttpClient,public storage:StorageService) { }
 
   ngOnInit() {
@@ -22,7 +23,13 @@ export class LibraryComponent implements OnInit {
     this.router.navigate(['/library/fojing']);
   }
   search() {
-    this.storage.set("result",{});
+
+    const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
+    this.http.post("http://127.0.0.1:9000/search",{"bookname":this.searchInf },httpOptions).subscribe((response:any)=>{
+      this.list = response;
+      this.storage.set("result",this.list);
+    });
+   
     this.router.navigate(['/searchResult']);
   }
 }

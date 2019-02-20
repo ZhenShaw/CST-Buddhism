@@ -15,11 +15,12 @@ func main() {
 
 	mux := http.NewServeMux()
 
+
 	//路由列表
 	mux.HandleFunc("/test", route.Test)
 	mux.HandleFunc("/result", route.Result)
 	mux.HandleFunc("/library", route.Library)
-
+	mux.HandleFunc("/search", route.Search)
 	mux.HandleFunc("/gongfo/fo", route.Fo)
 	mux.HandleFunc("/gongfo/flower", route.Flower)
 	mux.HandleFunc("/gongfo/xiang", route.Xiang)

@@ -32,7 +32,7 @@ import { QifuComponent } from './components/gongfo/qifu/qifu.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'library', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'bazi', component: BaziComponent },
   { path: 'qiuqian', component: QiuqianComponent },
