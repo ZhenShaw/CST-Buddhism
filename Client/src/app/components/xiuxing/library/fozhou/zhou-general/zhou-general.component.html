@@ -6,11 +6,9 @@
       <div class="up">
         <img src="../../../../../../assets/book.jpg">
         <div class="introduce">
-          <p class="bookName">莲花生大师心咒</p>
+          <p class="bookName">{{zhouInf.bookname}}</p>
           <div class="bookIntroduce">
-           书本介绍 书本介绍 书本介绍 书本介绍 书本介绍 书本介绍 书本介绍 
-           书本介绍 书本介绍 书本介绍 书本介绍 书本介绍 书本介绍 书本介绍
-           书本介绍 书本介绍 书本介绍 书本介绍 
+          {{zhouInf.bookintroduce}}
           </div>
         </div>
       </div>
@@ -21,10 +19,7 @@
         <button (click)="readContent()">原文</button>
       </div>
       <div class="main">
-          内容介绍 内容介绍 内容介绍 内容介绍 内容介绍 内容介绍 内容介绍
-          内容介绍 内容介绍 内容介绍 内容介绍 内容介绍 内容介绍 内容介绍
-          内容介绍 内容介绍 内容介绍 内容介绍 内容介绍 内容介绍 内容介绍
-          内容介绍 内容介绍 内容介绍 内容介绍 内容介绍 内容介绍 内容介绍
+         {{displayInf}}
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <ul class="list">
   <li>
-    <div class="item" *ngFor="let item of list">
+    <div class="item" *ngFor="let item of jingList">
        <div class="iLeft">
            <img src="../../../../assets/book.jpg">
         </div>
@@ -8,9 +8,7 @@
           <p class="bName">{{item["bookname"]}}</p>
           <p class="rNum">修读人数：{{item["readnumber"]}}</p> 
         </div>
-        <div class="iRight" (click)="readFJ()">
-          <a [routerLink]="[ '/jngGeneral' ]" >&gt;</a>
-        </div>
+        <button class="iRight" (click)="readFJ(item)">&gt;</button>
     </div>
   </li>
 </ul>

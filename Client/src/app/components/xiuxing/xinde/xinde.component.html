@@ -2,43 +2,50 @@
   <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="http://www.bootcss.com/p/buttons/css/buttons.css">
   <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  
-  </head>
-  <body>
-  <!-- <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://www.bootcss.com/p/buttons/js/buttons.js"></script> -->
-  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-  </body>
-  
-  <!-- <div class="pullright">
-          <button class="button button-circle button-tiny"><i class="fa fa-plus"></i></button>
-  </div> -->
-  
+</head>
+<body>
+<!-- <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.bootcss.com/p/buttons/js/buttons.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<div class="card-header">
+</body>
+
+
+
+
+<div class="body">
+  <div class="card-header">
     <header class="blog-header py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1">
           <h3 class="text-muted">心得</h3>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
-            <a class="nav-link disabled"><button class="button button-primary button-circle button-small" [routerLink]="[ '/xiuxing/xinde/addxinde']"><i class="fa fa-plus"></i></button></a>
+            <a class="nav-link disabled"><button class="button button-highlight button-circle button-small" [routerLink]="[ '/xiuxing/xinde/addxinde']"><i class="fa fa-plus"></i></button></a>
           </div>
       </div>
     </header>
+  </div>         
+  <div class="list-group" *ngFor="let item of tablePageList">
+    <a class="list-group-item list-group-item-warning flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{item.Title}}</h5>
+        <!-- <small>{{item.Createdat}}</small> -->
+      </div>
+      <p class="mb-1" >{{item.Xinde}}</p>
+    </a>
+  </div>
+  <button type="button" class="btn btn-secondary" [hidden]="!preShow" (click)="showPrePage()" href='javascript:void(0)'>上一页</button>
+  <div class="pull-right">
+  <button type="button" class="btn btn-secondary " [hidden]="!nextShow" (click)="showNextPage()" href='javascript:void(0)' >下一页</button>
+  </div>
+  <!-- <nav aria-label="Page navigation example" class="text-align">
+    <ul class="pagination">
+      <li ><a class="page-link" href='javascript:void(0)' [hidden]="!preShow" disabled="!preShow" (click)="showPrePage()">上一页</a></li>
+      <li ><a class="page-link" href='javascript:void(0)' [hidden]="!nextShow" disabled="!nextShow" (click)="showNextPage()">下一页</a></li>
+    </ul>
+  </nav> -->
 </div>
-                
-<div class="list-group" *ngFor="let item of messagelist">
-                <a class="list-group-item list-group-item-action flex-column align-items-start">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{item.Title}}</h5>
-                    <small>{{item.Createdat}}</small>
-                  </div>
-                  <p class="mb-1" >{{item.Xinde}}</p>
-                </a>
-</div>
-
 

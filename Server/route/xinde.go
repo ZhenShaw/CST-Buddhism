@@ -35,7 +35,6 @@ func GetXinderoute(w http.ResponseWriter, r *http.Request) {
 
 // AddXinderoute 是添加心得的函数
 func AddXinderoute(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("a")
 	sethead(w)
 	r.ParseForm()
 	fmt.Println("本次心得请求为：", r.Method)
