@@ -26,7 +26,6 @@ export class XindeComponent implements OnInit {
 
   ngOnInit() {
     this.getxinde();
-    this.message="标题"
   }
   
   getxinde(){

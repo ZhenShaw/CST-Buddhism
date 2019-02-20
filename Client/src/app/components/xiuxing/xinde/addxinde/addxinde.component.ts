@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { Router } from '@angular/router';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs'
 import { Message } from '../xinde.component';
@@ -17,7 +17,7 @@ export class AddxindeComponent implements OnInit {
     Xinde:"",
     Title:""
   }
-  constructor(public http:HttpClient,public flashMessagesService:FlashMessagesService) { }
+  constructor(public http:HttpClient,public flashMessagesService:FlashMessagesService,public route:Router) { }
 
   ngOnInit() {
   }
@@ -37,6 +37,9 @@ export class AddxindeComponent implements OnInit {
       }
       this.http.post(api,this.Message,HttpOptions).subscribe(res =>{
         console.log(res);
+        if (res){
+          this.route.navigate(['/xiuxing/xinde']);
+        }
       })
     }
   }
