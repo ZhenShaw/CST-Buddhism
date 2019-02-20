@@ -1,7 +1,5 @@
 package psql
 
-import "fmt"
-
 
 type inf struct {
 	Booktype string `json:"booktype"`
@@ -33,7 +31,7 @@ func SearchResult(name string){
 	}
 
 	if len(List)<1 {
-		for i=0;i< len(name);i++{
+		for i:=0;i< len(name);i++{
 
 			rows, err := db.Query("select * from public.fojing where bookname like $1",'%'+name[i]+'%')
 			checkError(err)
@@ -47,7 +45,7 @@ func SearchResult(name string){
 
 		}
 
-		for i=0;i< len(name);i++{
+		for i:=0;i< len(name);i++{
 
 			rows, err := db.Query("select * from public.fozhou where bookname like $1",'%'+name[i]+'%')
 			checkError(err)
