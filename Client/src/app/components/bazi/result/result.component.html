@@ -1,7 +1,7 @@
 <div class="res">
-  <a class="headline">
+  <p class="headline">
     个人信息
-  </a>
+  </p>
   <p class="wordsize">
     姓名：{{people.name}}<br>
     性别：{{people.sex}}<br>
@@ -12,26 +12,26 @@
     本命：{{people.fate}}<br>
     命卦：{{people.divinesign}}<br>
   </p>
-  <a class="headline">
+  <p class="headline">
     八字论命
-  </a>
+  </p>
   <div>
-  <div class="mas">
-  {{message}}
-  </div>
-  <div class="cho">
-  <a class="clo">
-    <br>
-    算财运<br><br>
-    算健康<br><br>
-    算事业<br><br>
-    算爱情<br><br>
-  </a>
-  <button (click)="moremessage()">
-    <a class="po">更多精准详批</a>
-  </button>
-  <br>
-  <br>
-  </div>
+    <div class="mas">
+    {{message}}
+    </div>
+    <div class="cho">
+      <p class="clo">
+        <br>
+        算财运<br><br>
+        算健康<br><br>
+        算事业<br><br>
+        算爱情<br><br>
+      </p>
+      <button (click)="moremessage()">
+        <p class="po">更多精准详批</p>
+      </button>
+      <br>
+      <br>
+    </div>
   </div>
 </div>
