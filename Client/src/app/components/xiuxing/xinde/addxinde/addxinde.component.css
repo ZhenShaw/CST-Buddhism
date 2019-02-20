@@ -1,0 +1,10 @@
+.body {
+    background-image: url("../../../../../assets/gongde-bg.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+  }
+
+  .input-group{
+      color: black
+  }
