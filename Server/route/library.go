@@ -44,6 +44,7 @@ func Library(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("err = ", err)
 		return
 	}
+
 	fmt.Fprint(w, string(control))  //向前端传值
 
 }

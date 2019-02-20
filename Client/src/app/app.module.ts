@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,9 +33,14 @@ import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiao
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
 import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.component';
 import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
-
+import { QifuComponent } from './components/gongfo/qifu/qifu.component';
+import { FoyinComponent } from './components/xiuxing/foyin/foyin.component';
 //引入服务，并配置服务
 import { StorageService } from './services/storage.service';
+import { SearchResultComponent } from './components/xiuxing/library/search-result/search-result.component';
+import { FlashMessagesService } from 'angular2-flash-messages';
+
+
 
 
 @NgModule({
@@ -68,15 +74,20 @@ import { StorageService } from './services/storage.service';
     SimiaotwoComponent,
     SimiaothreeComponent,
     AddxindeComponent,
-    JieqianComponent
+    JieqianComponent,
+    SearchResultComponent,
+    QifuComponent,
+    FoyinComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlashMessagesModule
+
   ],
-  providers: [StorageService],
+  providers: [StorageService,FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

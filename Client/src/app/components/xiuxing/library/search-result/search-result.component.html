@@ -1,0 +1,24 @@
+<div class="body">
+  <div class="top">
+    <div class="sBox">
+      <input type="text" placeholder="请输入搜索的书名" [(ngModel)]="searchInf"><button class="sBtn" (click)="search()">搜索</button>
+    </div>
+  </div>
+  <div class="central">搜索结果有{{number}}个</div>
+  <div class="bottom">
+    <ul class="list">
+      <li *ngFor="let item of list">
+        <div class="item">
+           <div class="iLeft">
+               <img src="../../../../assets/book.jpg">
+            </div>
+            <div class="iMiddle">
+              <p class="bName">{{item["bookname"]}}</p>
+              <p class="rNum">修读人数：{{item["readnumber"]}}</p> 
+            </div>
+            <button class="iRight" (click)="readFZ(item)">&gt;</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

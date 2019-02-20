@@ -31,6 +31,9 @@ func Getxinde() []XindeInfo {
 
 // Addxinde 是添加心得的函数
 func Addxinde(newxinde XindeInfo) {
+	if (newxinde.Xinde) == "" {
+		return
+	}
 	stmt, err := db.Prepare("insert into xinde(wechatid,xinde,title) values($1, $2,$3)")
 	stmt.Exec(newxinde.WechatID, newxinde.Xinde, newxinde.Title)
 	checkError(err)

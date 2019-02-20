@@ -16,7 +16,7 @@
   <img class="fo" (click)="dialog.open()" (click)="fo()" src={{fo_list[fo_index].url}} alt="">
   <img class="fruit" (click)="dialog.open()" (click)="fruit()" src={{fruit_list[fruit_index].url}} alt="">
   <div class="button">
-    <button (click)="bless()">祈福</button>
+    <button [routerLink]="[ '/qifu']">祈福</button>
   </div>
 </div>
 
