@@ -28,7 +28,7 @@
       </div>
     </header>
   </div>         
-  <div class="list-group" *ngFor="let item of messagelist">
+  <div class="list-group" *ngFor="let item of tablePageList">
     <a class="list-group-item list-group-item-warning flex-column align-items-start">
       <div class="d-flex w-100 justify-content-between">
         <h5 class="mb-1">{{item.Title}}</h5>
@@ -37,6 +37,15 @@
       <p class="mb-1" >{{item.Xinde}}</p>
     </a>
   </div>
+  <button type="button" class="btn btn-secondary" [hidden]="!preShow" (click)="showPrePage()" href='javascript:void(0)'>上一页</button>
+  <div class="pull-right">
+  <button type="button" class="btn btn-secondary " [hidden]="!nextShow" (click)="showNextPage()" href='javascript:void(0)' >下一页</button>
+  </div>
+  <!-- <nav aria-label="Page navigation example" class="text-align">
+    <ul class="pagination">
+      <li ><a class="page-link" href='javascript:void(0)' [hidden]="!preShow" disabled="!preShow" (click)="showPrePage()">上一页</a></li>
+      <li ><a class="page-link" href='javascript:void(0)' [hidden]="!nextShow" disabled="!nextShow" (click)="showNextPage()">下一页</a></li>
+    </ul>
+  </nav> -->
 </div>
-
 
