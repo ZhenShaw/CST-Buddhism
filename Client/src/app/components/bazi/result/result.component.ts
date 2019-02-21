@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
+import { Router,NavigationExtras } from '@angular/router';
+
 import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
@@ -8,7 +10,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 })
 export class ResultComponent implements OnInit {
 
-  constructor(public http:HttpClient,public router: Router) { }
+  constructor(public http:HttpClient,public router: Router,public route:ActivatedRoute) { }
 
   public message:any="message";
 
@@ -22,11 +24,27 @@ export class ResultComponent implements OnInit {
   fate:"", //本命
   divinesign:"" //命卦
   }
-
+  public year:any;
+  public month:any;
+  public day:any;
   moremessage(){
-    this.router.navigateByUrl("detail");
-  }
+    let queryParams:NavigationExtras={
+      queryParams:{'name': this.people.name ,'sex':this.people.sex,'year':this.year,'month':this.month,'day':this.day}
+      }
+        this.router.navigate(['/detail'],queryParams);
+  
+    
+    }
   ngOnInit() {
+    this.route.queryParams.subscribe((data)=>{
+      console.log(data);
+      this.people.name=data.name;
+      this.people.sex=data.sex;
+      this.year=data.year;
+      this.month=data.month;
+      this.day=data.day;
+     })
+
     const httpOptions = {headers: new HttpHeaders({'Content-Type':'application/json'})}
     var api = "http://127.0.0.1:9000/result";
     this.http.post(api,{"date":'2010/10/01'},httpOptions).subscribe(response=>{
