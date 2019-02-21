@@ -41,21 +41,25 @@
     flex:5;
     text-align: center;
     overflow:auto;
-    height:60%;
-    border-bottom: 1px solid black;
+    width:90%;
+    height:80%;
+    margin:0 auto;
+    border-bottom: 0.1rem solid black;
+
+ 
 }
 .list li {
     display:block;
     width:100%;
-    height:5em;
-   
+    height:6em;
+    border-bottom: 0.05rem solid grey;
 }
 .item {
-    width:100%;
-    height:100%;
+    width:90%;
+    height:95%;
     display:flex;
     flex-direction: row;
-    border-bottom: 0.6px solid grey;
+    
 }
 .iLeft {
     flex:1;
@@ -81,4 +85,6 @@
     font-size:3rem; 
     background-color: white;
     border:none;
+    color:grey;
+  
 }

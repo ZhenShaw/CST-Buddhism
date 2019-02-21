@@ -14,7 +14,7 @@ export class FoyinComponent implements OnInit {
   public disp;
   constructor(public audio: AudioService) {
     this.disp = 'off';
-    this.audio.add({Url: '/assets/foyin/audio/大悲咒.mp3', Title: '大悲咒'});
+    this.audio.add({Url: 'https://cst-1256261760.cos.ap-guangzhou.myqcloud.com/audio/%E5%8D%97%E6%97%A0%E9%98%BF%E5%BC%A5%E9%99%80%E4%BD%9B.mp3', Title: '大悲咒'});
      this.audio.add({Url: '/assets/foyin/udio/南无阿弥陀佛.mp3', Title: '南无阿弥陀佛'});
    }
 

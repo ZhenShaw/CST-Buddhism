@@ -23,13 +23,10 @@ export class LibraryComponent implements OnInit {
     this.router.navigate(['/library/fojing']);
   }
   search() {
-
-    const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
-    this.http.post("http://127.0.0.1:9000/search",{"bookname":this.searchInf },httpOptions).subscribe((response:any)=>{
-      this.list = response;
-      this.storage.set("result",this.list);
-    });
-   
-    this.router.navigate(['/searchResult']);
+      if(this.searchInf.length>0){
+        this.storage.remove("searchInf");
+        this.storage.set("searchInf",this.searchInf); 
+        this.router.navigate(['/searchResult']);
+      }
   }
 }
