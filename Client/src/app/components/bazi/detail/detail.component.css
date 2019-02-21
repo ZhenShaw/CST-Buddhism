@@ -3,6 +3,7 @@ body{
     background-size: 100%;
     height: 100%;
     width: 100%;
+    overflow: auto;
 }
 
 .titlefont{
@@ -61,13 +62,11 @@ hr{
 
 #content {
  
-    position: absolute;
+    position: fixed;
     left:0%;
     top:50%;
     right:0%;
     bottom: 0%;
-    padding: 10px;
-    margin:10px;
     z-index: 1003;
     overflow: auto;
 
@@ -96,4 +95,4 @@ hr{
     top:75%;
     text-align: center;
 }
-  
+

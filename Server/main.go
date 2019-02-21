@@ -15,7 +15,6 @@ func main() {
 
 	mux := http.NewServeMux()
 
-
 	//路由列表
 	mux.HandleFunc("/test", route.Test)
 	mux.HandleFunc("/result", route.Result)
@@ -30,6 +29,7 @@ func main() {
 	mux.HandleFunc("/jieqian", route.Jieqian)
 	mux.HandleFunc("/xiuxing/xinde", route.GetXinderoute)
 	mux.HandleFunc("/xiuxing/xinde/addxinde", route.AddXinderoute)
+	mux.HandleFunc("/bazi/bazhidetail", route.BaziDetail)
 
 	//监听9000端口
 	fmt.Println("Web服务器启动...端口:9000")

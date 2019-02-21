@@ -1,18 +1,41 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient,HttpHeaders} from '@angular/common/http'
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  public caiyun:any='财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运财运'
-  public jiankang:any='健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康健康'
-  public shiye:any='事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业事业'
-  public aiqing:any='爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情爱情'
+  public year:string
+  public month:string
+  public date:string
+  public sex:string
+  public caiyun:any=''
+  public jiankang:any=''
+  public shiye:any=''
+  public aiqing:any=''
   public jiaofei:any=false
-  constructor() { }
+  constructor(public http:HttpClient,public route:ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.queryParams.subscribe((data)=>{
+      console.log(data)
+      this.year=data.year;
+      this.month=data.month;
+      this.date=data.day;
+      this.sex=data.sex;
+      })
+    const httpOptions ={headers:new HttpHeaders({'Content-Type':'application/json'})};
+    let api="http://localhost:9000/bazi/bazhidetail";
+    this.http.post(api,{year:this.year,month:this.month,date:this.date,sex:this.sex},httpOptions).subscribe((response:any)=>{
+     this.caiyun=response.caiyun;
+     this.jiankang=response.jiankang;
+     this.shiye=response.shiye;
+     this.aiqing=response.aiqing;
+
+    });
+
   }
 
   money(){

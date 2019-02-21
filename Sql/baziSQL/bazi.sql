@@ -11,3 +11,15 @@ create table bazizhu (
     yuezhu varchar(50),
     rizhu varchar(50)
 );
+
+create table bazixiangjie(
+    uid serial primary key,
+    created_at timestamp default 'now()',
+    caiyun text,
+    jiankang text,
+    shiye text,
+    aiqing_male text,
+    aiqing_female text
+    
+
+);
