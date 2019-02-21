@@ -1,31 +1,50 @@
 
 
-.cover{
-    height: 15rem;
-    width:8rem;
-    margin-left: 7rem;
-    margin-top: 5rem;
+.body{
+    background-image: url("../../../../assets/foyin/img/bacg.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
 }
 
+.mar{
+    margin-left: 9rem;
+}
+/*@keyframes rotateImg {
+    0% {transform : rotate(0deg);}
+    100% {transform : rotate(360deg);}
+  }
+  @-webkit-keyframes rotateImg {
+    0%{-webkit-transform : rotate(0deg);}
+  100%{-webkit-transform : rotate(360deg);}
+}*/
  .big-title{
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     margin-left: 8rem;
+    font-family:"黑体";
+     margin-left: 9rem;
+     margin-top:100px;
 }
 
 .btn1{
-    margin-left: 5rem;
+    
+    top:10px;
+    
     float: left;
+ 
 }
 .btn2{
+    top:10px;
     float: left;
+ 
 }
 .btn3{
+   margin-left: 1rem;
     float: left;
 }
 .play-ctrl{
-    
+    top:400px;
     position: relative;margin: 0.3rem 0.5rem;
     height: 1rem;
+    
 }
 .time{
     position: absolute;z-index: 8;top: 0.3rem;left: 0.3rem;font-size: 0.3rem;
@@ -33,23 +52,45 @@
 .left{
     position: absolute;z-index: 8;top: 0.3rem;right: 0.3rem;font-size: 0.3rem;
 }
+
+.circle{
+    width: 20px;      
+    height: 20px;    
+    top:540px;
+     background-color:rgb(255, 255, 255);
+      border-radius: 50%;      
+      -moz-border-radius: 50%;      
+      -webkit-border-radius: 50%;
+      position: absolute;
+      z-index: 3;
+}
 .total{
-   height: 5px;
-   background: rgb(14, 13, 13);
    
+   height: 5px;
+   background: rgb(211, 208, 208);
+ 
 }
 .current{
+position: absolute;
    top:0;
-    position: absolute;
-    height: 5.5px;
-  background:sienna;
+    height: 5px;
+  background:rgb(247, 226, 156);
+  z-index: 2;
 }
 .data{
     position: absolute;top: 0;left: 0;z-index: 6;
-    height: 0.15rem;background:  rgb(141, 141, 141);border-radius: 0.1rem;
+    height: 5px;background:  rgb(187, 187, 187);
+    border-radius: 0.5rem;
+   position: absolute;
+   z-index: 1;
 }
-
+.title{
+    font-size: 14px;
+}
 .item{
     padding: 0.2rem 0.3rem;color:sienna;
     font-size: 0.45rem;position: relative;
+}
+.play-bar{
+    top:150px;
 }

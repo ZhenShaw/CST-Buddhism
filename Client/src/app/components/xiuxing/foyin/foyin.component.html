@@ -1,27 +1,63 @@
-<div class="body">  
-  <div class="play-bar">  
-      <img height="450px" width="300px" src="/assets/foyin/img/foxiang.png" alt="" class="cover" >
-      <h2 class="big-title">{{audio.PlayList()[audio.PlayData().Index].Title}}</h2>
+
+<head>
+        <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="http://www.bootcss.com/p/buttons/css/buttons.css">
+        <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      </head>
+      <body>
+      <!-- <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+      <script type="text/javascript" src="http://www.bootcss.com/p/buttons/js/buttons.js"></script> -->
+      <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       
-      <div class="btn1" (click)="audio.Prev()">
-          <img height="75px" src="/assets/foyin/icon/icon_prev.png "  alt="">
-      </div>
-      <div class="btn2" (click)="audio.Toggle()">
-          <img height="75px" 
-          src="{{audio.PlayData().IsPlaying ? '/assets/foyin/icon/icon_pause.png' : '/assets/foyin/icon/icon_play.png'}}" alt="">
-      </div>
-      <div class="btn3" (click)="audio.Next()">
-          <img height="75px"  src="/assets/foyin/icon/icon_next.png" alt="">
-      </div>
-      </div> 
+      </body>
+      
+      
+      
+      
+      <div class="body">
+        <div class="card-header">
+          <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+              <div class="col-4 pt-1">
+                <h3 class="text-muted">佛音</h3>
+              </div>
+            </div>
+          </header>
+        </div>  
+         <div class="mar">
+            <h2 class="text-muted ">{{audio.PlayList()[audio.PlayData().Index].Title}}</h2>
+        </div>
+            <div class="circle" (click)="Skip($event)"
+            [ngStyle]="{'left': audio.PlayData().Current/audio.PlayData().During * 100 + '%'}"></div> 
+        <div class="play-ctrl"> 
+                <div class="total" id="audio-total" ></div>
+                <div class="current " (click)="Skip($event)"
+                [ngStyle]="{'width': audio.PlayData().Current/audio.PlayData().During * 100 + '%'}"></div> 
+                <div class="data" (click)="Skip($event)"
+                [ngStyle]="{'width': audio.PlayData().Data/audio.PlayData().During * 100 + '%'}"></div> 
 
-  <div class="play-ctrl">
-          <div class="total" id="audio-total" width="100%"></div> 
-          <div class="data" (click)="Skip($event)"
-          [ngStyle]="{'width': audio.PlayData().Data/audio.PlayData().During * 100 + '%'}"></div>
-          <div class="current" (click)="Skip($event)"
-          [ngStyle]="{'width': audio.PlayData().Current/audio.PlayData().During * 100 + '%'}"></div>
-          
-  </div>
-</div>
+                <br>
+                <div class="play-bar">  
+                    <div class="btn2" (click)="audio.Toggle() ">
+                        <img height="85px" 
+                        src="{{audio.PlayData().IsPlaying ? '/assets/foyin/icon/icon_pause2.png' : '/assets/foyin/icon/icon_play2.png'}}" >
+                    </div>
+            
+                    <div class="btn1" (click)="audio.Prev()">
+                        <img height="75px" src="/assets/foyin/icon/icon_prev2.png "  alt="">
+                    </div>
+            
+                    <div class="btn3" (click)="audio.Next()">
+                        <img height="75px"  src="/assets/foyin/icon/icon_next2.png" alt="">
+                    </div>
+                    </div> 
+                
+        </div>
+        
+        
+    </div>
+    
 
+    
