@@ -1,5 +1,9 @@
 package psql
 
+import (
+	"fmt"
+	"reflect"
+)
 
 type inf struct {
 	Booktype string `json:"booktype"`
@@ -12,6 +16,9 @@ type inf struct {
 }
 var List = []inf{} //所有人的信息，切片存储
 func SearchResult(name string){
+
+	searchInf := string(name)
+	fmt.Println(reflect.TypeOf(searchInf))
 	List = (List)[0:0]
 	var one inf
 	sqlStatement := `SELECT * FROM fojing WHERE bookname=$1`
@@ -31,11 +38,11 @@ func SearchResult(name string){
 	}
 
 	if len(List)<1 {
-		for i:=0;i< len(name);i++{
 
-			rows, err := db.Query("select * from public.fojing where bookname like $1",'%'+name[i]+'%')
+			str := "%"+string(name)+"%"
+			fmt.Println(str)
+			rows, err := db.Query("select * from public.fojing where bookname like $1",str)
 			checkError(err)
-
 			for rows.Next() {
 				err = rows.Scan(&one.Bookname, &one.Readnumber,&one.Bookintroduce,&one.Contentintroduce,&one.Yuanwen,&one.Yiwen)
 				checkError(err)
@@ -43,20 +50,15 @@ func SearchResult(name string){
 				List = append(List,one)
 			}
 
-		}
-
-		for i:=0;i< len(name);i++{
-
-			rows, err := db.Query("select * from public.fozhou where bookname like $1",'%'+name[i]+'%')
+			rows, err = db.Query("select * from public.fozhou where bookname like $1",str)
 			checkError(err)
-
 			for rows.Next() {
 				err = rows.Scan(&one.Bookname, &one.Readnumber,&one.Bookintroduce,&one.Contentintroduce,&one.Yuanwen)
 				checkError(err)
 				one.Booktype="fozhou"
 				List = append(List,one)
 			}
-		}
+
 	}
 
 }

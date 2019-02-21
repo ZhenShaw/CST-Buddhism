@@ -8,30 +8,40 @@ import { StorageService } from '../../../../services/storage.service';
   styleUrls: ['./search-result.component.css']
 })
 export class SearchResultComponent implements OnInit {
-  public number:Number;
+  public number:Number=0;
   public list:any[]=[];
   public searchInf:any;
+
   constructor(public router:Router,public http:HttpClient,public storage:StorageService) { }
 
   ngOnInit() {
-   this.list=this.storage.get("result");   
+    let inf =this.storage.get("searchInf");
+    const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
+    this.http.post("http://127.0.0.1:9000/search",{"bookname":inf },httpOptions).subscribe((response:any)=>{
+      this.list = response;
+      this.number = this.list.length;
+    });
   }
   search() {
+    if(this.searchInf.length>0){
+      const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
+      this.http.post("http://127.0.0.1:9000/search",{"bookname":this.searchInf },httpOptions).subscribe((response:any)=>{
+        this.list = response;
+        this.number = this.list.length;
+        this.storage.remove("searchInf");
+        this.storage.set("searchInf",this.searchInf);
+       
+      });
     
-    const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
-    this.http.post("http://127.0.0.1:9000/search",{"bookname":this.searchInf },httpOptions).subscribe((response:any)=>{
-      this.list = response;
-      this.storage.remove("result");
-      this.storage.set("result",this.list);
-    });
-    this.router.navigate(['/searchResult']);
+      this.router.navigate(['/searchResult']);
+    }
   } 
   read(item) {
       if(item.booktype=="fozhou"){
         this.storage.set("zhouInf",item);
         this.router.navigate(['/zhouGeneral']);
       }else {
-        this.storage.set("zhouInf",item);
+        this.storage.set("jingInf",item);
         this.router.navigate(['/jingGeneral']);
       }
   }

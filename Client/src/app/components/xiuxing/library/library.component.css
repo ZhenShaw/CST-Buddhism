@@ -68,9 +68,12 @@
     float:right;
     flex:2.5;
     text-align: center;
-    overflow:hidden;
-    height:90%;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    border-top:1px solid black;
+    overflow:auto;
+    height:86%;
+    border-left: 0.05rem solid black;
+    border-bottom: 0.05rem solid black;
+    border-top:0.05rem solid black;
+    padding-top:1%;
+    padding-bottom:1%;
+  
 }

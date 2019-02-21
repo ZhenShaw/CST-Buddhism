@@ -39,6 +39,7 @@ const routes: Routes = [
   { path: 'gongfo', component: GongfoComponent },
   { path: 'xiuxing', component: XiuxingComponent },
   { path: 'gongde', component: GongdeComponent },
+
   // 子页面路由写在下方
   { path: 'suanming', component: SuanmingComponent },
   { path: 'xiuxing/xinde', component: XindeComponent },
@@ -57,7 +58,7 @@ const routes: Routes = [
   { path: 'searchResult', component: SearchResultComponent },
   { path: 'detail', component: DetailComponent },
   { path: 'zhouGeneral', component: ZhouGeneralComponent },
-  { path: 'jngGeneral', component: JingGeneralComponent },
+  { path: 'jingGeneral', component: JingGeneralComponent },
   { path: 'jingyuanwen', component: JingyuanwenComponent },
   { path: 'jingyiwen', component: JingyiwenComponent },
   { path: 'result', component: ResultComponent },
