@@ -23,7 +23,7 @@ func Jieqian(w http.ResponseWriter, r *http.Request) {
 
 	setheader(w)
 	rand.Seed(time.Now().UnixNano())
-	number :=strconv.Itoa(rand.Intn(10)+1)
+	number :=strconv.Itoa(rand.Intn(100)+1)
 	fmt.Println(number)
 	huichuang :=psql.Qiuqianinit(number)
 	response(huichuang, w)  
