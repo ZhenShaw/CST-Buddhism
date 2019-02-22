@@ -1,15 +1,10 @@
 /* 进度条 */
 progress
 {
-  margin-top: 7%;
    color:rgb(190, 125, 64); /*兼容IE10和chorme的已完成进度背景*/
-   margin-left:auto;
-   margin-right:auto;
    border:none;
    border-radius: 25px;
    background:rgb(216, 211, 207);/*这个属性也可当作Chrome的已完成进度背景，只不过被下面的::progress-bar覆盖了*/      
-   width:88%;
-   height:7%;
    overflow: hidden;
 }
 progress::-webkit-progress-bar
@@ -27,11 +22,17 @@ progress::-webkit-progress-value
 
  
 /* 方形按钮 */
-  .botton1 {
+.buttonk{
+  height: 15%; 
+  margin-left:auto;
+   margin-right:auto;
+  margin-bottom: 3%;
+  margin-top: -3%
+}
 
-    height: 15%;
-    margin-left: 29%;
-    margin-right: 29%;
+
+  button.button1 {
+    height: 100%;
     border-radius: 2px;
     font-size: 15px;
     font-weight: 700;
@@ -44,18 +45,41 @@ progress::-webkit-progress-value
   /* 卡片样式 */
   .card {
       position: relative;
+      top:3px;
       padding: 8%;
-      margin: 5% 2%;
+      margin: 5% 3%;
       border-radius: 3px;
       height: 40%;
       border:2px #9c9c9c;
       border-style:none none solid none;
       box-shadow: 0px 0px 4px  rgb(156, 156, 156);
   }
+
+  .card1 {
+    position: relative;
+    top:3px;
+    padding: 8%;
+    margin: 5% 3%;
+    border-radius: 3px;
+    height: 90%;
+    border:2px #9c9c9c;
+    border-style:none none solid none;
+    box-shadow: 0px 0px 4px  rgb(156, 156, 156);
+}
   /* 标题 */
- h5 {
-    text-align:center ;
+  p.head1{
+    font-size: 125%;
+    color: rgb(100, 100, 100);
+    text-align: center;
+   }
+
+ p.head2{
+  font-size: 125%;
+  color: rgb(100, 100, 100);
+  font-weight: bold;
+  text-align: center;
  }
+
  /* 表格 */
  table {
    margin: 8% 0%;
@@ -78,15 +102,20 @@ progress::-webkit-progress-value
   margin-top: 14%;
   margin-bottom: 0%;
 }
+/* 单选按钮 */
+div.select {
+  margin-top:0%;
+}
 
 label {
   position: relative;
-  left: -10px;
-  top: 22px;
+  left: -5%;
+  top: 21px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #999;
+  background-color: #ffffff;
+  border: 2px solid #999;
 }
 
 input[type="radio"] {
@@ -112,7 +141,39 @@ input:checked+label::after {
   border-left: none;
   transform: rotate(45deg)
 }
+/* 支付按钮 */
+div.pay{
+  white-space:nowrap;
+  margin-top: 5%;
+  height: 13%;
+}
+button.weixin {
+  width: 30%;
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  /* 去除button默认外边框 */
+  border: 1px solid rgb(71, 209, 59);
+  background-color: rgb(71, 209, 59);
+}
 
+button.zhifubao {
+  width: 30%;
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  /* 去除button默认外边框 */
+  border: 1px solid rgb(62, 182, 238);
+  background-color: rgb(62, 182, 238);
+}
   /* 背景遮罩层 */
 
 .overlay {
@@ -137,7 +198,7 @@ input:checked+label::after {
   right: 0;
   margin: auto;
   width: 80%;
-  height: 45%;
+  height: 50%;
   padding: 10px;
   border-radius: 30px;
   background-color: rgb(251, 241, 230);

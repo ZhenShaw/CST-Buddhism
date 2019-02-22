@@ -31,12 +31,13 @@ export class ResultComponent implements OnInit {
   huo:"",
   tu:""
   }
+  public sex:any;
   public year:any;
   public month:any;
   public day:any;
   moremessage(){
     let queryParams:NavigationExtras={
-      queryParams:{'name': this.people.name ,'sex':this.people.sex,'year':this.year,'month':this.month,'day':this.day}
+      queryParams:{'name': this.people.name ,'sex':this.sex,'year':this.year,'month':this.month,'day':this.day}
       }
         this.router.navigate(['/detail'],queryParams);
   
@@ -46,6 +47,7 @@ export class ResultComponent implements OnInit {
     this.route.queryParams.subscribe((data)=>{
       console.log(data);
       this.people.name=data.name;
+      this.sex=data.sex;
       if(data.sex==1){
         this.people.sex="男";
       }
