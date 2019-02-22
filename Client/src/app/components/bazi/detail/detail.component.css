@@ -10,7 +10,9 @@ body{
     font-family: "楷体";
     color: #333399;
     font-size: 28px;
+    text-indent: 5%;
 }
+
 
 
 
@@ -45,6 +47,9 @@ hr{
 .longtext{
     word-wrap: break-word;
     word-break: normal;
+    text-indent: 5%;
+    padding:5%;
+    margin:auto;
 }
 
 #modal{
