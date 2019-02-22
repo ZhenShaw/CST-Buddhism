@@ -1,7 +1,9 @@
-import { Component, OnInit,Output } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Pagination } from '../zhuyinjingshu/page/pagination';
 import { JingShu } from './jingshu';
 import { BOOKS } from './Count';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 @Component({
   selector: 'app-zhuyinjingshu',
   templateUrl: './zhuyinjingshu.component.html',
@@ -25,7 +27,9 @@ export class ZhuyinjingshuComponent implements OnInit {
 
   public pagination: Pagination = Pagination.defaultPagination;
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+  ) { }
 
   private initList(): void {
     let url: string = 'your-url';
@@ -60,9 +64,22 @@ export class ZhuyinjingshuComponent implements OnInit {
     this.booknum = num;
   }
 
+  getData() {
+    const dates = {
+      "do": "init"
+    };
 
+    this.http.get('地址', { params: dates })
+      .subscribe(data => {
+        alert(JSON.stringify(data));
+      }, err => {
+        console.error('ERROR', err);
+      }
 
-
-
+      )}
 
 }
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
