@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FlashMessagesModule } from 'angular2-flash-messages';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,10 +36,13 @@ import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.
 import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
 import { QifuComponent } from './components/gongfo/qifu/qifu.component';
 import { FoyinComponent } from './components/xiuxing/foyin/foyin.component';
+import { PageComponent } from './components/gongde/zhuyinjingshu/page/page.component';
+
 //引入服务，并配置服务
 import { StorageService } from './services/storage.service';
 import { SearchResultComponent } from './components/xiuxing/library/search-result/search-result.component';
 import { FlashMessagesService } from 'angular2-flash-messages';
+
 
 
 
@@ -77,15 +81,16 @@ import { FlashMessagesService } from 'angular2-flash-messages';
     JieqianComponent,
     SearchResultComponent,
     QifuComponent,
-    FoyinComponent
+    FoyinComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    FlashMessagesModule
-
+    FlashMessagesModule,
+    BrowserAnimationsModule
   ],
   providers: [StorageService, FlashMessagesService],
   bootstrap: [AppComponent]

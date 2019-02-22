@@ -1,8 +1,11 @@
 <!-- ctrl+shift+i整理代码 -->
 <div class="card">
-    <h5>心经大悲咒合集</h5>
+    <p class="head1">{{book.name}}</p>
     <!-- 进度条显示进度，max是总任务量，value是已经完成任务量 -->
-    <progress max="20000" value="{{pgvalue}}"></progress>
+    <div style="margin-left:auto; margin-right:auto; margin-bottom: -5%;margin-top: 0%;">
+        <progress max="20000" value="{{book.pgvalue}}"></progress>
+    </div>
+
     <table>
         <thead>
             <th>已达成</th>
@@ -10,44 +13,50 @@
             <th>参与人数</th>
         </thead>
         <tbody>
-            <td>{{pgvalue}}</td>
+            <td>{{book.pgvalue}}</td>
             <td>20000</td>
-            <td>{{participants}}</td>
+            <td>{{book.participants}}</td>
         </tbody>
     </table>
 
-    <button class="botton1" (click)="this.open()">点击参与助印</button>
-
+    <div class="buttonk"><button class="button1" (click)="this.open()">点击参与助印</button></div>
+    <div style="margin-left:auto; margin-right: auto">
+        <page [(pagination)]="pagination"> </page>
+    </div>
 </div>
+
 
 <div>
     <!-- 遮罩 -->
     <div id="overlay" class="overlay" (click)="this.close()"></div>
     <!-- 弹窗 -->
     <div id="modal" class="modal">
-        <div class="">
-            <h5 style="font-size: 125%;color: rgb(100, 100, 100);font-weight: bold;">助印经书</h5>
-            <div class="nowrap">
-                <span style="margin-right:30%; font-size:120%; color:rgb(133, 132, 132)">功德芳名</span>
-                <input style="width:170%;">
-            </div>
-            <div >
-                <input id="item1" type="radio" name="radio" value="10" (click)="select(10)" checked>
-                <label for="item1"></label>
-                <span style="font-size:20px">10本</span>
-                <input id="item2" type="radio" name="radio" value="20" (click)="select(20)">
-                <label for="item2"></label>
-                <span style="font-size:20px">20本</span>
-            </div>
-            <div>
-                <input id="item3" type="radio" name="radio" value="50" (click)="select(50)">
-                <label for="item3"></label>
-                <span style="font-size:20px">50本</span>
-                <input id="item4" type="radio" name="radio" value="100" (click)="select(100)">
-                <label for="item4"></label>
-                <span style="font-size:20px">100本</span>
-            </div>
-            <div >{{booknum}}</div>
+        <p class="head2">助印经书</p>
+        <div class="nowrap">
+            <span style="margin-right:29%; font-size:120%; color:rgb(133, 132, 132)">功德芳名</span>
+            <input style="width:165%;">
         </div>
+        <div class="select">
+            <input id="item1" type="radio" name="radio" value="10" (click)="select(10)" checked>
+            <label for="item1"></label>
+            <span style="font-size:20px">10本</span>
+            <input id="item2" type="radio" name="radio" value="20" (click)="select(20)">
+            <label for="item2"></label>
+            <span style="font-size:20px">20本</span>
+        </div>
+        <div class="select">
+            <input id="item3" type="radio" name="radio" value="50" (click)="select(50)">
+            <label for="item3"></label>
+            <span style="font-size:20px">50本</span>
+            <input id="item4" type="radio" name="radio" value="100" (click)="select(100)">
+            <label for="item4"></label>
+            <span style="font-size:20px">100本</span>
+        </div>
+        <div style="text-align:center; margin-top:5%; font-size:17px">共{{booknum*3}}元</div>
+        <div class="pay">
+            <button class="weixin">微信</button>
+            <button class="zhifubao">支付宝</button>
+        </div>
+
     </div>
 </div>
