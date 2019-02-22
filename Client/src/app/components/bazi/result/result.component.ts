@@ -12,18 +12,24 @@ export class ResultComponent implements OnInit {
 
   constructor(public http:HttpClient,public router: Router,public route:ActivatedRoute) { }
 
-  public message:any="message";
-
   public people:any={
   name:"", //姓名
   sex:"", //性别
   birthday:"", //出生
-  yinli:"",
+  yinli:"", //阴历
+  nianzhu:"", //年柱
+  yuezhu:"", //月柱
+  rizhu:"", //日柱
   fateforyear:"", //年命
   luckfromgod:"", //天运
   animal:"", //生肖
   fate:"", //本命
-  divinesign:"" //命卦
+  divinesign:"", //命卦
+  jin:"",
+  mu:"",
+  shui:"",
+  huo:"",
+  tu:""
   }
   public year:any;
   public month:any;
@@ -63,6 +69,14 @@ export class ResultComponent implements OnInit {
       this.people.fate=a[3]
       this.people.divinesign=a[4]
       this.people.yinli=a[5]+"   "+a[6]+"   "+a[7]
+      this.people.nianzhu=a[8]
+      this.people.yuezhu=a[9]
+      this.people.rizhu=a[10]
+      this.people.mu=a[11]
+      this.people.jin=a[12]
+      this.people.shui=a[13]
+      this.people.huo=a[14]
+      this.people.tu=a[15]
     }) 
   }
 }
