@@ -20,7 +20,6 @@ export class DetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.queryParams.subscribe((data)=>{
-      console.log(data)
       this.year=data.year;
       this.month=data.month;
       this.date=data.day;
