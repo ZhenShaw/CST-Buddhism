@@ -22,18 +22,35 @@ func Result(w http.ResponseWriter, r *http.Request) {
 		var f interface{}
 		json.Unmarshal(result, &f)
 		m := f.(map[string]interface{})
-		var yinli string
+		var year string
+		var month string
+		var day string
+		var sex string
 		for k, v := range m {
 			switch vv := v.(type) {
 			case string:
-				fmt.Println(k, "is string", vv)
-				yinli = vv
+				if k == "year" {
+					fmt.Println(k, "is string", vv)
+					year = vv
+				}
+				if k == "month" {
+					fmt.Println(k, "is string", vv)
+					month = vv
+				}
+				if k == "day" {
+					fmt.Println(k, "is string", vv)
+					day = vv
+				}
+				if k == "sex" {
+					fmt.Println(k, "is string", vv)
+					sex = vv
+				}
 			}
 		}
 		var baziresult psql.Result
-		baziresult = psql.Getresult(yinli)
+		baziresult = psql.Getresult(year, month, day, sex)
 		var b string
-		b = baziresult.NianMing + " " + baziresult.TianYun + " " + baziresult.ShengXiao + " " + baziresult.BenMing + " " + baziresult.MingGua
+		b = baziresult.NianMing + " " + baziresult.TianYun + " " + baziresult.ShengXiao + " " + baziresult.BenMing + " " + baziresult.MingGua + " " + baziresult.YinLi
 		fmt.Println(b)
 		bb, err := json.Marshal(b)
 		Checkerr(err)

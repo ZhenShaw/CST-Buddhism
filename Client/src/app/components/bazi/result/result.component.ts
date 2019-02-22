@@ -18,6 +18,7 @@ export class ResultComponent implements OnInit {
   name:"", //姓名
   sex:"", //性别
   birthday:"", //出生
+  yinli:"",
   fateforyear:"", //年命
   luckfromgod:"", //天运
   animal:"", //生肖
@@ -39,15 +40,20 @@ export class ResultComponent implements OnInit {
     this.route.queryParams.subscribe((data)=>{
       console.log(data);
       this.people.name=data.name;
-      this.people.sex=data.sex;
+      if(data.sex==1){
+        this.people.sex="男";
+      }
+      else {
+        this.people.sex="女";
+      }
       this.year=data.year;
       this.month=data.month;
       this.day=data.day;
      })
-
+     this.people.birthday = this.year + "年" + this.month + "月" + this.day+"日";
     const httpOptions = {headers: new HttpHeaders({'Content-Type':'application/json'})}
     var api = "http://127.0.0.1:9000/result";
-    this.http.post(api,{"date":'2010/10/01'},httpOptions).subscribe(response=>{
+    this.http.post(api,{"year":this.year,"month":this.month,"day":this.day,"sex":this.people.sex},httpOptions).subscribe(response=>{
       console.log(response)
       var b:any=response
       var a:any[]=b.split(" ")
@@ -56,6 +62,7 @@ export class ResultComponent implements OnInit {
       this.people.animal=a[2]
       this.people.fate=a[3]
       this.people.divinesign=a[4]
+      this.people.yinli=a[5]+"   "+a[6]+"   "+a[7]
     }) 
   }
 }
