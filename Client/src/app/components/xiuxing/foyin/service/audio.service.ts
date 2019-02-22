@@ -52,7 +52,17 @@ export class AudioService {
 
     };
     this.playData = { Style: 0, Index: 0 };
-    this.playList=[];
+    this.playList=[
+        {Url: 'https://cst-1256261760.cos.ap-guangzhou.myqcloud.com/audio/%E5%8D%97%E6%97%A0%E9%98%BF%E5%BC%A5%E9%99%80%E4%BD%9B.mp3', Title: '大悲咒'},
+        {Url: 'https://cst-1256261760.cos.ap-guangzhou.myqcloud.com/audio/%E5%A4%A7%E6%82%B2%E5%92%92.mp3', Title: '南无阿弥陀佛'},
+        {Url: 'https://cst-1256261760.cos.ap-guangzhou.myqcloud.com/audio/%E5%8D%97%E6%97%A0%E9%98%BF%E5%BC%A5%E9%99%80%E4%BD%9B.mp3', Title: '六字真言'},
+        {Url: 'https://cst-1256261760.cos.ap-guangzhou.myqcloud.com/audio/%E5%8D%97%E6%97%A0%E9%98%BF%E5%BC%A5%E9%99%80%E4%BD%9B.mp3', Title: '地藏经'},
+        {Url: 'https://cst-1256261760.cos.ap-guangzhou.myqcloud.com/audio/%E5%8D%97%E6%97%A0%E9%98%BF%E5%BC%A5%E9%99%80%E4%BD%9B.mp3', Title: '消灾吉祥神咒'},
+        {Url: 'https://cst-1256261760.cos.ap-guangzhou.myqcloud.com/audio/%E5%8D%97%E6%97%A0%E9%98%BF%E5%BC%A5%E9%99%80%E4%BD%9B.mp3', Title: '心经'},
+        {Url: 'https://cst-1256261760.cos.ap-guangzhou.myqcloud.com/audio/%E5%8D%97%E6%97%A0%E9%98%BF%E5%BC%A5%E9%99%80%E4%BD%9B.mp3', Title: '楞严咒'},
+        {Url: 'https://cst-1256261760.cos.ap-guangzhou.myqcloud.com/audio/%E5%8D%97%E6%97%A0%E9%98%BF%E5%BC%A5%E9%99%80%E4%BD%9B.mp3', Title: '往生咒'},
+        {Url: 'https://cst-1256261760.cos.ap-guangzhou.myqcloud.com/audio/%E5%8D%97%E6%97%A0%E9%98%BF%E5%BC%A5%E9%99%80%E4%BD%9B.mp3', Title: '般若波罗蜜多心经'}
+    ];
   }
    //添加音频
 public add(audio:Audio): void {
@@ -152,7 +162,7 @@ public Next(): void {
   }
 }
 //播放指定索引的音频
-private PlayIndex(index : number):void {
+public PlayIndex(index : number):void {
   index=this.playList[index] ? index :
   this.playList[index+1] ? (index+1):
   this.playList[index-1] ? (index-1):-1;

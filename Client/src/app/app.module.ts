@@ -39,6 +39,7 @@ import { FoyinComponent } from './components/xiuxing/foyin/foyin.component';
 import { StorageService } from './services/storage.service';
 import { SearchResultComponent } from './components/xiuxing/library/search-result/search-result.component';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { XuangeComponent } from './components/xiuxing/foyin/xuange/xuange.component';
 
 
 
@@ -77,7 +78,8 @@ import { FlashMessagesService } from 'angular2-flash-messages';
     JieqianComponent,
     SearchResultComponent,
     QifuComponent,
-    FoyinComponent
+    FoyinComponent,
+    XuangeComponent
   ],
   imports: [
     BrowserModule,

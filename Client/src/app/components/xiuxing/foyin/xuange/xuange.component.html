@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  
+    <div class="card-header">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <h3 class="text-muted">佛音</h3>
+          </div>
+        </div>
+      </header>
+    </div>  
+  <div *ngFor="let item of playList,let key=index">
+  <a class="list-group-item" (click)="xuange(key)">{{item.Title}}</a>
+  </div>
+  </body>
+  </html>
