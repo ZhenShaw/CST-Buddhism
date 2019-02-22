@@ -26,6 +26,7 @@ import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
 import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
 import { FoyinComponent } from './components/xiuxing/foyin/foyin.component';
+import {XuangeComponent } from './components/xiuxing/foyin/xuange/xuange.component';
 import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
 import { SearchResultComponent } from './components/xiuxing/library/search-result/search-result.component';
 import { QifuComponent } from './components/gongfo/qifu/qifu.component';
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'suanming', component: SuanmingComponent },
   { path: 'xiuxing/xinde', component: XindeComponent },
   { path: 'xiuxing/foyin', component: FoyinComponent },
+  { path: 'xiuxing/foyin/xuange', component: XuangeComponent },
   { path: 'gongde/zhuyinjingshu', component: ZhuyinjingshuComponent },
   { path: 'gongde/juanxianghuo', component: JuanxianghuoComponent },
   { path: 'gongfo/dialog', component: DialogComponent },

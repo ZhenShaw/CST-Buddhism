@@ -7,7 +7,7 @@
 #### 导入
 切换到buddhism数据库
 
- 在命令行 buddhism=# COPY bazizhu(gongli,xingqi,year,month,day,nianzhu,shuxiang,yuezhu,rizhu) from 'E:/bazi2.csv' with csv header;
+ 在命令行 buddhism=# COPY bazizhu(gongli,xingqi,year,month,day,nianzhu,shuxiang,yuezhu,rizhu,nianming) from 'E:/bazi2.csv' with csv header;
 （在C盘导入可能有未知错误，我放在了E盘导入）
 
 

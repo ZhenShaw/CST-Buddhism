@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FlashMessagesModule } from 'angular2-flash-messages';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,6 +41,7 @@ import { PageComponent } from './components/gongde/zhuyinjingshu/page/page.compo
 import { StorageService } from './services/storage.service';
 import { SearchResultComponent } from './components/xiuxing/library/search-result/search-result.component';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { XuangeComponent } from './components/xiuxing/foyin/xuange/xuange.component';
 
 
 
@@ -82,15 +82,15 @@ import { FlashMessagesService } from 'angular2-flash-messages';
     SearchResultComponent,
     QifuComponent,
     FoyinComponent,
-    PageComponent
+    PageComponent,
+    XuangeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    FlashMessagesModule,
-    BrowserAnimationsModule
+    FlashMessagesModule
   ],
   providers: [StorageService, FlashMessagesService],
   bootstrap: [AppComponent]

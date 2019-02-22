@@ -9,7 +9,8 @@ create table bazizhu (
     nianzhu varchar(50),
     shuxiang varchar(50),
     yuezhu varchar(50),
-    rizhu varchar(50)
+    rizhu varchar(50),
+    nianming varchar(50)
 );
 
 create table bazixiangjie(
