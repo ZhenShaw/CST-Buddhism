@@ -26,10 +26,24 @@
 </div>
 
 <div class="card1">
-    <div><h5>助印功德榜芳名</h5></div>
-    <li *ngFor="let donator of donators" >
-        <div> {{donator.donatorid}} {{donator.scripturename}} {{donator.donatenum}}本</div>
+    <div>
+        <h5>助印功德榜芳名</h5>
+    </div>
+    <div>
+        <th>芳名</th>
+        <th>经书</th>
+        <th>助印数</th>
+    </div>
+
+    <li *ngFor="let donator of donators" style="padding:0;margin:0;list-style:none;">
+
+        <td>{{donator.donatorid}}</td>
+        <td>{{donator.scripturename}}</td>
+        <td>{{donator.donatenum}}本</td>
     </li>
+
+
+
 </div>
 
 <div>

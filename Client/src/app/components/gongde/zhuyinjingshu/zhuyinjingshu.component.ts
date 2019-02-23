@@ -125,6 +125,9 @@ export class ZhuyinjingshuComponent implements OnInit {
         break;
     }
     this.SendDonator(this.user);
+    this.close();
+    location.reload();
+      
   }
   //发送捐赠请求
   SendDonator(user:Userinf){
