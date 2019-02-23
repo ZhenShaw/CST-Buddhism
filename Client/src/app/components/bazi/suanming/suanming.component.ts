@@ -24,8 +24,8 @@ cesuan(){
       alert("请输入你的姓名")
     }
     else{
-        if(this.username.length<2){
-          alert("请输入大于2的名字")
+        if((this.username.length<2) ||( !(/^[\u3220-\uFA29]+$/.test(this.username)))){
+          alert("请输入2-5个汉字的名字")
        }
         else{
           if(this.sex==null){
