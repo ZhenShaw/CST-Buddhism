@@ -24,7 +24,12 @@ export class ZhuyinjingshuComponent implements OnInit {
   booknum: number = 10;
 
   //多种经书种类
-  book: Scripture;
+  book: Scripture ={
+    scripturename: "", //经书名
+    targetnum:20000,  //目标数量
+    nownum: 0,    //已达成数量
+    donatornum: 0, //捐赠人数
+  };
   //经书进度和目录
   booksbuff: any;
   //分页码
@@ -121,6 +126,7 @@ export class ZhuyinjingshuComponent implements OnInit {
     }
     this.SendDonator(this.user);
   }
+  //发送捐赠请求
   SendDonator(user:Userinf){
     var todonate=JSON.stringify(this.user);
     console.log(todonate);
