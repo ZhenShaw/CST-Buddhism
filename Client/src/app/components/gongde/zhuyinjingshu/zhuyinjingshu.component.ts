@@ -131,6 +131,7 @@ export class ZhuyinjingshuComponent implements OnInit {
   }
   //发送捐赠请求
   SendDonator(user:Userinf){
+    if(this.user.wechatid==""){this.user.wechatid="匿名"}
     var todonate=JSON.stringify(this.user);
     console.log(todonate);
     this.http.post('http://localhost:9000/yinjingshu',todonate, httpOptions).subscribe(function(data){console.log(data);});

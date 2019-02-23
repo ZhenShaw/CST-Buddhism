@@ -29,18 +29,30 @@
     <div>
         <h5>助印功德榜芳名</h5>
     </div>
-    <div>
-        <th>芳名</th>
-        <th>经书</th>
-        <th>助印数</th>
-    </div>
 
-    <li *ngFor="let donator of donators" style="padding:0;margin:0;list-style:none;">
+    <body>
+        <table>
+            <tr>
+                <thead>
+                    <th>芳名</th>
+                    <th>经书</th>
+                    <th>助印</th>
+                </thead>
 
-        <td>{{donator.donatorid}}</td>
-        <td>{{donator.scripturename}}</td>
-        <td>{{donator.donatenum}}本</td>
-    </li>
+            </tr>
+
+
+            <li *ngFor="let donator of donators" style="padding:0;margin:5% 0%;list-style:none;">
+                <tr>
+                    <td> {{donator.donatorid}} </td>
+                    <td>{{donator.scripturename}}</td>
+                    <td>{{donator.donatenum}}本</td>
+                </tr>
+
+            </li>
+        </table>
+
+    </body>
 
 
 
