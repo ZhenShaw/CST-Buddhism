@@ -48,6 +48,7 @@ func YinjingshuInit(scriptureList []Scripture, donatorList []Donator) ([]Scriptu
 	checkError(err)
 	rows.Next()
 	rows.Scan(&donatorNum)
+	var rdlist []Donator
 	if donatorNum < 10 { //捐赠者总数小于10
 		rows, err := db.Query("select wechatID,scriptureName,donateNum from donatorinfo;")
 		for i := 0; i < donatorNum; i++ {
@@ -55,6 +56,9 @@ func YinjingshuInit(scriptureList []Scripture, donatorList []Donator) ([]Scriptu
 			rows.Next()
 			rows.Scan(&donator.DonatorID, &donator.ScriptureName, &donator.DonateNum)
 			donatorList = append(donatorList, donator)
+		}
+		for i := 0; i < donatorNum; i++	{
+			rdlist=append(rdlist,donatorList[donatorNum-i-1])
 		}
 	} else { //捐赠者总数大于10
 		sqlStatement := "select wechatID,scriptureName,donateNum from donatorinfo where uid>$1 and uid<=$2;"
@@ -65,11 +69,14 @@ func YinjingshuInit(scriptureList []Scripture, donatorList []Donator) ([]Scriptu
 			rows.Scan(&donator.DonatorID, &donator.ScriptureName, &donator.DonateNum)
 			donatorList = append(donatorList, donator)
 		}
+		for i := 0; i < 10; i++	{
+			rdlist=append(rdlist,donatorList[9-i])
+		}
 	}
 
 	defer rows.Close()
 
-	return scriptureList, donatorList
+	return scriptureList, rdlist
 }
 
 //user.do=="donator",调用函数YinjingshuDonator

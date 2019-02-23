@@ -35,7 +35,7 @@ func Yinjingshu(w http.ResponseWriter, r *http.Request){
 
 	//初始化列表
 	scriptureList:=make([]psql.Scripture,0,10)
-	donatorList:=make([]psql.Donator,0,100)
+	donatorList:=make([]psql.Donator,0,10)
 
 	//对应请求执行函数
 	var rs []byte
