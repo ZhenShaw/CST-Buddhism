@@ -32,7 +32,6 @@ export class ZhuyinjingshuComponent implements OnInit {
   ) { }
 
   private initList(): void {
-    let url: string = 'your-url';
     let page = this.pagination.currentPage - 1;
     this.pagination.totalItems = 6;
     let head = page;
