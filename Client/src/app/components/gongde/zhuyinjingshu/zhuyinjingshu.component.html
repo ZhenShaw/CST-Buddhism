@@ -40,7 +40,7 @@
         <p class="head2">助印经书</p>
         <div class="nowrap">
             <span style="margin-right:29%; font-size:120%; color:rgb(133, 132, 132)">功德芳名</span>
-            <input style="width:165%;">
+            <input style="width:165%;" [(ngModel)]="user.wechatid">
         </div>
         <div class="select">
             <input id="item1" type="radio" name="radio" value="10" (click)="select(10)" checked>
@@ -58,10 +58,10 @@
             <label for="item4"></label>
             <span style="font-size:20px">100本</span>
         </div>
-        <div style="text-align:center; margin-top:5%; font-size:17px">共{{booknum*3}}元</div>
+        <div style="text-align:center; margin-top:5%; font-size:17px">共{{this.user.donatenum*3}}元</div>
         <div class="pay">
-            <button class="weixin">微信</button>
-            <button class="zhifubao">支付宝</button>
+            <button class="weixin" (click)="this.donation()">微信</button>
+            <button class="zhifubao" (click)="this.donation()">支付宝</button>
         </div>
 
     </div>

@@ -1,5 +1,5 @@
 export class Userinf {
-    donatorid:string;
+    wechatid:string;
     scripturename:string;
     donatenum:number;
     do:string;
