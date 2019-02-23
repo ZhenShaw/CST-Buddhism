@@ -1,8 +1,11 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Pagination } from '../zhuyinjingshu/page/pagination';
-import { JingShu } from './jingshu';
+import { Scripture } from './scripture';
+import { Userinf } from './userinf';
+import { Observable, of, observable, } from 'rxjs';
 import { BOOKS } from './Count';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-zhuyinjingshu',
@@ -15,38 +18,56 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 export class ZhuyinjingshuComponent implements OnInit {
-  //已达成的经书数量
-  pgvalue: number;
-  //参与人数
-  participants: number;
-  //购书数
-  booknum: number;
-  //多种经书种类
-  book: JingShu;
 
+  //印书数量
+  booknum: number=10;
+
+  //多种经书种类
+  book: Scripture;
+  //经书进度和目录
+  booksbuff: any;
+  //分页码
+  pagenum:number=1;
+  //捐赠者
+  donator:Userinf;
+  //捐赠者们
+  donators:any
+
+  init = JSON.stringify({ "do": "init" });
+  
+  
 
   public pagination: Pagination = Pagination.defaultPagination;
 
   constructor(
     private http: HttpClient,
-  ) { }
+  ) {
 
-  private initList(): void {
-    let page = this.pagination.currentPage - 1;
-    this.pagination.totalItems = 6;
-    let head = page;
-    this.book = BOOKS[head];
+  }
+
+  public initList(): void {
+    this.http.post('http://localhost:9000/yinjingshu', this.init, httpOptions).subscribe(
+      data => {
+        var booksbuff1 = JSON.stringify(data);
+        var booksbuff2 = JSON.parse(booksbuff1);
+        this.booksbuff = booksbuff2.slist;
+        this.donators=booksbuff2.dlist;
+        console.log(this.donators);
+        let page = this.pagination.currentPage - 1;
+        this.pagination.totalItems = 6;
+        let head = page;
+        this.book = this.booksbuff[head];
+      });
+
   }
 
 
   ngOnInit() {
-    this.pgvalue = 12777;
-    this.booknum = 10;
-
-
     this.initList();
     this.pagination.changePage = (() => {
       this.initList();
+      this.pagenum = this.pagination.currentPage;
+      console.log(this.pagenum);
     });
   }
   // 弹窗的开关函数
@@ -63,19 +84,9 @@ export class ZhuyinjingshuComponent implements OnInit {
     this.booknum = num;
   }
 
-  getData() {
-    const dates = {
-      "do": "init"
-    };
+  donation(){
 
-    this.http.get('地址', { params: dates })
-      .subscribe(data => {
-        alert(JSON.stringify(data));
-      }, err => {
-        console.error('ERROR', err);
-      }
-
-      )}
+  }
 
 }
 

@@ -1,9 +1,9 @@
 <!-- ctrl+shift+i整理代码 -->
 <div class="card">
-    <p class="head1">{{book.name}}</p>
+    <p class="head1">{{book.scripturename}}</p>
     <!-- 进度条显示进度，max是总任务量，value是已经完成任务量 -->
     <div style="margin-left:auto; margin-right:auto; margin-bottom: -5%;margin-top: 0%;">
-        <progress max="20000" value="{{book.pgvalue}}"></progress>
+        <progress max="20000" value="{{book.nownum}}"></progress>
     </div>
 
     <table>
@@ -13,9 +13,9 @@
             <th>参与人数</th>
         </thead>
         <tbody>
-            <td>{{book.pgvalue}}</td>
-            <td>20000</td>
-            <td>{{book.participants}}</td>
+            <td>{{book.nownum}}</td>
+            <td>{{book.targetnum}}</td>
+            <td>{{book.donatornum}}</td>
         </tbody>
     </table>
 
@@ -27,6 +27,9 @@
 
 <div class="card1">
     <div><h5>助印功德榜芳名</h5></div>
+    <li *ngFor="let donator of donators" >
+        <div> {{donator.donatorid}} {{donator.scripturename}} {{donator.donatenum}}</div>
+    </li>
 </div>
 
 <div>

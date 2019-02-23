@@ -1,4 +1,6 @@
 //分页组件所需配置信息的对象
+
+
 export class Pagination {
 
     /**

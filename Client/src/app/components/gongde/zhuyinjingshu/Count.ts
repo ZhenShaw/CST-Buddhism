@@ -1,10 +1,12 @@
-import { JingShu } from './jingshu';
+import { Scripture } from './scripture';
+ 
 
-export const BOOKS: JingShu[] = [
-  { name: '心经大悲咒',pgvalue: 11277, participants: 2033},
-  { name: '地藏菩萨本愿经',pgvalue: 14277, participants: 2533},
-  { name: '般若波罗蜜多心经',pgvalue: 11007, participants: 1933},
-  { name: '金刚般若波罗蜜经',pgvalue: 3277, participants: 233},
-  { name: '妙法莲华经',pgvalue: 5277, participants: 1555},
-  { name: '大方广佛华严经',pgvalue: 6277, participants: 1666}
+
+export const BOOKS: Scripture[] = [
+  { scripturename: '心经大悲咒',targetnum:20000,nownum: 11277, donatornum: 2033},
+  { scripturename: '地藏菩萨本愿经',targetnum:20000,nownum: 14277, donatornum: 2533},
+  { scripturename: '般若波罗蜜多心经',targetnum:20000,nownum: 11007, donatornum: 1933},
+  { scripturename: '金刚般若波罗蜜经',targetnum:20000,nownum: 3277, donatornum: 233},
+  { scripturename: '妙法莲华经',targetnum:20000,nownum: 5277, donatornum: 1555},
+  { scripturename: '大方广佛华严经',targetnum:20000,nownum: 6277, donatornum: 1666}
 ];
