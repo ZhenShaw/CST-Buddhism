@@ -50,7 +50,7 @@ func Result(w http.ResponseWriter, r *http.Request) {
 		var baziresult psql.Result
 		baziresult = psql.Getresult(year, month, day, sex)
 		var b string
-		b = baziresult.NianMing + " " + baziresult.TianYun + " " + baziresult.ShengXiao + " " + baziresult.BenMing + " " + baziresult.MingGua + " " + baziresult.YinLi
+		b = baziresult.NianMing + " " + baziresult.TianYun + " " + baziresult.ShengXiao + " " + baziresult.BenMing + " " + baziresult.MingGua + " " + baziresult.YinLi + " " + baziresult.NianZhu + " " + baziresult.YueZhu + " " + baziresult.RiZhu + " " + baziresult.Mu + " " + baziresult.Jin + " " + baziresult.Shui + " " + baziresult.Huo + " " + baziresult.Tu
 		fmt.Println(b)
 		bb, err := json.Marshal(b)
 		Checkerr(err)

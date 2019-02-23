@@ -1,15 +1,17 @@
-
-
-.body{
-    background-image: url("../../../../assets/foyin/img/bacg.jpg");
-    height: 100%;
-    width: 100%;
-    background-size: 100%;
+.body {
+  /* background-image: url("../../../../assets/foyin/img/bacg.jpg"); */
+  height: 100%;
+  width: 100%;
+  /* background-size: 100%; */
 }
 
-.mar{
-    margin-left: 9rem;
+.mar {
+  margin: 50px;
+  text-align: center;
+
 }
+
+
 /*@keyframes rotateImg {
     0% {transform : rotate(0deg);}
     100% {transform : rotate(360deg);}
@@ -18,79 +20,111 @@
     0%{-webkit-transform : rotate(0deg);}
   100%{-webkit-transform : rotate(360deg);}
 }*/
- .big-title{
-    font-family:"黑体";
-     margin-left: 9rem;
-     margin-top:100px;
+/* .big-title {
+  font-family: "黑体";
+  margin-left: 9rem;
+  margin-top: 100px;
+} */
+/* 
+.btn1 {
+
+  top: 10px;
+
+  float: left;
+
 }
 
-.btn1{
-    
-    top:10px;
-    
-    float: left;
- 
-}
-.btn2{
-    top:10px;
-    float: left;
- 
-}
-.btn3{
-   margin-left: 1rem;
-    float: left;
-}
-.play-ctrl{
-    top:400px;
-    position: relative;margin: 0.3rem 0.5rem;
-    height: 1rem;
-    
-}
-.time{
-    position: absolute;z-index: 8;top: 0.3rem;left: 0.3rem;font-size: 0.3rem;
-}
-.left{
-    position: absolute;z-index: 8;top: 0.3rem;right: 0.3rem;font-size: 0.3rem;
+.btn2 {
+  top: 10px;
+  float: left;
+
 }
 
-.circle{
-    width: 20px;      
-    height: 20px;    
-    top:540px;
-     background-color:rgb(255, 255, 255);
-      border-radius: 50%;      
-      -moz-border-radius: 50%;      
-      -webkit-border-radius: 50%;
-      position: absolute;
-      z-index: 3;
+.btn3 {
+  margin-left: 1rem;
+  float: left;
+} */
+
+.play-ctrl {
+  bottom: 3%;
+  position: fixed;
+  margin: 0.3rem 0.5rem;
+  /* height: 1rem; */
+  width: 95%;
 }
-.total{
-   
-   height: 5px;
-   background: rgb(211, 208, 208);
- 
+
+.time {
+  position: absolute;
+  z-index: 8;
+  top: 0.3rem;
+  left: 0.3rem;
+  font-size: 0.3rem;
 }
-.current{
-position: absolute;
-   top:0;
-    height: 5px;
-  background:rgb(247, 226, 156);
+
+.left {
+  position: absolute;
+  z-index: 8;
+  top: 0.3rem;
+  right: 0.3rem;
+  font-size: 0.3rem;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  /* top: 540px; */
+  background-color: rgb(172, 131, 131);
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+}
+
+.total {
+  margin-top: 5px;
+  height: 5px;
+  background: rgb(211, 208, 208);
+
+}
+
+.current {
+  margin-top: 5px;
+  position: absolute;
+  top: 0;
+  height: 5px;
+  background: rgb(247, 226, 156);
   z-index: 2;
 }
-.data{
-    position: absolute;top: 0;left: 0;z-index: 6;
-    height: 5px;background:  rgb(187, 187, 187);
-    border-radius: 0.5rem;
-   position: absolute;
-   z-index: 1;
+
+.data {
+  margin-top: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  height: 5px;
+  background: rgb(187, 187, 187);
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: 1;
 }
-.title{
-    font-size: 14px;
+
+.title {
+  font-size: 14px;
 }
-.item{
-    padding: 0.2rem 0.3rem;color:sienna;
-    font-size: 0.45rem;position: relative;
+
+.item {
+  padding: 0.2rem 0.3rem;
+  color: sienna;
+  font-size: 0.45rem;
+  position: relative;
 }
-.play-bar{
-    top:150px;
+
+.play-bar {
+  /* top: 150px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0px 5%;
 }

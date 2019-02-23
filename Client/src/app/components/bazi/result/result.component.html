@@ -18,8 +18,27 @@
   </p>
   <div>
     <div class="mas">
-    {{message}}
-    </div>
+      <table>
+        <thead>
+             <tr>                           
+              <th>年柱</th>&nbsp;&nbsp;
+              <th>月柱</th>&nbsp;&nbsp;
+              <th>日柱</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                <td>{{people.nianzhu}}</td>&nbsp;&nbsp;
+                <td>{{people.yuezhu}}</td>&nbsp;&nbsp;
+                <td>{{people.rizhu}}</td>
+             </tr>
+          </tbody>
+   </table>
+   <br>
+   <p>
+   五行个数:{{people.mu}}个木&nbsp;&nbsp;{{people.huo}}个火&nbsp;&nbsp;{{people.shui}}个水&nbsp;&nbsp;{{people.tu}}个土&nbsp;&nbsp;{{people.jin}}个金
+  </p>
+  </div>
     <div class="cho">
       <p class="clo">
         <br>

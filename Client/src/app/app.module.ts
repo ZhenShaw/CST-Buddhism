@@ -35,11 +35,14 @@ import { AddxindeComponent } from './components/xiuxing/xinde/addxinde/addxinde.
 import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
 import { QifuComponent } from './components/gongfo/qifu/qifu.component';
 import { FoyinComponent } from './components/xiuxing/foyin/foyin.component';
+import { PageComponent } from './components/gongde/zhuyinjingshu/page/page.component';
+
 //引入服务，并配置服务
 import { StorageService } from './services/storage.service';
 import { SearchResultComponent } from './components/xiuxing/library/search-result/search-result.component';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { XuangeComponent } from './components/xiuxing/foyin/xuange/xuange.component';
+
 
 
 
@@ -79,6 +82,7 @@ import { XuangeComponent } from './components/xiuxing/foyin/xuange/xuange.compon
     SearchResultComponent,
     QifuComponent,
     FoyinComponent,
+    PageComponent,
     XuangeComponent
   ],
   imports: [
@@ -87,7 +91,6 @@ import { XuangeComponent } from './components/xiuxing/foyin/xuange/xuange.compon
     FormsModule,
     HttpClientModule,
     FlashMessagesModule
-
   ],
   providers: [StorageService, FlashMessagesService],
   bootstrap: [AppComponent]

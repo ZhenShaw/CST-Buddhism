@@ -7,12 +7,88 @@ import (
 )
 
 type Result struct {
+	Mu        string
+	Jin       string
+	Shui      string
+	Tu        string
+	Huo       string
+	NianZhu   string
+	YueZhu    string
+	RiZhu     string
 	YinLi     string
 	NianMing  string
 	TianYun   string
 	ShengXiao string
 	BenMing   string
 	MingGua   string
+}
+type Wuxing struct {
+	Mu   int
+	Jin  int
+	Shui int
+	Tu   int
+	Huo  int
+}
+
+var forwuxing Wuxing
+
+func resetwuxing() {
+	forwuxing.Mu = 0
+	forwuxing.Huo = 0
+	forwuxing.Jin = 0
+	forwuxing.Shui = 0
+	forwuxing.Tu = 0
+}
+
+func getwuxing(wuxing1 string, wuxing2 string) {
+	switch wuxing1 {
+	case "甲":
+		forwuxing.Mu = forwuxing.Mu + 1
+	case "乙":
+		forwuxing.Mu = forwuxing.Mu + 1
+	case "丙":
+		forwuxing.Huo = forwuxing.Huo + 1
+	case "丁":
+		forwuxing.Huo = forwuxing.Huo + 1
+	case "戊":
+		forwuxing.Tu = forwuxing.Tu + 1
+	case "己":
+		forwuxing.Tu = forwuxing.Tu + 1
+	case "庚":
+		forwuxing.Jin = forwuxing.Jin + 1
+	case "辛":
+		forwuxing.Jin = forwuxing.Jin + 1
+	case "壬":
+		forwuxing.Shui = forwuxing.Shui + 1
+	case "癸":
+		forwuxing.Shui = forwuxing.Shui + 1
+	}
+	switch wuxing2 {
+	case "子":
+		forwuxing.Shui = forwuxing.Shui + 1
+	case "丑":
+		forwuxing.Tu = forwuxing.Tu + 1
+	case "寅":
+		forwuxing.Mu = forwuxing.Mu + 1
+	case "卯":
+		forwuxing.Mu = forwuxing.Mu + 1
+	case "辰":
+		forwuxing.Tu = forwuxing.Tu + 1
+	case "巳":
+		forwuxing.Huo = forwuxing.Huo + 1
+	case "午":
+		forwuxing.Huo = forwuxing.Huo + 1
+	case "未":
+		forwuxing.Tu = forwuxing.Tu + 1
+	case "申":
+		forwuxing.Jin = forwuxing.Jin + 1
+	case "酉":
+		forwuxing.Jin = forwuxing.Jin + 1
+	case "戌":
+		forwuxing.Tu = forwuxing.Tu + 1
+	case "亥":
+		forwuxing.Shui = forwuxing.Shui + 1
+	}
 }
 
 func Getresult(year string, month string, day string, sex string) Result {
@@ -23,14 +99,15 @@ func Getresult(year string, month string, day string, sex string) Result {
 	var yinli_day string
 	foryear, err := strconv.Atoi(year)
 	checkError(err)
-	rows, err := db.Query("select year, month, day, shuxiang, nianming, rizhu from bazizhu where gongli=$1", date)
+	rows, err := db.Query("select nianzhu, yuezhu, year, month, day, shuxiang, nianming, rizhu from bazizhu where gongli=$1", date)
 	checkError(err)
 	for rows.Next() {
-		rows.Scan(&yinli_year, &yinli_month, &yinli_day, &user.ShengXiao, &user.NianMing, &user.TianYun)
+		rows.Scan(&user.NianZhu, &user.YueZhu, &yinli_year, &yinli_month, &yinli_day, &user.ShengXiao, &user.NianMing, &user.RiZhu)
 	}
 	user.YinLi = yinli_year + "年 " + yinli_month + " " + yinli_day
-	tianyun := strings.Split(user.TianYun, "")
-	var Tianyun string = tianyun[0]
+	nianzhu := strings.Split(user.NianZhu, "")
+	yuezhu := strings.Split(user.YueZhu, "")
+	rizhu := strings.Split(user.RiZhu, "")
 	var a int = foryear / 1000
 	var b int = (foryear / 100) % 10
 	var c int = (foryear / 10) % 10
@@ -128,7 +205,7 @@ func Getresult(year string, month string, day string, sex string) Result {
 	case "猪":
 		user.BenMing = "阿弥陀佛"
 	}
-	switch Tianyun {
+	switch rizhu[0] {
 	case "甲":
 		user.TianYun = "木"
 	case "乙":
@@ -150,6 +227,16 @@ func Getresult(year string, month string, day string, sex string) Result {
 	case "癸":
 		user.TianYun = "水"
 	}
+	getwuxing(nianzhu[0], nianzhu[1])
+	getwuxing(yuezhu[0], yuezhu[1])
+	getwuxing(rizhu[0], rizhu[1])
+	user.Mu = strconv.Itoa(forwuxing.Mu)
+	user.Huo = strconv.Itoa(forwuxing.Huo)
+	user.Tu = strconv.Itoa(forwuxing.Tu)
+	user.Shui = strconv.Itoa(forwuxing.Shui)
+	user.Jin = strconv.Itoa(forwuxing.Jin)
 	fmt.Println(user)
+	fmt.Println(forwuxing)
+	resetwuxing()
 	return user
 }

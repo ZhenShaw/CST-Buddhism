@@ -13,13 +13,13 @@
         <li>
           <b class="ziti">您的姓名：</b>
           <br>
-          <input type="text"  style="width:150px ;height:28px" [(ngModel)]="username"/>
+          <input type="text" placeholder="请输入2-5个汉字"  maxlength="5" style="width:150px ;height:28px" [(ngModel)]="username" onkeydown="if(event.keyCode==32){return false;}" />
         </li>
         <br><br>
         <li>
           <b class="ziti">您的性别：</b>
           <br>
-          <input type="radio" checked style="width:20px ;height:20px" value="1" name="sex" id="sex1" [(ngModel)]="sex" ><label for="sex1" style="font-size: 20px; font-family: 楷体">男</label>
+          <input type="radio"  style=" width:20px ;height:20px" value="1" name="sex" id="sex1" [(ngModel)]="sex" ><label for="sex1" style="font-size: 20px; font-family: 楷体">男</label>
           &nbsp;
           <input type="radio" style="width:20px ;height:20px" value="2" name="sex" id="sex2" [(ngModel)]="sex"><label for="sex2" style="font-size: 20px; font-family: 楷体">女</label>
         </li>
