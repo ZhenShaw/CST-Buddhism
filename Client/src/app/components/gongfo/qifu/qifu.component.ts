@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Renderer2 } from '@angular/core';
+import axios from 'axios';//引入第三方模块进行数据请求
 @Component({
   selector: 'app-qifu',
   templateUrl: './qifu.component.html',
@@ -79,11 +80,11 @@ export class QifuComponent implements OnInit {
     audio.src = this.chunkList.stream;
     audio.play();
     var x = document.getElementsByClassName("span");
-    for(let i=0;i<3;i++){
-      (<HTMLElement>x[i]).style.animation = "wink "+1+"s ease infinite";
-      window.setTimeout(()=>{(<HTMLElement>x[i]).style.animationPlayState="running"},0);
-      window.setTimeout(()=>{(<HTMLElement>x[i]).style.animationPlayState="paused"},this.chunkList.duration*1000-1);
-    }  
+    for (let i = 0; i < 3; i++) {
+      (<HTMLElement>x[i]).style.animation = "wink " + 1 + "s ease infinite";
+      window.setTimeout(() => { (<HTMLElement>x[i]).style.animationPlayState = "running" }, 0);
+      window.setTimeout(() => { (<HTMLElement>x[i]).style.animationPlayState = "paused" }, this.chunkList.duration * 1000 - 1);
+    }
   }
 
   bindEvents() {
@@ -115,7 +116,28 @@ export class QifuComponent implements OnInit {
       document.getElementById('time').innerHTML = String(this.chunkList.duration) + '"';//更新录音时长
       document.getElementById('voice').style.width = this.chunkList.duration * 20 + 'px';//更新录音框宽度
       console.log(this.chunkList);
-
+      //上传文件
+      const formData = new FormData()
+      formData.append('file', blob, 'voice.mp3')
+      axios({
+        method: 'post',
+        url: 'http://localhost:9000/gongfo/qifu',
+        data: formData,
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      })
+        .then(
+          res => {
+            console.log('上传成功！')
+            console.log(res.data)
+          }
+        )
+        .catch(
+          err => {
+            console.log('上传失败！')
+          }
+        )
     };
   }
   mounted() {

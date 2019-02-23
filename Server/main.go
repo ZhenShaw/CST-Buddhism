@@ -24,13 +24,13 @@ func main() {
 	mux.HandleFunc("/gongfo/flower", route.Flower)
 	mux.HandleFunc("/gongfo/xiang", route.Xiang)
 	mux.HandleFunc("/gongfo/fruit", route.Fruit)
+	mux.HandleFunc("/gongfo/qifu", route.Qifu)
 	mux.HandleFunc("/yinjingshu", route.Yinjingshu)
-	//mux.HandleFunc("/xiuxing/xinde", route.Xinderoute)
 	mux.HandleFunc("/jieqian", route.Jieqian)
 	mux.HandleFunc("/xiuxing/xinde", route.GetXinderoute)
 	mux.HandleFunc("/xiuxing/xinde/addxinde", route.AddXinderoute)
 	mux.HandleFunc("/bazi/bazhidetail", route.BaziDetail)
-
+	
 	//监听9000端口
 	fmt.Println("Web服务器启动...端口:9000")
 	err := http.ListenAndServe(":9000", mux)
