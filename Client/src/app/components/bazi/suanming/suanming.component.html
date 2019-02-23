@@ -13,7 +13,7 @@
         <li>
           <b class="ziti">您的姓名：</b>
           <br>
-          <input type="text" placeholder="请输入2-5个汉字"  maxlength="5" style="width:150px ;height:28px" [(ngModel)]="username" onkeydown="if(event.keyCode==32){return false;}" />
+          <input type="text" placeholder="请输入2-5个汉字"  maxlength="5" style="width:100% ;height:100%" [(ngModel)]="username" onkeydown="if(event.keyCode==32){return false;}" />
         </li>
         <br><br>
         <li>
@@ -27,12 +27,12 @@
         <li>
           <b class="ziti">出生日期：</b>
           <br>
-          <input type="date" style="width:150px ;height:28px" [(ngModel)]="riqi" >
+          <input type="date" style="width:100% ;height:100%" [(ngModel)]="riqi" >
         </li>
       </ul> 
       <!--插入立即测算图片和文字-->
     <br><br>
-    <div style="background: url(img/../../../../assets/cesuan.png); background-repeat:no-repeat; height: 10%; margin: 5%;" (click)="cesuan()">
+    <div style="background: url(img/../../../../assets/cesuan.png); background-repeat:no-repeat; width:100%;height: 10%; margin: 5%;" (click)="cesuan()">
 
       <p style="font-size: 28px; font-family: 楷体; margin-left:12%;color :#CCCC99; ">立即测算</p>
     </div>
