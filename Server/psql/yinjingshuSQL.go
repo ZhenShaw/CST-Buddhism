@@ -46,12 +46,12 @@ func YinjingshuInit(scriptureList []Scripture,donatorList []Donator)([]Scripture
 
 
 
-	//获取捐赠者列表（捐赠者总数小于100时，使用所有数据；大于100时，只调出最近更新的100条数据）
+	//获取捐赠者列表（捐赠者总数小于10时，使用所有数据；大于10时，只调出最近更新的10条数据）
 	rows, err = db.Query("select max(uid) from donatorinfo;")
 	checkError(err)
 	rows.Next()
 	rows.Scan(&donatorNum)
-	if donatorNum<100 {					//捐赠者总数小于100
+	if donatorNum<10 {					//捐赠者总数小于10
 		rows, err := db.Query("select wechatID,scriptureName,donateNum from donatorinfo;")
 		for i:=0;i<donatorNum;i++{
 			checkError(err)
@@ -59,10 +59,10 @@ func YinjingshuInit(scriptureList []Scripture,donatorList []Donator)([]Scripture
 			rows.Scan(&donator.DonatorID,&donator.ScriptureName,&donator.DonateNum)
 			donatorList=append(donatorList,donator)
 		}
-	}else{								//捐赠者总数大于100
+	}else{								//捐赠者总数大于10
 		sqlStatement :="select wechatID,scriptureName,donateNum from donatorinfo where uid>$1 and uid<=$2;"
-		rows,err := db.Query(sqlStatement, donatorNum-100,donatorNum)
-		for i:=0;i<100;i++{
+		rows,err := db.Query(sqlStatement, donatorNum-10,donatorNum)
+		for i:=0;i<10;i++{
 			checkError(err)
 			rows.Next()
 			rows.Scan(&donator.DonatorID,&donator.ScriptureName,&donator.DonateNum)
