@@ -21,6 +21,8 @@ export class FoyinComponent implements OnInit {
   ngOnInit() {
     this.playList = this.audio.PlayList();
     this.playData = this.audio.PlayData();
+    this.audio.Next();
+    this.audio.Prev();
   }
 
   public xuange()
