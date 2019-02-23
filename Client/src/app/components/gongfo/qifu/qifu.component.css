@@ -7,20 +7,121 @@
     background-size: cover;
 }
 
-/* textarea{
-    width: 74%;
-    height: 47%;
+ textarea{
+    width: 64%;
+    height: 30%;
     position: absolute;
-    bottom: 13%;
-    left: 13%;
-    background-color: rgb(161, 98, 3);
+    bottom: 18%;
+    left: 18%;
+    background:rgba(0,0, 0, 0) ;
     border-radius: 1em;
     color: black;
-    border: 0px;
-    z-index: -1;
+    border: 0px;	
 }
 
 textarea::placeholder{
-    color: rgba(19, 18, 18, 0.884);
-    margin-top: 0%;
-} */
+	color: rgba(19, 18, 18, 0.884);
+} 
+
+.voiceposition{
+	position:absolute;
+	max-width: 250px;
+	height: 26px;
+	bottom: 48%;
+	left: 20%;
+}
+
+.time{
+	float: right;
+}
+
+.voice{
+	position:absolute;
+	height: 26px;
+	max-width: 220px;
+	float: left;
+	text-align: center;
+	background-color:rgb(123, 237, 159);
+	border-radius: 2px;
+}
+
+.voice:before {
+	position: absolute;
+	left: -16px;
+	top: 5px;
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px;
+	border-color: transparent  rgba(123, 237, 159, 0.85) transparent transparent;
+}
+
+.voice span {
+	/* animation: wink 1s ease infinite; */
+	/* color: rgba(255, 255, 255, 1); */
+	color:rgba(0, 0, 0, 1);
+	display: inline-block;
+	transform-origin: center;
+}
+
+.voice span:nth-child(3) {
+	transform: scale(1);
+	font-weight: 400;
+}
+.voice span:nth-child(2) {
+	transform: scale(0.8);
+	font-weight: 500;
+}
+.voice span:nth-child(1) {
+	transform: scale(0.5);
+	font-weight: 700;
+}
+
+.phone-operate {
+	position: absolute;
+	bottom: 8%;
+	left: 32%;
+	width: 150px;
+	height: 40px;
+	background-color: rgb(56, 56, 247);
+	border-radius: 1em;
+	color: white;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	box-shadow: 0 -1px 1px rgba(0, 0, 0, .1);
+}
+.phone-operate:active {
+	background-color: #95a5a6;
+}
+.phone-operate:active:before {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: -2px;
+	content: '';
+	width: 0%;
+	height: 2px;
+	background-color: #7bed9f;
+	animation: loading 1s ease-in-out infinite backwards;
+}
+
+@keyframes loading {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 90%;
+	}
+}
+@keyframes wink {
+	from {
+		color: rgba(0, 0, 0, .9);
+	}
+	to {
+		color: rgba(0, 0, 0, .1);
+	}
+}

@@ -2,7 +2,8 @@
     background-color: #CCCC99;
     height: 100%;
     width: 100%;
-    background-size: cover;
+    background-size: 100%;
+    overflow: auto;
    
 }
 h2{

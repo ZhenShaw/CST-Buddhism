@@ -1,13 +1,12 @@
 <div class="bg">
-  <!-- <textarea placeholder="向佛祖说出你的愿望。。。"></textarea> -->
-  <button id="startButtonid" (click)="startButton()">开始录音</button>
-
-  <button id="convertButtonid" (click)="convertButton()">转换录音(44100 => 16000)</button>
-
-  <button id="replayButtonid" (click)="replayButton()">回放原始录音</button>
-
-  <button id="replayConvertedButtonid" (click)="replayConvertedButton()">回放转换后录音</button>
-
-  <textarea id="logDiv" style="width: 100%"></textarea>
-
+  <audio id="audio"></audio>
+  <div class="voiceposition" id="voiceposition">
+    <div *ngIf="!ishide" class="voice" id="voice" (click)="play()">
+      <span class="span">)</span><span class="span">)</span><span class="span">)</span>
+    </div>
+    <span class="time" id="time"></span>
+  </div>
+  <textarea placeholder="向佛祖说出你的愿望。。。"></textarea>
+  <div id="btntext" class="phone-operate" (touchstart)="gtouchstart()" (touchmove)="gtouchmove()" (touchend)="gtouchend()"
+    ng-model="btnText">{{btnText}}</div>
 </div>
