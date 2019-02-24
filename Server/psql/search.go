@@ -1,10 +1,5 @@
 package psql
 
-import (
-	"fmt"
-	"reflect"
-)
-
 type inf struct {
 	Booktype string `json:"booktype"`
 	Bookname  string `json:"bookname"`
@@ -17,8 +12,6 @@ type inf struct {
 var List = []inf{} //所有人的信息，切片存储
 func SearchResult(name string){
 
-	searchInf := string(name)
-	fmt.Println(reflect.TypeOf(searchInf))
 	List = (List)[0:0]
 	var one inf
 	sqlStatement := `SELECT * FROM fojing WHERE bookname=$1`
@@ -40,7 +33,6 @@ func SearchResult(name string){
 	if len(List)<1 {
 
 			str := "%"+string(name)+"%"
-			fmt.Println(str)
 			rows, err := db.Query("select * from public.fojing where bookname like $1",str)
 			checkError(err)
 			for rows.Next() {

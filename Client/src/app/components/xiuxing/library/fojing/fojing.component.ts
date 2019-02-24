@@ -22,7 +22,7 @@ export class FojingComponent implements OnInit {
   }
   readFJ(item) {
     this.storage.set("jingInf",item);
-    this.router.navigate(['/jngGeneral']);
+    this.router.navigate(['/jingGeneral']);
    
   }
 }

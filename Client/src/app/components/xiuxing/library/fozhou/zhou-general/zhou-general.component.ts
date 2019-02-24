@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { StorageService } from '../../../../../services/storage.service';
 import { Router } from '@angular/router';
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./zhou-general.component.css']
 })
 export class ZhouGeneralComponent implements OnInit {
+   @ViewChild("bookintroduce") bookintroduce:any;
+   @ViewChild("displaytext") displaytext:any;
   public zhouInf:any
   public displayInf:any
   constructor(public router:Router,public http:HttpClient,public storage:StorageService) { }
@@ -15,6 +17,8 @@ export class ZhouGeneralComponent implements OnInit {
   ngOnInit() {
      this.zhouInf = this.storage.get("zhouInf");
      this.displayInf=this.zhouInf.contentintroduce;
+     this.bookintroduce.nativeElement.innerHTML=this.zhouInf.bookintroduce;
+     this.displaytext.nativeElement.innerHTML=this.displayInf;
   }
   readIntroduce() {
      this.displayInf=this.zhouInf.contentintroduce;

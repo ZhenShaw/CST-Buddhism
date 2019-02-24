@@ -7,8 +7,7 @@
         <img src="../../../../../../assets/book.jpg">
         <div class="introduce">
           <p class="bookName">{{zhouInf.bookname}}</p>
-          <div class="bookIntroduce">
-          {{zhouInf.bookintroduce}}
+          <div #bookintroduce class="bookIntroduce">
           </div>
         </div>
       </div>
@@ -18,8 +17,8 @@
         <button (click)="readIntroduce()">简介</button>
         <button (click)="readContent()">原文</button>
       </div>
-      <div class="main">
-         {{displayInf}}
+      <div #displaytext class="main">
+        
       </div>
     </div>
   </div>
