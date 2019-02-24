@@ -21,6 +21,16 @@ export class FozhouComponent implements OnInit {
     });
   }
   readFZ(item){
+   
+    let tempI:number=parseInt(item["readnumber"])+1;
+    let tempS:string=String(tempI)
+    const addReadNum={
+      "booktype":"fozhou",
+      "bookname":item["bookname"],
+      "readnumber":tempS
+    }
+    const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
+    this.http.post("http://127.0.0.1:9000/changeNumber",addReadNum,httpOptions);
     this.storage.set("zhouInf",item);
     this.router.navigate(['/zhouGeneral']);
   }
