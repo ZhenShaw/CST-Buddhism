@@ -31,7 +31,8 @@ func main() {
 	mux.HandleFunc("/xiuxing/xinde", route.GetXinderoute)
 	mux.HandleFunc("/xiuxing/xinde/addxinde", route.AddXinderoute)
 	mux.HandleFunc("/bazi/bazhidetail", route.BaziDetail)
-	
+	mux.HandleFunc("/gongde/juanxianghuo", route.Juanxianghuo)
+
 	//监听9000端口
 	fmt.Println("Web服务器启动...端口:9000")
 	err := http.ListenAndServe(":9000", mux)

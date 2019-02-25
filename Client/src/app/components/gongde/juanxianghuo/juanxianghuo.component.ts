@@ -13,6 +13,7 @@ export class JuanxianghuoComponent implements OnInit {
   }
   //record用于记录用户选择的香的类型和购买的数量
   public record1:any={
+    wechatid:'匿名',
     name:'',
     number:'',
     type:'',
@@ -53,7 +54,7 @@ pay(){
   this.http.post(api,this.record1,httpOptions).subscribe((response:any)=>{
     console.log(response)
     //判断姓名是否已经填写，香是否已选择
-   if (response=="true"){
+   if (response==true){
      alert("支付成功")
    }
    else{
@@ -62,5 +63,6 @@ pay(){
   }) 
   //清空消息
   this.record1={};
+  this.record1.wechatid='匿名';
 }
 }
