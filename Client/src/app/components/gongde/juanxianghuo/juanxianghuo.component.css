@@ -56,3 +56,20 @@ color: #3f4040;
     color:#fc913a;
     font-size: 19px;
 }
+.input_name{
+  position: absolute;
+  left:5%;
+  top:57%;
+  font-weight:600;
+  color:#fc913a;
+  font-size: 130%;
+  border:0px;
+  outline: none;
+}
+.input_name input{
+  width:53%;
+  height:29px;
+  background-color:rgb(248, 223, 114);
+  border:0px;outline: none;border-radius:2px;
+  font-size: 80%;
+}
