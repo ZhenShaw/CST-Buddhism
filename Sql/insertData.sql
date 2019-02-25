@@ -27,14 +27,16 @@ insert into gongfo(name,url,details,status)values('药师佛','http://api10.budd
 insert into gongfo(name,url,details,status)values('准提菩萨','http://api10.buddhaheart.cn/webfiles/sys/201712/1712081619241e38.png','准提菩萨汉译有准胝观音、准提佛母、七俱胝佛母等名。准提菩萨为显密佛教徒所知的大菩萨，在禅宗，则称之为天人丈夫观音。在中国佛教徒的心目中，准提菩萨是一位感应甚强、对崇敬者至为关怀的大菩萨，更是三世诸佛之母，他的福德智慧无量，功德广大、感应至深，满足众生世间、出世间的愿望，无微不至的守护众生。修学准提咒并没有任何限制，不分任何身份者，都可以修学诵持的，依此也可看出准提菩萨的慈悲。',0);
 
 insert into gongfo(name,url,details,status)values('香火','http://api10.buddhaheart.cn/webfiles/sys/201710/171013142225d175.png','',3);
-insert into gongfo(name,url,details,status)values('德香','http://api10.buddhaheart.cn/webfiles/sys/201710/17101314224764f7.png','',2);
-insert into gongfo(name,url,details,status)values('平安香','http://api10.buddhaheart.cn/webfiles/sys/201710/171013142304435a.png','',2);
-insert into gongfo(name,url,details,status)values('消灾香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131423204dab.png','',2);
-insert into gongfo(name,url,details,status)values('增福香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131423395306.png','',2);
-insert into gongfo(name,url,details,status)values('智慧香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131423523987.png','',2);
-insert into gongfo(name,url,details,status)values('增缘香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131424048539.png','',2);
-insert into gongfo(name,url,details,status)values('求子香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131424205c59.png','',2);
-insert into gongfo(name,url,details,status)values('增财香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131424369a6d.png','',2);
+insert into gongfo(name,url,details,status)values('德香','http://api10.buddhaheart.cn/webfiles/sys/201710/17101314224764f7.png','',3);
+insert into gongfo(name,url,details,status)values('平安香','http://api10.buddhaheart.cn/webfiles/sys/201710/171013142304435a.png','',3);
+insert into gongfo(name,url,details,status)values('消灾香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131423204dab.png','',3);
+insert into gongfo(name,url,details,status)values('增福香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131423395306.png','',3);
+insert into gongfo(name,url,details,status)values('智慧香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131423523987.png','',3);
+insert into gongfo(name,url,details,status)values('增缘香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131424048539.png','',3);
+insert into gongfo(name,url,details,status)values('求子香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131424205c59.png','',3);
+insert into gongfo(name,url,details,status)values('增财香','http://api10.buddhaheart.cn/webfiles/sys/201710/1710131424369a6d.png','',3);
+
+
 
 insert into juanxianghuo (wechatid,xingming,shuliang,leixing) values('匿名','张耀扬','66','平安香');
 insert into juanxianghuo (wechatid,xingming,shuliang,leixing) values('匿名','黄静夏','15','增财香');
