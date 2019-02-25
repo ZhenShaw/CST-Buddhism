@@ -6,4 +6,4 @@ CREATE TABLE scriptureinfo
 	targetNum integer NOT NULL,
 	nowNum integer NOT NULL,
 	donatorNum integer NOT NULL
-)
+);
