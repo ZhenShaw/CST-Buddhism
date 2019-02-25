@@ -16,8 +16,7 @@ export class FojingComponent implements OnInit {
     const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
     this.http.post("http://127.0.0.1:9000/library",{"booktype":"佛经"},httpOptions).subscribe((response:any)=>{
       this.jingList = response;
-      console.log("佛经");
-      console.log(response);
+   
     })
   }
   readFJ(item) {
@@ -29,7 +28,7 @@ export class FojingComponent implements OnInit {
       "readnumber":tempS
     }
     const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
-    this.http.post("http://127.0.0.1:9000/changeNumber",addReadNum,httpOptions);
+    this.http.post("http://127.0.0.1:9000/changeNumber",addReadNum,httpOptions).subscribe();
     this.storage.set("jingInf",item);
     this.router.navigate(['/jingGeneral']);
    

@@ -22,8 +22,10 @@ export class ZhouGeneralComponent implements OnInit {
   }
   readIntroduce() {
      this.displayInf=this.zhouInf.contentintroduce;
+     this.displaytext.nativeElement.innerHTML=this.displayInf;
   }
   readContent() {
      this.displayInf=this.zhouInf.yuanwen;
+     this.displaytext.nativeElement.innerHTML=this.displayInf;
   }
 }

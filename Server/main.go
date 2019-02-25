@@ -20,7 +20,7 @@ func main() {
 	mux.HandleFunc("/result", route.Result)
 	mux.HandleFunc("/library", route.Library)
 	mux.HandleFunc("/search", route.Search)
-	mux.HandleFunc("/changeNumber", route.changeNumber)
+	mux.HandleFunc("/changeNumber", route.ChangeNumber)
 	mux.HandleFunc("/gongfo/fo", route.Fo)
 	mux.HandleFunc("/gongfo/flower", route.Flower)
 	mux.HandleFunc("/gongfo/xiang", route.Xiang)

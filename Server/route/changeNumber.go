@@ -19,6 +19,7 @@ func ChangeNumber(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Access-Control-Allow-Headers", "Content-Type") //header的类型
 	w.Header().Set("content-type", "application/json")             //返回数据格式是json
 
+
 	if r.Method == "POST" {
 		// 解析url传递的参数
 		r.ParseForm()
@@ -32,14 +33,13 @@ func ChangeNumber(w http.ResponseWriter, r *http.Request) {
 			}
 
 			psql.Change(temp.Booktype,temp.Bookname,temp.Readnumber)
+
 			//join() 方法用于把数组中的所有元素放入一个字符串。
 			//元素是通过指定的分隔符进行分隔的
 			strings.Join(v, "")
 		}
 
 	}
-
-
 
 
 }
