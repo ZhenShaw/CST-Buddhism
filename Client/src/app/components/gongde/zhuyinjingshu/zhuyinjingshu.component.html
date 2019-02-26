@@ -2,9 +2,9 @@
 <div class="card">
     <p class="head1">{{book.scripturename}}</p>
     <!-- 进度条显示进度，max是总任务量，value是已经完成任务量 -->
-    <div style="margin-left:auto; margin-right:auto; margin-bottom: -5%;margin-top: 0%;">
+    <nav style="margin-left:24%; margin-right:10%; margin-bottom: -5%;margin-top: 0%; ">
         <progress max="20000" value="{{book.nownum}}"></progress>
-    </div>
+    </nav>
 
     <table>
         <thead>
@@ -42,7 +42,7 @@
             </tr>
 
 
-            <li *ngFor="let donator of donators" style="padding:0;margin:5% 0%;list-style:none;">
+            <li *ngFor="let donator of donators" style="padding:0;margin:5% 0%;list-style:none; font-size-adjust:initial;">
                 <tr>
                     <td> {{donator.donatorid}} </td>
                     <td>{{donator.scripturename}}</td>

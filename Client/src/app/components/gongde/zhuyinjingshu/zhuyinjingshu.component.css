@@ -1,6 +1,7 @@
 /* 进度条 */
 progress
 {
+  width: 80%;
    color:rgb(190, 125, 64); /*兼容IE10和chorme的已完成进度背景*/
    border:none;
    border-radius: 25px;
@@ -73,7 +74,7 @@ progress::-webkit-progress-value
    }
 
  p.head2{
-  font-size: 125%;
+  font-size: 1.5rem;
   color: rgb(100, 100, 100);
   font-weight: bold;
   text-align: center;

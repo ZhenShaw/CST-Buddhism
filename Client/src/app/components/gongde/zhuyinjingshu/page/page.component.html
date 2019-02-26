@@ -1,9 +1,9 @@
 <!--分页组件的标签内容-->
-<nav aria-label="Page navigation" style="float: right">
-  <ul class="pagination">
+<nav aria-label="Page navigation" >
+  <ul class="pagination pagination-sm">
     <li class="page-item" [ngClass]="{disabled:pagination.currentPage === 1}">
       <a class="page-link" href="javascript:void(0);" (click)="prePage()" aria-label="Previous">
-        <span aria-hidden="true">←</span>
+        <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
     <li class="page-item" *ngFor="let item of pageList;trackBy:index"
@@ -12,7 +12,7 @@
     </li>
     <li class="page-item" [ngClass]="{disabled:pagination.currentPage === pageNum}">
       <a class="page-link" href="javascript:void(0);" (click)="nextPage()" aria-label="Next">
-        <span style="font-weight: 700;" aria-hidden="true">→</span>
+        <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
   </ul>
