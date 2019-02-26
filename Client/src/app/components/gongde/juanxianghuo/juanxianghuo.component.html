@@ -36,6 +36,10 @@
       <option value ="66" >66支 10元</option>
     </select>
     <p class="juzi">捐赠香火后将由法师为您点香</p>
-  </div>
+    <marquee direction=up behavior=scroll scrollamount=1 scrolldelay=1 align=bottom  height=30 width=80% hspace=83 vspace=700 onmouseover=this.stop() onmouseout=this.start()> 
+    <div  *ngFor="let infos of record2">
+    <p style="font-family:微软雅黑;font-size:110%;font-weight:500;color:#FFFFF3;"> {{infos.Name}} 刚刚捐赠了 {{infos.Number}} 支 {{infos.Leixing}} </p>
+    </div></marquee>
+</div>
   
 
