@@ -12,6 +12,9 @@ import (
 type Personmsg struct {
 	Wechatid, Name, Number, Leixing string
 }
+type Personmsg2 struct {
+	Name, Number, Leixing string
+}
 
 func checkError1(err error) {
 	if err != nil {
@@ -21,10 +24,16 @@ func checkError1(err error) {
 
 var ifsuccess bool = false
 
+func setheader2(w http.ResponseWriter) {
+	w.Header().Set("Content-Type", "application/x-www-form-urlencoded")
+	w.Header().Set("Access-Control-Allow-Origin", "*") //允许跨域
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type,access-control-allow-origin, access-control-allow-headers")
+}
 func Juanxianghuo(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Access-Control-Allow-Origin", "*")             //允许访问所有域
+	/*w.Header().Set("Access-Control-Allow-Origin", "*")             //允许访问所有域
 	w.Header().Add("Access-Control-Allow-Headers", "Content-Type") //header的类型
-	w.Header().Set("content-type", "application/json")             //返回数据格式是json
+	w.Header().Set("content-type", "application/json")             //返回数据格式是json*/
+	setheader2(w)
 	Userinfo := Personmsg{}
 	r.ParseForm()
 	data, err := ioutil.ReadAll(r.Body) //读取r中的所有数据，返回读取的数据和读取过程中遇到的任何错误，如果读取成功，则 err 返回 nil，而不是 EOF
@@ -46,4 +55,21 @@ func Juanxianghuo(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("error:", err)
 	}
 	w.Write(result)
+}
+func Juanxianghuodisplay(w http.ResponseWriter, r *http.Request) {
+	/*w.Header().Set("Access-Control-Allow-Origin", "*")             //允许访问所有域
+	w.Header().Add("Access-Control-Allow-Headers", "Content-Type") //header的类型
+	w.Header().Set("content-type", "application/json")             //返回数据格式是json*/
+	setheader2(w)
+	//var totaldata2 []Personmsg2
+	totaldata2 := psql.Juanxianghuododisplay()
+	//totaldata2 = append(totaldata2, )
+	//将数据传回给前端
+	data, err := json.Marshal(&totaldata2)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	//打印数据
+	println("data=", string(data))
+	w.Write(data)
 }
