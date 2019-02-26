@@ -10,16 +10,16 @@
         <thead>
             <th>已达成</th>
             <th>目标</th>
-            <th>参与人数</th>
+            <th>助印人</th>
         </thead>
-        <tbody>
+        <tr>
             <td>{{book.nownum}}</td>
             <td>{{book.targetnum}}</td>
             <td>{{book.donatornum}}</td>
-        </tbody>
+        </tr>
     </table>
 
-    <div class="buttonk"><button class="button1" (click)="this.open()">点击参与助印</button></div>
+    <button class="button1" (click)="this.open()">点击参与助印</button>
     <div style="margin-left:auto; margin-right: auto">
         <page [(pagination)]="pagination"> </page>
     </div>
@@ -32,26 +32,17 @@
 
     <body>
         <table>
-            <tr>
-                <thead>
-                    <th>芳名</th>
-                    <th>经书</th>
-                    <th>助印</th>
-                </thead>
-
+            <thead>
+                <th>芳名</th>
+                <th>经书</th>
+                <th>助印</th>
+            </thead>
+            <tr *ngFor="let donator of donators">
+                <td class="left"> {{donator.donatorid}} </td>
+                <td class="middle">{{donator.scripturename}}</td>
+                <td class="right">{{donator.donatenum}}本</td>
             </tr>
-
-
-            <li *ngFor="let donator of donators" style="padding:0;margin:5% 0%;list-style:none; font-size-adjust:initial;">
-                <tr>
-                    <td> {{donator.donatorid}} </td>
-                    <td>{{donator.scripturename}}</td>
-                    <td>{{donator.donatenum}}本</td>
-                </tr>
-
-            </li>
         </table>
-
     </body>
 
 

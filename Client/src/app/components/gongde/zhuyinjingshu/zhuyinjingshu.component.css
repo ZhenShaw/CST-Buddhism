@@ -1,3 +1,4 @@
+
 /* 进度条 */
 progress
 {
@@ -23,7 +24,6 @@ progress::-webkit-progress-value
 
 /* 方形按钮 */
 .buttonk{
-  height: 15%; 
   margin-left:auto;
    margin-right:auto;
   margin-bottom: 3%;
@@ -31,8 +31,12 @@ progress::-webkit-progress-value
 }
 
 
-  button.button1 {
+  .button1 {
     height: 100%;
+    margin-top: -5%;
+    margin-bottom: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
     border-radius: 2px;
     font-size: 15px;
     font-weight: 700;
@@ -49,7 +53,7 @@ progress::-webkit-progress-value
       padding: 8%;
       margin: 5% 3%;
       border-radius: 3px;
-      height: 40%;
+      height: 40%vh;
       border:2px #9c9c9c;
       border-style:none none solid none;
       box-shadow: 0px 0px 4px  rgb(156, 156, 156);
@@ -58,10 +62,12 @@ progress::-webkit-progress-value
   .card1 {
     position: relative;
     top:3px;
-    padding: 8%;
-    margin: 5% 3%;
+    padding: 8% 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top:5%;
     border-radius: 3px;
-    height: 90%;
+    height: 80%vh;
     border:2px #9c9c9c;
     border-style:none none solid none;
     box-shadow: 0px 0px 4px  rgb(156, 156, 156);
@@ -74,7 +80,7 @@ progress::-webkit-progress-value
    }
 
  p.head2{
-  font-size: 1.5rem;
+  font-size: 125%;
   color: rgb(100, 100, 100);
   font-weight: bold;
   text-align: center;
@@ -84,26 +90,45 @@ progress::-webkit-progress-value
  table {
    margin: 8% 0%;
    width: 100%;
-   
  }
 
  th{
-
-  width: 10%;
+  width: 30%vw;
 }
 
 
 
  thead {
   text-align:center ;
+
  }
 
  td {
   font-size: 17px;
-  width: 10%;
+  width: 30%;
+  text-align:center ;
+ }
+
+ td.middle {
+  font-size: 17px;
+  width: 40%;
+  padding: 4%;
   text-align:center ;
  }
  
+ td.left {
+  font-size: 17px;
+  width: 25%;
+  padding: 4%;
+  text-align:left ;
+ }
+
+ td.right{
+  font-size: 17px;
+  width: 25%;
+  padding: 4%;
+  text-align:right ;
+ }
  
 
  /* 不换行 */
@@ -112,7 +137,7 @@ progress::-webkit-progress-value
   width:25%;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 14%;
+  margin-top: 10%;
   margin-bottom: 0%;
 }
 /* 单选按钮 */
@@ -160,7 +185,7 @@ div.pay{
   margin-top: 5%;
   height: 13%;
 }
-button.weixin {
+.weixin {
   width: 30%;
   height: 100%;
   margin-left: 10%;
@@ -174,7 +199,7 @@ button.weixin {
   background-color: rgb(71, 209, 59);
 }
 
-button.zhifubao {
+.zhifubao {
   width: 30%;
   height: 100%;
   margin-left: 10%;

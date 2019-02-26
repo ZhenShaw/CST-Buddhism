@@ -24,9 +24,9 @@ export class ZhuyinjingshuComponent implements OnInit {
   booknum: number = 10;
 
   //多种经书种类
-  book: Scripture ={
+  book: Scripture = {
     scripturename: "", //经书名
-    targetnum:20000,  //目标数量
+    targetnum: 20000,  //目标数量
     nownum: 0,    //已达成数量
     donatornum: 0, //捐赠人数
   };
@@ -65,7 +65,9 @@ export class ZhuyinjingshuComponent implements OnInit {
         var booksbuff2 = JSON.parse(booksbuff1);
         this.booksbuff = booksbuff2.slist;
         this.donators = booksbuff2.dlist;
+        console.log("组件初始化,获取助印者列表和经书列表为：");
         console.log(this.donators);
+        console.log(this.booksbuff);
         let page = this.pagination.currentPage - 1;
         this.pagination.totalItems = 6;
         let head = page;
@@ -105,36 +107,38 @@ export class ZhuyinjingshuComponent implements OnInit {
         console.log(this.booksbuff[0].scripturename);
         break;
       case 2:
-      this.user.scripturename = this.booksbuff[1].scripturename;
-      console.log(this.booksbuff[1].scripturename);
+        this.user.scripturename = this.booksbuff[1].scripturename;
+        console.log(this.booksbuff[1].scripturename);
         break;
       case 3:
-      this.user.scripturename = this.booksbuff[2].scripturename;
-      console.log(this.booksbuff[2].scripturename);
+        this.user.scripturename = this.booksbuff[2].scripturename;
+        console.log(this.booksbuff[2].scripturename);
         break;
       case 4:
-      this.user.scripturename = this.booksbuff[3].scripturename;
-      console.log(this.booksbuff[3].scripturename);
+        this.user.scripturename = this.booksbuff[3].scripturename;
+        console.log(this.booksbuff[3].scripturename);
       case 5:
-      this.user.scripturename = this.booksbuff[4].scripturename;
-      console.log(this.booksbuff[4].scripturename);
+        this.user.scripturename = this.booksbuff[4].scripturename;
+        console.log(this.booksbuff[4].scripturename);
         break;
       case 6:
-      this.user.scripturename = this.booksbuff[5].scripturename;
-      console.log(this.booksbuff[5].scripturename);
+        this.user.scripturename = this.booksbuff[5].scripturename;
+        console.log(this.booksbuff[5].scripturename);
         break;
     }
+
     this.SendDonator(this.user);
     this.close();
-    location.reload();
-      
+    this.initList();
+    // location.reload();刷新网页的代码   
   }
   //发送捐赠请求
-  SendDonator(user:Userinf){
-    if(this.user.wechatid==""){this.user.wechatid="匿名"}
-    var todonate=JSON.stringify(this.user);
+  SendDonator(user: Userinf) {
+    if (this.user.wechatid == "") { this.user.wechatid = "匿名" }
+    var todonate = JSON.stringify(this.user);
+    console.log("发送捐赠请求,发送列表为：");
     console.log(todonate);
-    this.http.post('http://localhost:9000/yinjingshu',todonate, httpOptions).subscribe(function(data){console.log(data);});
+    this.http.post('http://localhost:9000/yinjingshu', todonate, httpOptions).subscribe(function (data) { console.log(data); });
   }
 
 }
