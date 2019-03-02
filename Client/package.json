@@ -21,6 +21,7 @@
     "@angular/router": "~7.1.0",
     "angular2-flash-messages": "^3.0.1",
     "axios": "^0.18.0",
+    "babylonjs": "^4.0.0-alpha.29",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
@@ -30,7 +31,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.13.2",
     "@angular/cli": "^7.3.2",
-    "@angular/compiler-cli": "^7.2.5",
+    "@angular/compiler-cli": "^7.2.7",
     "@angular/language-service": "~7.1.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",

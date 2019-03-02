@@ -26,14 +26,15 @@ import { SimiaoComponent } from './components/xiuxing/simiao/simiao.component';
 import { SimiaotwoComponent } from './components/xiuxing/simiao/simiaotwo/simiaotwo.component';
 import { SimiaothreeComponent } from './components/xiuxing/simiao/simiaothree/simiaothree.component';
 import { FoyinComponent } from './components/xiuxing/foyin/foyin.component';
-import {XuangeComponent } from './components/xiuxing/foyin/xuange/xuange.component';
+import { XuangeComponent } from './components/xiuxing/foyin/xuange/xuange.component';
 import { JieqianComponent } from './components/qiuqian/jieqian/jieqian.component';
 import { SearchResultComponent } from './components/xiuxing/library/search-result/search-result.component';
 import { QifuComponent } from './components/gongfo/qifu/qifu.component';
-
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 const routes: Routes = [
-  { path: '', redirectTo:"home", pathMatch: 'full' },
+  { path: '', redirectTo: "home", pathMatch: 'full' },
+  { path: 'welcome', component: WelcomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'bazi', component: BaziComponent },
   { path: 'qiuqian', component: QiuqianComponent },
