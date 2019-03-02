@@ -1,6 +1,7 @@
 package psql
 
 import (
+	"fmt"
 	"log"
 )
 
@@ -34,7 +35,7 @@ func YinjingshuInit(scriptureList []Scripture, donatorList []Donator) ([]Scriptu
 	var donatorNum int
 
 	//获取经书列表
-	rows, err := db.Query("select scriptureName,targetNum,nowNum,donatorNum from scriptureinfo;")
+	rows, err := db.Query("select scriptureName,targetNum,nowNum,donatorNum from scriptureinfo order by uid;")
 	for i := 0; rows.Next(); i++ {
 		if err := rows.Scan(&scripture.ScriptureName, &scripture.TargetNum, &scripture.NowNum, &scripture.DonatorNum); err != nil {
 			log.Fatal(err)
@@ -82,18 +83,40 @@ func YinjingshuInit(scriptureList []Scripture, donatorList []Donator) ([]Scriptu
 //user.do=="donator",调用函数YinjingshuDonator
 func YinjingshuDonator(user Userinf) {
 
-	//向数据表donatorinfo中插入数据
-	stmt, err := db.Prepare("insert into donatorinfo(wechatID,scriptureName,donateNum) values($1, $2, $3)")
-	stmt.Exec(user.WechatID, user.ScriptureName, user.DonateNum)
-	checkError(err)
-
 	//增加数据表scriptureinfo对应经书的已达成数量（nowNum）
 	var nownum int
 	sqlStatement := "select nowNum from scriptureinfo where scriptureName=$1;"
 	rows := db.QueryRow(sqlStatement, user.ScriptureName)
 	rows.Scan(&nownum)
 	nownum += user.DonateNum
-	stmt, err = db.Prepare("update scriptureinfo set nowNum=$1 where scriptureName=$2;")
+	stmt, err := db.Prepare("update scriptureinfo set nowNum=$1 where scriptureName=$2;")
 	checkError(err)
 	stmt.Exec(nownum, user.ScriptureName)
+
+
+	//增加数据表scriptureinfo对应捐赠人数的已达成数量（donatornum）
+	var exist string
+	sqlStatement = "select wechatid from donatorinfo where wechatid=$1;"
+	rows = db.QueryRow(sqlStatement, user.WechatID)
+	rows.Scan(&exist)
+	fmt.Println("name:",exist)
+	if exist=="" {				//判断该用户是否为新用户
+		var donatornum int
+		sqlStatement = "select donatornum from scriptureinfo where scriptureName=$1;"
+		rows = db.QueryRow(sqlStatement, user.ScriptureName)
+		rows.Scan(&donatornum)
+		stmt, err = db.Prepare("update scriptureinfo set donatornum=$1 where scriptureName=$2;")
+		checkError(err)
+		stmt.Exec(donatornum+1, user.ScriptureName)
+	}
+
+
+
+	//向数据表donatorinfo中插入数据
+	stmt, err = db.Prepare("insert into donatorinfo(wechatID,scriptureName,donateNum) values($1, $2, $3)")
+	checkError(err)
+	stmt.Exec(user.WechatID, user.ScriptureName, user.DonateNum)
+
+
+
 }
