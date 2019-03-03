@@ -101,6 +101,7 @@ export class ZhuyinjingshuComponent implements OnInit {
 
   donation() {
     //根据页码改变捐赠经书类型
+    
     switch (this.pagenum) {
       case 1:
         this.user.scripturename = this.booksbuff[0].scripturename;
@@ -117,6 +118,7 @@ export class ZhuyinjingshuComponent implements OnInit {
       case 4:
         this.user.scripturename = this.booksbuff[3].scripturename;
         console.log(this.booksbuff[3].scripturename);
+        break;
       case 5:
         this.user.scripturename = this.booksbuff[4].scripturename;
         console.log(this.booksbuff[4].scripturename);
@@ -126,7 +128,6 @@ export class ZhuyinjingshuComponent implements OnInit {
         console.log(this.booksbuff[5].scripturename);
         break;
     }
-
     this.SendDonator(this.user);
     this.close();
     this.initList();
