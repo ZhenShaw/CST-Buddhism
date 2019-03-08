@@ -20,6 +20,7 @@
     height:50%;
 }
 .sBox input {
+    width:77%;
     height:90%;
     border-radius: 4%;
     padding-left: 1rem;

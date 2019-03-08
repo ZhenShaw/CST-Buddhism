@@ -28,8 +28,10 @@
     float:right;
     width:60%;
     height:15%;
+  
 }
 .sBox input {
+    width: 77%;
     height:90%;
     border-radius: 4%;
     padding-left: 1rem;
@@ -37,7 +39,8 @@
 .sBox button {
     width:20%;
     height:90%;  
-    border-radius: 10%; 
+    border-radius: 6%; 
+    
 }
  img {
     width:30%;
