@@ -42,14 +42,18 @@ export class WelcomeComponent implements OnInit {
   
 
       // 导入3D网格素材，第一个参数 "" 表示导入的所有网格，rootUrl、sceneFilename
-      BABYLON.SceneLoader.ImportMesh("", "/assets/babylon/", "buddhism.babylon", scene,function(newMeshes ){
-          var buddhism = newMeshes[0];
-          var Material = new BABYLON.StandardMaterial("Material",scene);
-          Material.diffuseColor = new BABYLON.Color3(1,1,0);
-          buddhism.material = Material;
-      });
 
-    return scene;
+
+
+      BABYLON.SceneLoader.ImportMesh("", "/assets/babylon/", "buddhism.babylon", scene, function (newMeshes) {
+        // 获取返回的网格
+        var buddhism = newMeshes[0];
+        // 简单上色参考
+        var Material = new BABYLON.StandardMaterial("groundMaterial", scene);
+        Material.diffuseColor = new BABYLON.Color3(1, 0.9, 0.1);
+        buddhism.material = Material;
+      });
+      return scene;
 
     };
 
