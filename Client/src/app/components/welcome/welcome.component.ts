@@ -20,25 +20,37 @@ export class WelcomeComponent implements OnInit {
   buddhism() {
     // 获得canvas元素
     var canvas = <HTMLCanvasElement>document.getElementById("renderCanvas");
+
+
     // 使用该canvas元素创建babylon渲染引擎
     var engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true });
 
     var createScene = function () {
       // 创建一个基本的Scene对象，用于容纳其它对象 
       var scene = new BABYLON.Scene(engine);
-
+      // scene.clearColor = new BABYLON.Color4(0, 191, 255);
       // 添加半球光源，由上往下照射
       var light = new BABYLON.HemisphericLight("Hemi", new BABYLON.Vector3(0, 1, 0), scene);
+     
 
       // 创建弧度旋转相机  参数：纵向旋转角度alpha、横向旋转角度beta、半径、目标位置、所属场景
       var camera = new BABYLON.ArcRotateCamera("Camera", -0.3, 1.5, 100, new BABYLON.Vector3(0, 15, 2), scene);
       // 相机与画布关联，可以控制场景视角变化
       camera.attachControl(canvas, true);
+   
+     
+  
 
       // 导入3D网格素材，第一个参数 "" 表示导入的所有网格，rootUrl、sceneFilename
-      BABYLON.SceneLoader.ImportMesh("", "/assets/babylon/", "buddhism.babylon", scene);
+      BABYLON.SceneLoader.ImportMesh("", "/assets/babylon/", "buddhism.babylon", scene,function(newMeshes ){
+          var buddhism = newMeshes[0];
+          var Material = new BABYLON.StandardMaterial("Material",scene);
+          Material.diffuseColor = new BABYLON.Color3(1,1,0);
+          buddhism.material = Material;
+      });
 
-      return scene;
+    return scene;
+
     };
 
     var scene = createScene();
@@ -47,6 +59,8 @@ export class WelcomeComponent implements OnInit {
     engine.runRenderLoop(function () {
       if (scene) {
         scene.render();
+
+       
       }
     });
 
