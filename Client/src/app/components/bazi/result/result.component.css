@@ -45,9 +45,10 @@ button{
 }
 .po{
     font-family: 华文仿宋;
-    font-size: 15px;
+    font-size: 13px;
     color: #FFFF99;
     font-weight:bold;
+    margin: 1%;
 }
 
 .wordsize{
