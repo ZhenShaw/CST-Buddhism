@@ -67,8 +67,6 @@ export class WelcomeComponent implements OnInit {
       camera.attachControl(canvas, true);
 
 
-
-
       // 导入3D网格素材，第一个参数 "" 表示导入的所有网格，rootUrl、sceneFilename
 
 
