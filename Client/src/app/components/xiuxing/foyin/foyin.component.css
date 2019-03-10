@@ -12,38 +12,23 @@
 }
 
 
-/*@keyframes rotateImg {
-    0% {transform : rotate(0deg);}
-    100% {transform : rotate(360deg);}
-  }
-  @-webkit-keyframes rotateImg {
-    0%{-webkit-transform : rotate(0deg);}
-  100%{-webkit-transform : rotate(360deg);}
-}*/
-/* .big-title {
-  font-family: "黑体";
-  margin-left: 9rem;
-  margin-top: 100px;
-} */
-/* 
-.btn1 {
-
-  top: 10px;
-
-  float: left;
-
+#Ifplay{
+  -webkit-animation: play 10s linear infinite;
+     -moz-animation: play 10s linear infinite;
+          animation: play 10s linear infinite;
 }
-
-.btn2 {
-  top: 10px;
-  float: left;
-
+@-webkit-keyframes play{
+  0%{-webkit-transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
 }
-
-.btn3 {
-  margin-left: 1rem;
-  float: left;
-} */
+@-moz-keyframes play {
+  0%{-moz-transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+@keyframes play{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
 
 .play-ctrl {
   bottom: 3%;

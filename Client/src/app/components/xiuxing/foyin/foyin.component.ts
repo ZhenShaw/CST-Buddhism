@@ -29,6 +29,7 @@ export class FoyinComponent implements OnInit {
 {
   this.route.navigate(['/xiuxing/foyin/xuange']);
 }
+
   public audioSwiped(e) {
     switch (e) {
         case 'up':
@@ -44,5 +45,9 @@ export class FoyinComponent implements OnInit {
 public Skip(e) {
   this.audio.Skip(e.layerX /
   document.getElementById('audio-total').getBoundingClientRect().width);
+}
+public  imageR(){
+  var x=document.getElementById("Ifplay");
+  this.audio.PlayData().IsPlaying ?x.style.animationPlayState="running":x.style.animationPlayState="paused";
 }
 }
