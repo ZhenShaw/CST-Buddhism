@@ -26,7 +26,7 @@ export class DetailComponent implements OnInit {
       this.sex=data.sex;
       })
     const httpOptions ={headers:new HttpHeaders({'Content-Type':'application/json'})};
-    let api="http://localhost:9000/bazi/bazhidetail";
+    let api="/api/bazi/bazhidetail";
     this.http.post(api,{year:this.year,month:this.month,date:this.date,sex:this.sex},httpOptions).subscribe((response:any)=>{
      this.caiyun=response.caiyun;
      this.jiankang=response.jiankang;
