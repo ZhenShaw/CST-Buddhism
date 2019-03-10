@@ -31,15 +31,15 @@ export class WelcomeComponent implements OnInit {
       // scene.clearColor = new BABYLON.Color4(0, 191, 255);
       // 添加半球光源，由上往下照射
       var light = new BABYLON.HemisphericLight("Hemi", new BABYLON.Vector3(0, 1, 0), scene);
-     
+
 
       // 创建弧度旋转相机  参数：纵向旋转角度alpha、横向旋转角度beta、半径、目标位置、所属场景
       var camera = new BABYLON.ArcRotateCamera("Camera", -0.3, 1.5, 100, new BABYLON.Vector3(0, 15, 2), scene);
       // 相机与画布关联，可以控制场景视角变化
       camera.attachControl(canvas, true);
-   
-     
-  
+
+
+
 
       // 导入3D网格素材，第一个参数 "" 表示导入的所有网格，rootUrl、sceneFilename
 
@@ -52,7 +52,31 @@ export class WelcomeComponent implements OnInit {
         var Material = new BABYLON.StandardMaterial("groundMaterial", scene);
         Material.diffuseColor = new BABYLON.Color3(1, 0.9, 0.1);
         buddhism.material = Material;
+        
+        //创建一个立方体，取消背面剔除
+        var skybox = BABYLON.Mesh.CreateBox("skyBox", 1000, scene);
+        var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
+        skyboxMaterial.backFaceCulling = false;
+        skyboxMaterial.disableLighting = true;
+        skybox.material = skyboxMaterial;
+        //设置infiniteDistance属性,让天空盒随我们的相机移动
+        skybox.infiniteDistance = true;
+        //移除立方体上所有的光线反射(太阳光不在天空里反射!)
+        skyboxMaterial.disableLighting = true;
+        //特殊天空纹理贴到立方体上
+        skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("/assets/babylon/riverside", scene);
+        skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
       });
+
+      var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", { diameter: 3 }, scene);
+      // 添加高亮层.
+      var hl = new BABYLON.HighlightLayer("hl1", scene);
+      hl.addMesh(sphere, BABYLON.Color3.White());
+      sphere.position.x = 4;
+      sphere.position.y = 11;
+      sphere.position.z = 0.5;
+
+
       return scene;
 
     };
@@ -64,7 +88,7 @@ export class WelcomeComponent implements OnInit {
       if (scene) {
         scene.render();
 
-       
+
       }
     });
 

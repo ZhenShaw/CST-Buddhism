@@ -56,7 +56,7 @@ export class GongfoComponent implements OnInit {
     this.status = 2;
     if (this.storage.get("flower_list")) { this.flower_list = this.storage.get("flower_list") }
     else {
-      var url = "http://localhost:9000/gongfo/flower"
+      var url = "/api/gongfo/flower"
       axios.get(url).then(res => {
         console.log(res)
         this.flower_list = res.data
@@ -78,7 +78,7 @@ export class GongfoComponent implements OnInit {
       this.Listlength = this.fo_list.length
     }
     else {
-      var url = "http://localhost:9000/gongfo/fo"
+      var url = "/api/gongfo/fo"
       axios.get(url).then(res => {
         console.log(res)
         this.fo_list = res.data
@@ -109,7 +109,7 @@ export class GongfoComponent implements OnInit {
     this.status = 3;
     if (this.storage.get("xiang_list")) { this.xiang_list = this.storage.get("xiang_list") }
     else {
-      var url = "http://localhost:9000/gongfo/xiang"
+      var url = "/api/gongfo/xiang"
       axios.get(url).then(res => {
         console.log(res)
         this.xiang_list = res.data
@@ -127,7 +127,7 @@ export class GongfoComponent implements OnInit {
     this.status = 4;
     if (this.storage.get("fruit_list")) { this.fruit_list = this.storage.get("fruit_list") }
     else {
-      var url = "http://localhost:9000/gongfo/fruit"
+      var url = "/api/gongfo/fruit"
       axios.get(url).then(res => {
         console.log(res)
         this.fruit_list = res.data

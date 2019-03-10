@@ -1,22 +1,26 @@
 <div class="bg">
-  <img class="top" src="../../../assets/gongfo/gy_top.png" alt="">
-  <img class="desk" src="../../../assets/gongfo/gy_desk.jpg" alt="">
+  <div class="main">
+    <img class="top" src="../../../assets/gongfo/gy_top.png" alt="">
+    <img class="fo" (click)="dialog.open()" (click)="fo()" src={{fo_list[fo_index].url}} alt="">
+    <div class="button">
+      <button [routerLink]="[ '/qifu']">祈福</button>
+    </div>
 
-  <div class="lazhuset">
-    <img class="lazhu" src="../../../assets/gongfo/gy_lazhu.png" alt="">
-    <img class="xiang" (click)="dialog.open()" (click)="xiang()" src={{xiang_list[xiang_index].url}} alt="">
-    <img class="lazhu" src="../../../assets/gongfo/gy_lazhu.png" alt="">
-  </div>
+    <img class="desk" src="../../../assets/gongfo/gy_desk.jpg" alt="">
 
-  <div class="flower">
-    <img class="flowerset" (click)="dialog.open()" (click)="flower()" src={{flower_list[flower_index].url}} alt="">
-    <img class="flowerset" (click)="dialog.open()" (click)="flower()" src={{flower_list[flower_index].url}} alt="">
-  </div>
-  
-  <img class="fo" (click)="dialog.open()" (click)="fo()" src={{fo_list[fo_index].url}} alt="">
-  <img class="fruit" (click)="dialog.open()" (click)="fruit()" src={{fruit_list[fruit_index].url}} alt="">
-  <div class="button">
-    <button [routerLink]="[ '/qifu']">祈福</button>
+    <div class="lazhuset">
+      <img class="lazhu" src="../../../assets/gongfo/gy_lazhu.png" alt="">
+      <img class="xiang" (click)="dialog.open()" (click)="xiang()" src={{xiang_list[xiang_index].url}} alt="">
+      <img class="lazhu" src="../../../assets/gongfo/gy_lazhu.png" alt="">
+    </div>
+
+    <div class="flower">
+      <img class="flowerset" (click)="dialog.open()" (click)="flower()" src={{flower_list[flower_index].url}} alt="">
+      <img class="flowerset" (click)="dialog.open()" (click)="flower()" src={{flower_list[flower_index].url}} alt="">
+    </div>
+
+
+    <img class="fruit" (click)="dialog.open()" (click)="fruit()" src={{fruit_list[fruit_index].url}} alt="">
   </div>
 </div>
 

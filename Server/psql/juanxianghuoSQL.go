@@ -8,6 +8,13 @@ type Personmsg2 struct {
 	Name, Number, Leixing string
 }
 
+func reverse(s []Personmsg2) []Personmsg2 {
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[i]
+	}
+	return s
+}
+
 //将用户姓名，选择的香型，数量写入数据库
 func Juanxianghuoinfo(wechatid string, name string, number string, leixing string) {
 	stmt1, err := db.Prepare("INSERT INTO juanxianghuo(wechatid,xingming,shuliang,leixing) VALUES($1,$2,$3,$4) RETURNING uid")
@@ -34,6 +41,7 @@ func Juanxianghuododisplay() []Personmsg2 {
 		totaldata = append(totaldata, Tempinfo)
 
 	}
-	return totaldata
+
+	return reverse(totaldata) //反转返回
 
 }
