@@ -24,6 +24,7 @@ func Library(w http.ResponseWriter, r *http.Request) {
 		for k ,v:= range r.Form{
 			var temp book
 			err:=json.Unmarshal([]byte(k),&temp)
+
 			//解析失败会报错，如json字符串格式不对，缺"号，缺}等。
 			if err!=nil{
 				fmt.Println(err)

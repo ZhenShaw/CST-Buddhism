@@ -37,6 +37,7 @@ export class WelcomeComponent implements OnInit {
       var camera = new BABYLON.ArcRotateCamera("Camera", -0.3, 1.5, 100, new BABYLON.Vector3(0, 15, 2), scene);
       // 相机与画布关联，可以控制场景视角变化
       camera.attachControl(canvas, true);
+       
    
      
   
