@@ -27,7 +27,7 @@
 .wrap img {
     display: relative;
     width: 100vw;
-    height: 280px;
+    height: 20%;
     float: left;
 }
 
@@ -68,7 +68,7 @@
 
 .list {
     width: 90%;
-    height: 250px;
+    height: 35%;;
     border: 3px solid #999;
     margin: auto;
     overflow: hidden;
