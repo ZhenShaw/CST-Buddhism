@@ -1,7 +1,23 @@
 #renderCanvas {
-  width: 100%;
-  height: 100%;
-  touch-action: none;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
 
+.play-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(172, 170, 170, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.play-control img {
+    width: 40px;
+    height: 40px;
 }

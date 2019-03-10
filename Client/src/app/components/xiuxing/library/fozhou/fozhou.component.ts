@@ -15,7 +15,7 @@ export class FozhouComponent implements OnInit {
   ngOnInit() {
     
     const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
-    this.http.post("http://127.0.0.1:9000/library",{"booktype":"佛咒"},httpOptions).subscribe((response:any)=>{
+    this.http.post("/api/library",{"booktype":"佛咒"},httpOptions).subscribe((response:any)=>{
       this.zhouList = response;
 
     });
@@ -31,7 +31,7 @@ export class FozhouComponent implements OnInit {
     }
 
     const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
-    this.http.post("http://127.0.0.1:9000/changeNumber",addReadNum,httpOptions).subscribe();
+    this.http.post("/api/changeNumber",addReadNum,httpOptions).subscribe();
     this.storage.set("zhouInf",item);
     this.router.navigate(['/zhouGeneral']);
   }

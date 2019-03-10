@@ -17,7 +17,7 @@ export class SearchResultComponent implements OnInit {
   ngOnInit() {
     let inf =this.storage.get("searchInf");
     const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
-    this.http.post("http://127.0.0.1:9000/search",{"bookname":inf },httpOptions).subscribe((response:any)=>{
+    this.http.post("/api/search",{"bookname":inf },httpOptions).subscribe((response:any)=>{
       this.list = response;
       this.number = this.list.length;
     });
@@ -25,7 +25,7 @@ export class SearchResultComponent implements OnInit {
   search() {
     if(this.searchInf.length>0){
       const httpOptions = { headers: new HttpHeaders({'Content-Type':'application/x-www-form-urlencoded'})}
-      this.http.post("http://127.0.0.1:9000/search",{"bookname":this.searchInf },httpOptions).subscribe((response:any)=>{
+      this.http.post("/api/search",{"bookname":this.searchInf },httpOptions).subscribe((response:any)=>{
         this.list = response;
         this.number = this.list.length;
         this.storage.remove("searchInf");

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AudioService } from 'src/app/components/xiuxing/foyin/service/audio.service';
+import { Audio } from 'src/app/components/xiuxing/foyin/interface/audio.model';
+import { PlayData } from 'src/app/components/xiuxing/foyin/interface/playdata.model';
 import * as BABYLON from 'babylonjs'
 
 @Component({
@@ -7,13 +10,47 @@ import * as BABYLON from 'babylonjs'
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
+  public playList: Audio[];
+  public playData: PlayData;
+  public src: String = "/assets/icon/play.png"
+  public playing: boolean = true
 
-  constructor() { }
+  constructor(public audio: AudioService) { }
 
   ngOnInit() {
+    
     this.buddhism()
+    this.playList = this.audio.PlayList();
+    this.playData = this.audio.PlayData();
+    this.audio.Next();
+    this.audio.Prev();
+   
   }
 
+  // 点击播放和暂停背景音乐
+  playMusic() {
+    if (this.playing) {
+      this.src = "/assets/icon/abort.png"
+      this.abort()
+    } else {
+      this.src = "/assets/icon/play.png"
+      this.play()
+    }
+    this.playing = !this.playing
+  }
+
+  // 播放音乐
+  play() {
+    this.audio.Toggle();
+  }
+  // 暂停音乐
+  abort() {
+    this.audio.Toggle();
+  }
+
+
+
+  
   // 引擎(engine), 场景(scene), 花布(canvas), 网格(mesh), 光源(light), 相机(camera),
   // 三元向量(Vector3), 三元颜色(Color3), 动作管理器(ActionManager), 和动画(Animation)
 
@@ -39,8 +76,6 @@ export class WelcomeComponent implements OnInit {
       camera.attachControl(canvas, true);
 
 
-
-
       // 导入3D网格素材，第一个参数 "" 表示导入的所有网格，rootUrl、sceneFilename
 
 
@@ -52,7 +87,7 @@ export class WelcomeComponent implements OnInit {
         var Material = new BABYLON.StandardMaterial("groundMaterial", scene);
         Material.diffuseColor = new BABYLON.Color3(1, 0.9, 0.1);
         buddhism.material = Material;
-        
+
         //创建一个立方体，取消背面剔除
         var skybox = BABYLON.Mesh.CreateBox("skyBox", 1000, scene);
         var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
