@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AudioService } from 'src/app/components/xiuxing/foyin/service/audio.service';
+import { Audio } from 'src/app/components/xiuxing/foyin/interface/audio.model';
+import { PlayData } from 'src/app/components/xiuxing/foyin/interface/playdata.model';
 import * as BABYLON from 'babylonjs'
 
 @Component({
@@ -7,15 +10,21 @@ import * as BABYLON from 'babylonjs'
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-
+  public playList: Audio[];
+  public playData: PlayData;
   public src: String = "/assets/icon/play.png"
   public playing: boolean = true
 
-  constructor() { }
+  constructor(public audio: AudioService) { }
 
   ngOnInit() {
+    
     this.buddhism()
-    this.play()
+    this.playList = this.audio.PlayList();
+    this.playData = this.audio.PlayData();
+    this.audio.Next();
+    this.audio.Prev();
+   
   }
 
   // 点击播放和暂停背景音乐
@@ -32,11 +41,11 @@ export class WelcomeComponent implements OnInit {
 
   // 播放音乐
   play() {
-
+    this.audio.Toggle();
   }
   // 暂停音乐
   abort() {
-
+    this.audio.Toggle();
   }
 
 
