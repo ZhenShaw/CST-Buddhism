@@ -8,12 +8,40 @@ import * as BABYLON from 'babylonjs'
 })
 export class WelcomeComponent implements OnInit {
 
+  public src: String = "/assets/icon/play.png"
+  public playing: boolean = true
+
   constructor() { }
 
   ngOnInit() {
     this.buddhism()
+    this.play()
   }
 
+  // 点击播放和暂停背景音乐
+  playMusic() {
+    if (this.playing) {
+      this.src = "/assets/icon/abort.png"
+      this.abort()
+    } else {
+      this.src = "/assets/icon/play.png"
+      this.play()
+    }
+    this.playing = !this.playing
+  }
+
+  // 播放音乐
+  play() {
+
+  }
+  // 暂停音乐
+  abort() {
+
+  }
+
+
+
+  
   // 引擎(engine), 场景(scene), 花布(canvas), 网格(mesh), 光源(light), 相机(camera),
   // 三元向量(Vector3), 三元颜色(Color3), 动作管理器(ActionManager), 和动画(Animation)
 
@@ -52,7 +80,7 @@ export class WelcomeComponent implements OnInit {
         var Material = new BABYLON.StandardMaterial("groundMaterial", scene);
         Material.diffuseColor = new BABYLON.Color3(1, 0.9, 0.1);
         buddhism.material = Material;
-        
+
         //创建一个立方体，取消背面剔除
         var skybox = BABYLON.Mesh.CreateBox("skyBox", 1000, scene);
         var skyboxMaterial = new BABYLON.StandardMaterial("skyBox", scene);
