@@ -121,7 +121,7 @@ export class QifuComponent implements OnInit {
       formData.append('file', blob, 'voice.mp3')
       axios({
         method: 'post',
-        url: 'http://localhost:9000/gongfo/qifu',
+        url: '/api/gongfo/qifu',
         data: formData,
         headers: {
           'Content-Type': 'multipart/form-data'
