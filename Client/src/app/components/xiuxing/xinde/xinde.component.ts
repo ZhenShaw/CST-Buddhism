@@ -26,7 +26,7 @@ export class XindeComponent implements OnInit {
   public tablePageList = [];  //分页后前台显示数据
   public pageNo = 1; //当前页码
   public preShow = false; //上一页
-  public nextShow = true; //下一页
+  public nextShow = false; //下一页
   public pageSize = 5; //单页显示数
   public curPage = 1; //当前页
   public pageNos:number[]=[5,10];

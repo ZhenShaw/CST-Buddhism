@@ -1,48 +1,52 @@
 <!-- 在ts文件定义高度，传入弹窗组件，默认高度为25% -->
 <app-modal [height]="height" #modal>
-  <div class="modal-context">
-    <div>
-      <a [routerLink]="[ '/suanming' ]">
-        <button style="width:50%">
-          <div>生辰八字</div>
-        </button>
-      </a>
-      <a [routerLink]="[ '/qiuqian' ]">
-        <button style="width:50%">
-          <div>求签卜卦</div>
-        </button>
-      </a>
-    </div>
-  </div>
+	<div class="modal-context">
+		<div>
+			<a [routerLink]="[ '/suanming' ]">
+				<button style="width:50%">
+					<div>生辰八字</div>
+				</button>
+			</a>
+			<a [routerLink]="[ '/qiuqian' ]">
+				<button style="width:50%">
+					<div>求签卜卦</div>
+				</button>
+			</a>
+		</div>
+	</div>
 </app-modal>
 
 <div class="body">
-  <div class="nav">
-    <div class="nav-line">
-      <a (click)="modal.open()">
-        <button>
-          <div>解惑</div>
-        </button>
-      </a>
-      <a [routerLink]="[ '/gongfo' ]">
-        <button>
-          <div>供佛</div>
-        </button>
-      </a>
-    </div>
+	<div class="nav">
+		<div class="nav-line">
+			<a (click)="modal.open()">
+				<button>
+					<img class="icon" src="/assets/icon/jiehuo.png">
+					<div>解惑</div>
+				</button>
+			</a>
+			<a [routerLink]="[ '/gongfo' ]">
+				<button>
+					<img class="icon" src="/assets/icon/gongfo.png">
+					<div>供佛</div>
+				</button>
+			</a>
+		</div>
 
-    <div class="nav-line">
-      <a [routerLink]="[ '/xiuxing' ]">
-        <button>
-          <div>修行</div>
-        </button>
-      </a>
-      <a [routerLink]="[ '/gongde' ]">
-        <button>
-          <div>积功德</div>
-        </button>
-      </a>
-    </div>
+		<div class="nav-line">
+			<a [routerLink]="[ '/xiuxing' ]">
+				<button>
+					<img class="icon" src="/assets/icon/xiuxing.png">
+					<div>修行</div>
+				</button>
+			</a>
+			<a [routerLink]="[ '/gongde' ]">
+				<button>
+					<img class="icon" src="/assets/icon/gongde.png">
+					<div>功德</div>
+				</button>
+			</a>
+		</div>
 
-  </div>
+	</div>
 </div>

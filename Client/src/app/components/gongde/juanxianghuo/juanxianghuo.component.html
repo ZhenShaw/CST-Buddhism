@@ -1,22 +1,18 @@
+
 <style>
-  input:focus
-  {
-    background-color:#f9a11b;
-  }
   input::-webkit-input-placeholder{
     color:#333030;
     font-size:60%;
   }
   </style>
-  
   <div class="body">
     <div class="xiang_area">
-    <div class="xiang"><input type="button" name="xiang_type" value="平安香" class="xuanze" (click)="pinganxiang()" ></div>
-    <div class="xiang"><input type="button" name="xiang_type" value="消灾香" class="xuanze" (click)="xiaozaixiang()"></div>
-    <div class="xiang"><input type="button" name="xiang_type" value="富贵香" class="xuanze" (click)="fuguixiang()"></div>
-    <div class="xiang"><input type="button" name="xiang_type" value="求子香" class="xuanze" (click)="qiuzixiang()"></div>
-    <div class="xiang"><input type="button" name="xiang_type" value="增财香" class="xuanze" (click)="zengcaixiang()"></div>
-    <div class="xiang"><input type="button" name="xiang_type" value="智慧香" class="xuanze" (click)="zhihuixiang()"></div>
+    <div class="xiang"><input type="button" name="xiang_type" value="平安香"  id="button1"  (click)="pinganxiang()" ></div>
+    <div class="xiang"><input type="button" name="xiang_type" value="消灾香"  id="button2" (click)="xiaozaixiang()"></div>
+    <div class="xiang"><input type="button" name="xiang_type" value="富贵香"  id="button3" (click)="fuguixiang()"></div>
+    <div class="xiang"><input type="button" name="xiang_type" value="求子香"  id="button4" (click)="qiuzixiang()"></div>
+    <div class="xiang"><input type="button" name="xiang_type" value="增财香"  id="button5" (click)="zengcaixiang()"></div>
+    <div class="xiang"><input type="button" name="xiang_type" value="智慧香"  id="button6" (click)="zhihuixiang()"></div>
   </div>
     <div class="input_name">
     芳名：<input type="text" id="name" placeholder="请输入您的名字" [(ngModel)]="record1.name" value="form_input" />
@@ -36,10 +32,13 @@
       <option value ="66" >66支 10元</option>
     </select>
     <p class="juzi">捐赠香火后将由法师为您点香</p>
-    <marquee direction=up behavior=scroll scrollamount=1 scrolldelay=1 align=bottom  height=30 width=80% hspace=83 vspace=700 onmouseover=this.stop() onmouseout=this.start()> 
+    <div class="gundongkuang">
+    <marquee style="position:absolute;left:19%;top:20%;" direction=up behavior="scroll" scrollamount=1 scrolldelay=1   height=70% width=70%   onmouseover=this.stop() onmouseout=this.start()> 
     <div  *ngFor="let infos of record2">
     <p style="font-family:微软雅黑;font-size:110%;font-weight:500;color:#FFFFF3;"> {{infos.Name}} 刚刚捐赠了 {{infos.Number}} 支 {{infos.Leixing}} </p>
-    </div></marquee>
+    </div>
+  </marquee>
+  </div>
 </div>
-  
+
 
