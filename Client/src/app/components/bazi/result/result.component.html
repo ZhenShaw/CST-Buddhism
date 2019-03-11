@@ -1,24 +1,26 @@
 <div class="res">
-  <p class="headline">
-    个人信息
-  </p>
-  <p class="wordsize">
-    姓名：{{people.name}}<br>
-    性别：{{people.sex}}<br>
-    出生：{{people.birthday}}<br>
-    阴历: {{people.yinli}}<br>
-    年命：纳音{{people.fateforyear}}<br>
-    天运：五行属{{people.luckfromgod}}<br>
-    生肖：{{people.animal}}<br>
-    本命：{{people.fate}}<br>
-    命卦：{{people.divinesign}}命<br>
-  </p>
-  <p class="headline">
-    八字论命
-  </p>
-  <div>
-    <div class="mas">
-      <table>
+  <b class="headline">
+    &nbsp;八字论命
+  </b>
+  <div class="wordsize">
+    
+    <b>姓名</b> {{people.name}}
+    &nbsp;&nbsp;
+    <b>性别</b> {{people.sex}}
+    <br>
+    <div class="xian"></div>
+    <b>公历</b> {{people.birthday}}
+    <br>
+    <div class="xian"></div>
+    <b>阴历</b> {{people.yinli}}
+    <br>
+    <div class="xian"></div>
+    <b>生肖</b> {{people.animal}}
+    &nbsp;&nbsp; &nbsp;
+    <b>命卦</b> {{people.divinesign}}命
+    <br>
+    <div class="xian"></div>
+    <table border="1" style="width:100%; text-align:center;">
         <thead>
              <tr>                           
               <th>年柱</th>&nbsp;&nbsp;
@@ -34,24 +36,36 @@
              </tr>
           </tbody>
    </table>
-   <br>
-   <p>
-   <b>五行个数:</b><br>{{people.mu}}个木&nbsp;&nbsp;{{people.huo}}个火&nbsp;&nbsp;{{people.shui}}个水&nbsp;&nbsp;{{people.tu}}个土&nbsp;&nbsp;{{people.jin}}个金
-  </p>
+    
+    
   </div>
+  <!-- <b class="headline">
+      &nbsp;八字论命
+  </b> -->
+  
+    <div class="mas"> 
+      <b>&nbsp;年命</b> 纳音{{people.fateforyear}}
+      <br>
+      <b>&nbsp;天运</b> 五行属{{people.luckfromgod}}
+      <br>
+      <b>&nbsp;本命</b> {{people.fate}}
+      <br>
+      <p>
+      <b>&nbsp;五行个数:</b><br>&nbsp;&nbsp;{{people.mu}}个木&nbsp;&nbsp;{{people.huo}}个火<br>&nbsp;&nbsp;{{people.shui}}个水&nbsp;&nbsp;{{people.tu}}个土<br>&nbsp;&nbsp;{{people.jin}}个金
+      </p>
+    </div>
+    
     <div class="cho">
       <p class="clo">
-        <br>
         算财运<br><br>
         算健康<br><br>
         算事业<br><br>
-        算爱情<br><br>
+        算爱情<br>
       </p>
       <button (click)="moremessage()">
         <p class="po">更多精准详批</p>
       </button>
       <br>
-      <br>
     </div>
-  </div>
+  
 </div>
