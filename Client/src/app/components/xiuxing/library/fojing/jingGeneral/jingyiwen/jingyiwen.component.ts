@@ -12,7 +12,6 @@ export class JingyiwenComponent implements OnInit {
 
   ngOnInit() {
     this.yiwen=this.storage.get("yiwen");
-    console.log(this.yiwen.bookname);
     this.yiwentext.nativeElement.innerHTML=this.yiwen.yiwen;
   }
 
