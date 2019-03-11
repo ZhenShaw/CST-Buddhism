@@ -30,7 +30,7 @@ export class AddxindeComponent implements OnInit {
       this.flashMessagesService.show("心得标题不能为空！",{cssClass:"alert-danger",timeout:3000});
     }
     else{
-      let api = 'http://127.0.0.1:9000/xiuxing/xinde/addxinde';
+      let api = '/api/xiuxing/xinde/addxinde';
       const HttpOptions = {
         headers: new HttpHeaders({'Content-Type':'application/json'})
       }

@@ -38,7 +38,7 @@ export class XindeComponent implements OnInit {
   }
   
   getxinde(){
-    let api = 'http://127.0.0.1:9000/xiuxing/xinde';
+    let api = '/api/xiuxing/xinde';
     this.http.get<Message[]>(api).subscribe(res=>{
       console.log(res);
       this.addxinde(res);
