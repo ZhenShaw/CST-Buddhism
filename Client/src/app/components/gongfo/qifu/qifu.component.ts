@@ -119,6 +119,7 @@ export class QifuComponent implements OnInit {
       //上传文件
       const formData = new FormData()
       formData.append('file', blob, 'voice.mp3')
+      console.log(formData);
       axios({
         method: 'post',
         url: '/api/gongfo/qifu',
