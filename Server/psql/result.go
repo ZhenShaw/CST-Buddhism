@@ -104,6 +104,9 @@ func Getresult(year string, month string, day string, sex string) Result {
 	for rows.Next() {
 		rows.Scan(&user.NianZhu, &user.YueZhu, &yinli_year, &yinli_month, &yinli_day, &user.ShengXiao, &user.NianMing, &user.RiZhu)
 	}
+	if yinli_day == "初十 " {
+		yinli_day = "初十"
+	}
 	user.YinLi = yinli_year + "年 " + yinli_month + " " + yinli_day
 	nianzhu := strings.Split(user.NianZhu, "")
 	yuezhu := strings.Split(user.YueZhu, "")
