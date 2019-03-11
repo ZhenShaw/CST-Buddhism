@@ -60,7 +60,7 @@ export class ResultComponent implements OnInit {
      })
      this.people.birthday = this.year + "年" + this.month + "月" + this.day+"日";
     const httpOptions = {headers: new HttpHeaders({'Content-Type':'application/json'})}
-    var api = "http://127.0.0.1:9000/result";
+    var api = "/api/result";
     this.http.post(api,{"year":this.year,"month":this.month,"day":this.day,"sex":this.people.sex},httpOptions).subscribe(response=>{
       console.log(response)
       var b:any=response
