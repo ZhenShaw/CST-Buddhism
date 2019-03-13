@@ -98,7 +98,8 @@ export class QifuComponent implements OnInit {
     this.recorder.onstop = () => {
       console.log(this.chunks)
       //let blob = new Blob(this.chunks, { 'type': 'audio/ogg; codecs=opus' }),
-      let blob = new Blob(this.chunks, { 'type': 'audio/mpeg; codecs=opus' }),
+      let blob = new Blob(this.chunks, { 'type': 'audio; codecs=opus' }),
+      //let blob = new Blob(this.chunks, { 'type': 'audio/mpeg; codecs=opus' }),
         audioStream = URL.createObjectURL(blob),
         //估算时长
         duration = Math.round(blob.size / 6600);
