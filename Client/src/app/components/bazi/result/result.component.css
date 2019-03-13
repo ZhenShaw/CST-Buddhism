@@ -1,29 +1,41 @@
 .headline{
     text-align: left;
-    color: yellow;
-    font-size: 35px;
+    color: rgb(255, 251, 0);
+    font-size: 30px;
     font-family: 华文楷体;
 }
-    
+b{
+    font-size: 22px;
+    color: rgb(255, 94, 0);
+   
+}
+
 .res{
-    height: 140%;
+    height: 100%;
     width: 100%;
     background-size: 100%;
-    background-color: #cccc99;
+    background-color: rgb(243, 200, 59);
 }
-    
+.xian{
+    height:0px;
+    width:100%;
+    border-top:1px solid rgba(0, 0, 0, 0.055);
+    margin: 1.5%;
+}
 .mas{
     width: 60%;
-    border: 1px solid black;
+    border: 2px solid rgba(252, 139, 33, 0.932);
     float: left;
-    height: 300px;
-    font-size: 24px;
-    margin: 2%;
+    height: 43%;
+    margin-left: 1%;
+    font-size: 22px;
+    font-family: 楷体;
+    background-color: rgba(181, 253, 255, 0.692);
 }
 button{
     border-radius: 10px;
-    box-shadow: 5px 5px 5px #6600FF;
-    height: 40px;
+    box-shadow: 3px 3px 3px #6600FF;
+    height: 35px;
     width: 90%;
     background-color: #6666FF;
 }
@@ -37,22 +49,24 @@ button{
     
 .cho{
     float: right;
-    width: 35%;
+    width: 33%;
+    height: 43%;
     border: 1px solid black;
     text-align: center;
-    margin-right: 3px;
+    margin-right: 1%;
     background-color:#ECA646;
+    
 }
 .po{
     font-family: 华文仿宋;
-    font-size: 13px;
+    font-size: 75%;
     color: #FFFF99;
     font-weight:bold;
     margin: 1%;
 }
 
 .wordsize{
-    font-size: 25px;
+    font-size: 22px;
     font-family: 楷体;
     margin: 3%;
 }

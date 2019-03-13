@@ -1,18 +1,21 @@
 .class1 {
-    background-color: #CCCC99;
+    background-color: rgb(243, 178, 59);
     height: 100%;
     width: 100%;
     background-size: 100%;
     overflow: auto;
    
 }
+hr{
+    width:98%;
+}
 h2{
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
     font-family: 楷体;
-    color:yellow;
+    color:rgb(255, 251, 0);
 }
-ul,ol{
+ul{
     list-style-type: none;
 }
 .ziti{
@@ -24,17 +27,14 @@ ul,ol{
     color:red;
     font-size: 20px;
     font-family: Arial;
+    text-align: center;
     
 }
 .class2{
-    width: 39%;
-     float: left; 
-    margin-left: 6%;
-}
-.class3{
-    
-    width: 49%;
-      float: left; 
-      margin: 0 auto;
-    
+  margin :2%;
+  background-color: white;
+  border-radius: 5%;
+  width: 95%;
+  height: 35%;
+  
 }
