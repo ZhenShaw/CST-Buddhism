@@ -2,12 +2,13 @@ package route
 
 import (
 	"bytes"
-	"encoding/json"
 	"io"
 	"log"
 	"net/http"
 	"os"
 	"os/exec"
+
+	"../aliyun"
 )
 
 func check(e error) {
@@ -34,7 +35,7 @@ func Qifu(w http.ResponseWriter, r *http.Request) {
 	// check(err)
 	if r.Method == "POST" {
 		//r.ParseMultipartForm(500)
-		files, header, err := r.FormFile("file")
+		files, _, err := r.FormFile("file")
 		if err != nil {
 			panic(err)
 		}
@@ -46,7 +47,9 @@ func Qifu(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			panic(err)
 		}
-		errs, _, _ := Shellout("rm -rf voice.mp3")
+
+		errs, _, _ := Shellout("rm -rf /home/www/cst/file/voice.mp3")
+
 		errs, _, _ = Shellout("ffmpeg -i /home/www/cst/file/voice -acodec libmp3lame -aq 4 -ar 16000 /home/www/cst/file/voice.mp3")
 		if errs != nil {
 			log.Printf("error: %v\n", errs)
@@ -56,10 +59,11 @@ func Qifu(w http.ResponseWriter, r *http.Request) {
 		// fmt.Println("--- stderr ---")
 		// fmt.Println(errout)
 		// fmt.Println(err)
+		text := aliyun.VoiceToText("http://cst.file.ifeel.vip/voice.mp3")
 
-		w.Write([]byte("upload success"))
-		response, _ := json.Marshal(header)
-		w.Write(response)
+		// w.Write([]byte("upload success"))
+		// response, _ := json.Marshal(header)
+		w.Write([]byte(text))
 	}
 
 }
