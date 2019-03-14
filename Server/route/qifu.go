@@ -46,8 +46,9 @@ func Qifu(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			panic(err)
 		}
-		errs, _, _ := Shellout("rm -rf voice.mp3")
-		errs, _, _ = Shellout("ffmpeg -i /home/www/cst/file/voice -acodec libmp3lame -aq 4 -ar 16000 /home/www/cst/file/voice.mp3")
+		errs, _, _ := Shellout("cd /home/www/cst/file/")
+		errs, _, _ = Shellout("rm -rf voice.mp3")
+		errs, _, _ = Shellout("ffmpeg -i voice -acodec libmp3lame -aq 4 -ar 16000 voice.mp3")
 		if errs != nil {
 			log.Printf("error: %v\n", errs)
 		}
