@@ -14,7 +14,7 @@ func SearchResult(name string){
 
 	List = (List)[0:0]
 	var one inf
-	sqlStatement := `SELECT * FROM fojing WHERE bookname=$1`
+	sqlStatement := `SELECT bookname,readnumber,bookintroduce,contentintroduce,yuanwen,yiwen FROM fojing WHERE bookname=$1`
 	row := db.QueryRow(sqlStatement,name)
 	err := row.Scan(&one.Bookname, &one.Readnumber,&one.Bookintroduce,&one.Contentintroduce,&one.Yuanwen,&one.Yiwen)
 	if err==nil {
@@ -22,7 +22,7 @@ func SearchResult(name string){
 		List = append(List,one)
 	}
 
-	sqlStatement = `SELECT * FROM fozhou WHERE bookname=$1`
+	sqlStatement = `SELECT bookname,readnumber,bookintroduce,contentintroduce,yuanwen FROM fozhou WHERE bookname=$1`
 	row = db.QueryRow(sqlStatement,name)
 	err = row.Scan(&one.Bookname, &one.Readnumber,&one.Bookintroduce,&one.Contentintroduce,&one.Yuanwen)
 	if err==nil {
@@ -33,7 +33,7 @@ func SearchResult(name string){
 	if len(List)<1 {
 
 			str := "%"+string(name)+"%"
-			rows, err := db.Query("select * from public.fojing where bookname like $1",str)
+			rows, err := db.Query("select bookname,readnumber,bookintroduce,contentintroduce,yuanwen,yiwen from public.fojing where bookname like $1",str)
 			checkError(err)
 			for rows.Next() {
 				err = rows.Scan(&one.Bookname, &one.Readnumber,&one.Bookintroduce,&one.Contentintroduce,&one.Yuanwen,&one.Yiwen)
@@ -42,7 +42,7 @@ func SearchResult(name string){
 				List = append(List,one)
 			}
 
-			rows, err = db.Query("select * from public.fozhou where bookname like $1",str)
+			rows, err = db.Query("select bookname,readnumber,bookintroduce,contentintroduce,yuanwen from public.fozhou where bookname like $1",str)
 			checkError(err)
 			for rows.Next() {
 				err = rows.Scan(&one.Bookname, &one.Readnumber,&one.Bookintroduce,&one.Contentintroduce,&one.Yuanwen)

@@ -2,11 +2,12 @@ package aliyun
 
 import (
 	"encoding/json"
+	"errors"
 	"os"
 	"regexp"
 	"time"
 
-	// go get -u github.com/aliyun/alibaba-cloud-sdk-go/sdk
+	//go get -u github.com/aliyun/alibaba-cloud-sdk-go/sdk
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk"
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/requests"
 	"github.com/pkg/errors"

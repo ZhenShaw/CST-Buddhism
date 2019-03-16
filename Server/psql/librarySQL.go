@@ -15,7 +15,7 @@ func Gain(tp string ){
     AllInf = (AllInf)[0:0]
 	var one bookInf
 	if tp=="佛咒" {
-		rows, err := db.Query("select * from public.fozhou")
+		rows, err := db.Query("select bookname,readnumber,bookintroduce,contentintroduce,yuanwen from public.fozhou")
 		checkError(err)
 
 		for rows.Next() {
@@ -24,7 +24,7 @@ func Gain(tp string ){
 			AllInf = append(AllInf,one)
 		}
 	}else {
-		rows, err := db.Query("select * from public.fojing")
+		rows, err := db.Query("select bookname,readnumber,bookintroduce,contentintroduce,yuanwen,yiwen from public.fojing")
 		checkError(err)
 
 		for rows.Next() {
