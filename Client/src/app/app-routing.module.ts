@@ -33,7 +33,7 @@ import { QifuComponent } from './components/gongfo/qifu/qifu.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: "home", pathMatch: 'full' },
+  { path: '', redirectTo: "welcome", pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'bazi', component: BaziComponent },
