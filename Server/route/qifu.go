@@ -2,6 +2,7 @@ package route
 
 import (
 	"bytes"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -29,12 +30,7 @@ func Shellout(command string) (error, string, string) {
 
 func Qifu(w http.ResponseWriter, r *http.Request) {
 	sethead(w)
-	// r.ParseMultipartForm(500)
-	//blobfile:=r.MultipartForm.File["content"]
-	// err := ioutil.WriteFile("test.txt",blobfile, 0666)
-	// check(err)
 	if r.Method == "POST" {
-		//r.ParseMultipartForm(500)
 		files, _, err := r.FormFile("file")
 		if err != nil {
 			panic(err)
@@ -47,24 +43,16 @@ func Qifu(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			panic(err)
 		}
-		
-		errs, _, _ := Shellout("cd /home/www/cst/file/")
-		errs, _, _ = Shellout("rm -rf voice.mp3")
-		errs, _, _ = Shellout("ffmpeg -i voice -acodec libmp3lame -aq 4 -ar 16000 voice.mp3")
 
+		Shellout("rm -rf voice.mp3")
+		errs, _, _ := Shellout("ffmpeg -i voice -acodec libmp3lame -aq 4 -ar 16000 voice.mp3")
 
 		if errs != nil {
 			log.Printf("error: %v\n", errs)
 		}
-		// fmt.Println("--- stdout ---")
-		// fmt.Println(out)
-		// fmt.Println("--- stderr ---")
-		// fmt.Println(errout)
-		// fmt.Println(err)
 		text := aliyun.VoiceToText("http://cst.file.ifeel.vip/voice.mp3")
 
-		// w.Write([]byte("upload success"))
-		// response, _ := json.Marshal(header)
+		fmt.Println(text)
 		w.Write([]byte(text))
 	}
 
