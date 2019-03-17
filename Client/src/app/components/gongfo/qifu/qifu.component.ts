@@ -22,6 +22,7 @@ export class QifuComponent implements OnInit {
   recorder: any
   audio: any
   blobEvent: any
+  VoiceResult:'123'
   requestAudioAccess() {
     navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
       this.recorder = new (<any>window).MediaRecorder(stream);
@@ -99,7 +100,7 @@ export class QifuComponent implements OnInit {
       console.log(this.chunks)
       //let blob = new Blob(this.chunks, { 'type': 'audio/ogg; codecs=opus' }),
       let blob = new Blob(this.chunks, { 'type': 'audio; codecs=opus' }),
-      //let blob = new Blob(this.chunks, { 'type': 'audio/mpeg; codecs=opus' }),
+        //let blob = new Blob(this.chunks, { 'type': 'audio/mpeg; codecs=opus' }),
         audioStream = URL.createObjectURL(blob),
         //估算时长
         duration = Math.round(blob.size / 6600);
@@ -121,10 +122,11 @@ export class QifuComponent implements OnInit {
       const formData = new FormData()
       formData.append('file', blob, 'voice.mp3')
       console.log(formData);
+      var that=this
       axios({
         method: 'post',
-       // url: '/api/gongfo/qifu',
-        url: '/api/gongfo/qifu',
+        // url: '/api/gongfo/qifu',
+        url: 'http://buddhism.cst.ifeel.vip:9000/gongfo/qifu',
         data: formData,
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -134,6 +136,8 @@ export class QifuComponent implements OnInit {
           res => {
             console.log('上传成功！')
             console.log(res.data)
+            that.VoiceResult = res.data
+            console.log(that.VoiceResult)
           }
         )
         .catch(

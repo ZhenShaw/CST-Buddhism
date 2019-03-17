@@ -54,16 +54,13 @@ export class GongfoComponent implements OnInit {
 
   flower() {
     this.status = 2;
-    if (this.storage.get("flower_list")) { this.flower_list = this.storage.get("flower_list") }
-    else {
-      var url = "/api/gongfo/flower"
-      axios.get(url).then(res => {
-        console.log(res)
-        this.flower_list = res.data
-        console.log(this.flower_list)
-        this.storage.set("flower_list", this.flower_list)
-      })
-    }
+    var url = "/api/gongfo/flower"
+    axios.get(url).then(res => {
+      console.log(res)
+      this.flower_list = res.data
+      console.log(this.flower_list)
+      this.storage.set("flower_list", this.flower_list)
+    })
   }
   //换花
   flower_change(i: number) {
@@ -73,20 +70,15 @@ export class GongfoComponent implements OnInit {
 
   fo() {
     this.status = 1;
-    if (this.storage.get("fo_list")) { 
-      this.fo_list = this.storage.get("fo_list") 
-      this.Listlength = this.fo_list.length
-    }
-    else {
-      var url = "/api/gongfo/fo"
-      axios.get(url).then(res => {
-        console.log(res)
-        this.fo_list = res.data
-        this.Listlength = res.data.length
-        console.log(this.Listlength)
-        this.storage.set("fo_list", this.fo_list)
-      })
-    }
+    var url = "/api/gongfo/fo"
+    axios.get(url).then(res => {
+      console.log(res)
+      this.fo_list = res.data
+      this.Listlength = res.data.length
+      console.log(this.Listlength)
+      this.storage.set("fo_list", this.fo_list)
+    })
+
   }
   //下一个佛
   next() {
@@ -107,15 +99,14 @@ export class GongfoComponent implements OnInit {
 
   xiang() {
     this.status = 3;
-    if (this.storage.get("xiang_list")) { this.xiang_list = this.storage.get("xiang_list") }
-    else {
-      var url = "/api/gongfo/xiang"
-      axios.get(url).then(res => {
-        console.log(res)
-        this.xiang_list = res.data
-        this.storage.set("xiang_list", this.xiang_list)
-      })
-    }
+
+    var url = "/api/gongfo/xiang"
+    axios.get(url).then(res => {
+      console.log(res)
+      this.xiang_list = res.data
+      this.storage.set("xiang_list", this.xiang_list)
+    })
+
   }
   //换香
   xiang_change(i: number) {
@@ -125,15 +116,14 @@ export class GongfoComponent implements OnInit {
 
   fruit() {
     this.status = 4;
-    if (this.storage.get("fruit_list")) { this.fruit_list = this.storage.get("fruit_list") }
-    else {
-      var url = "/api/gongfo/fruit"
-      axios.get(url).then(res => {
-        console.log(res)
-        this.fruit_list = res.data
-        this.storage.set("fruit_list", this.fruit_list)
-      })
-    }
+
+    var url = "/api/gongfo/fruit"
+    axios.get(url).then(res => {
+      console.log(res)
+      this.fruit_list = res.data
+      this.storage.set("fruit_list", this.fruit_list)
+    })
+
   }
   //换水果
   fruit_change(i: number) {
