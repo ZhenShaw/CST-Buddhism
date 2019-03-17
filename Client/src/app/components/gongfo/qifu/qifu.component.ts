@@ -124,7 +124,7 @@ export class QifuComponent implements OnInit {
       axios({
         method: 'post',
        // url: '/api/gongfo/qifu',
-        url: 'http://buddhism.cst.ifeel.vip:9000/gongfo/qifu',
+        url: '/api/gongfo/qifu',
         data: formData,
         headers: {
           'Content-Type': 'multipart/form-data'

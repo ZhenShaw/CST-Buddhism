@@ -15,7 +15,7 @@ export class JieqianComponent implements OnInit {
 
   ngOnInit() {
     const httpOptions={ headers:new HttpHeaders({'Content-Type':"application/x-www-form-urlencoded"}) };
-    let api="http://localhost:9000/jieqian"; 
+    let api="/api/jieqian"; 
     this.http.post(api,'1',httpOptions).subscribe(response=>{ 
       this.qiuqian=response
       console.log(this.qiuqian)

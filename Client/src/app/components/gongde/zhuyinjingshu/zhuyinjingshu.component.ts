@@ -59,7 +59,7 @@ export class ZhuyinjingshuComponent implements OnInit {
   }
 
   public initList(): void {
-    this.http.post('http://localhost:9000/yinjingshu', this.init, httpOptions).subscribe(
+    this.http.post('/api/yinjingshu', this.init, httpOptions).subscribe(
       data => {
         var booksbuff1 = JSON.stringify(data);
         var booksbuff2 = JSON.parse(booksbuff1);
@@ -139,7 +139,7 @@ export class ZhuyinjingshuComponent implements OnInit {
     var todonate = JSON.stringify(this.user);
     console.log("发送捐赠请求,发送列表为：");
     console.log(todonate);
-    this.http.post('http://localhost:9000/yinjingshu', todonate, httpOptions).subscribe(function (data) { console.log(data); });
+    this.http.post('/api/yinjingshu', todonate, httpOptions).subscribe(function (data) { console.log(data); });
   }
 
 }
