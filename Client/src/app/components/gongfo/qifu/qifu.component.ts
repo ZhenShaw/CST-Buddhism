@@ -22,7 +22,7 @@ export class QifuComponent implements OnInit {
   recorder: any
   audio: any
   blobEvent: any
-  VoiceResult:'123'
+  text: any = '123'
   requestAudioAccess() {
     navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
       this.recorder = new (<any>window).MediaRecorder(stream);
@@ -122,7 +122,7 @@ export class QifuComponent implements OnInit {
       const formData = new FormData()
       formData.append('file', blob, 'voice.mp3')
       console.log(formData);
-      var that=this
+      var that = this
       axios({
         method: 'post',
         // url: '/api/gongfo/qifu',
@@ -136,13 +136,13 @@ export class QifuComponent implements OnInit {
           res => {
             console.log('上传成功！')
             console.log(res.data)
-            that.VoiceResult = res.data
-            console.log(that.VoiceResult)
+            that.text = res.data
           }
         )
         .catch(
           err => {
             console.log('上传失败！')
+            that.text = "请求失败"
           }
         )
     };
