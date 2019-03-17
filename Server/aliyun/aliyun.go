@@ -10,8 +10,17 @@ import (
 	//go get -u github.com/aliyun/alibaba-cloud-sdk-go/sdk
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk"
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/requests"
-
 )
+
+// func main() {
+// 	akID = os.Getenv("ALIYUN_ACCESSKEY_ID")
+// 	akSecret = os.Getenv("ALIYUN_ACCESSKEY_SECRET")
+// 	aKey = os.Getenv("ALIYUN_APPKEY")
+// 	// text := VoiceToText("http://cst.file.ifeel.vip/voice.mp3")
+// 	text, _ := voiceHandler("http://cst.file.ifeel.vip/voice.mp3", akID, akSecret, aKey)
+
+// 	fmt.Println(text)
+// }
 
 var akID, akSecret, aKey string
 
@@ -32,16 +41,22 @@ func VoiceToText(file_link string) string {
 }
 
 // 正则表达式提取必要字符串
-func getResText(text string) (res string) {
-	r, _ := regexp.Compile(`"Text":"(.*?)"`)
-	res = r.FindStringSubmatch(text)[1]
-	return res
+func getResText(text string) string {
+	r, err := regexp.Compile(`"Text":"(.*?)"`)
+	if err != nil {
+		panic(err)
+	}
+	res := r.FindStringSubmatch(text)
+	if len(res) == 0 {
+		return "无内容"
+	}
+	return res[1]
 }
 
 //获取语音识别接口的返回结果，格式为json字符串
 func voiceHandler(file_link, akID, akSecret, aKey string) (text string, err error) {
 	/**
-	 * 地域ID
+	 * 地域IDss
 	 * 常量内容，请勿改变
 	 */
 	const REGION_ID string = "cn-shanghai"
