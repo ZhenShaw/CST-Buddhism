@@ -1,9 +1,9 @@
 .p1{
-
-    position:absolute;
-    top:10%;
-    width: 100%;
+    position: absolute;
+    top:6%;
     text-align: center;
+    left: 0;
+    right: 0;
     font-size:32px;
     color:rgb(73, 87, 87);
     font-family:"STXingkai";
@@ -11,27 +11,27 @@
 }
 .img{
     position:absolute;
-    margin-top: 60%;
-    margin-left: 25%;
-    width:220px;
-    height:300px;
+    top:40%;
+    left:35%;
+    width:30%;
+    height:40%;
     animation:0;
 }
 @keyframes mymove
 {
     0% {transform:  translate(0px) rotate(0deg);}
-    25% {transform: translateY(20px)  rotate(55deg);}
-    75% {transform:  translate(-20px) rotate(-20deg);}
-    100% {transform: translate(5px) rotate(0deg);}
+    25% {transform: translateY(15px)  rotate(38deg);}
+    75% {transform:  translate(-13px) rotate(-15deg);}
+    100% {transform: translate(3px) rotate(0deg);}
 }
 .p2{
     position: absolute;
-    bottom: 2%;
+    bottom:4%;
     left: 30%;
     width: 40%;
     text-align: center;
     font-size:40px;
-    background-color: rgb(15, 166, 236);
+    background-color: rgb(216, 203, 25);
     color:rgb(73, 87, 87);
     border-radius: 10px;
 }

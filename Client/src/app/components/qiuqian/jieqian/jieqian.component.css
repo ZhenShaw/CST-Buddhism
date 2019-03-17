@@ -9,7 +9,75 @@
           
                 
 }
+.container{
+    position: fixed;
+    background-image: url('../../../../assets/qiuqian/jieguo.jpg');
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    width:100%;
+    height: 100%;
+          
+                
+}
 
+.p1{
+    position: relative;
+    top: 3%;
+    width: 100%;
+    text-align: center;
+    font-size:30px;
+    color:rgb(221, 188, 127);
+    font-weight:bold;
+    text-shadow: 2px 2px 2px rgb(180, 48, 81);
+}
+.jieguo{
+    position: relative;
+    top: 3%;
+    width: 100%;
+    color:white;
+    margin-left: 5%;
+    font-size:22px;
+}
+.p2{
+    position: absolute;
+    bottom: 2%;
+    left: 30%;
+    width: 40%;
+    text-align: center;
+    font-size:40px;
+    background-color: white;
+    color:rgb(216, 183, 122);
+    border-radius: 20px;
+
+
+}
+.span{
+
+    font-size:24px;
+    font-weight:bold;
+}
+.div1{
+    position: relative;
+    top: 3%;
+    width: 80%;
+    color:white;
+    margin-left:5%;
+    font-size:24px;
+    font-weight:bold;
+
+}
+.div2{
+    position: relative;
+    top: 3%;
+    width: 80%;
+    color:white;
+    margin-left:5%;
+    font-size:24px;
+    font-weight:bold;
+   
+
+}
 .p1{
     position: relative;
     top: 3%;
