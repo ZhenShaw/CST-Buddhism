@@ -1,8 +1,9 @@
-package aliyun
+package main
 
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"os"
 	"regexp"
 	"time"
@@ -10,8 +11,17 @@ import (
 	//go get -u github.com/aliyun/alibaba-cloud-sdk-go/sdk
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk"
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/requests"
-
 )
+
+func main() {
+	akID = os.Getenv("ALIYUN_ACCESSKEY_ID")
+	akSecret = os.Getenv("ALIYUN_ACCESSKEY_SECRET")
+	aKey = os.Getenv("ALIYUN_APPKEY")
+	// text := VoiceToText("http://cst.file.ifeel.vip/voice.mp3")
+	text, _ := voiceHandler("http://cst.file.ifeel.vip/voice.mp3", akID, akSecret, aKey)
+
+	fmt.Println(text)
+}
 
 var akID, akSecret, aKey string
 
