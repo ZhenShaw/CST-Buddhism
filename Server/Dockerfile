@@ -6,7 +6,7 @@ ADD . .
 
 RUN go get github.com/lib/pq
 RUN go get github.com/aliyun/alibaba-cloud-sdk-go/sdk
-RUN go get github.com/pkg/errors
+# RUN go get github.com/pkg/errors
 RUN go build main.go
 
 #EXPOSE 9000
