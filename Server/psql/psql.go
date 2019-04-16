@@ -12,7 +12,7 @@ var db *sql.DB
 
 //数据库连接配置
 const (
-	host     = "localhost"
+	host     = "pg_db" //docker中postgres镜像的名称
 	port     = 5432
 	user     = "postgres"
 	password = "postgres"
@@ -45,7 +45,6 @@ func checkError(err error) {
 	}
 }
 
-
-func TestDB(){
+func TestDB() {
 	fmt.Print("数据库连接测试完成\n")
 }

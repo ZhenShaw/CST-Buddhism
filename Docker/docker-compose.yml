@@ -1,0 +1,37 @@
+version: "2"
+networks:
+  buddhism-net:
+services:
+  go_server:
+    build: go_server
+    networks:
+      - buddhism-net
+    container_name: go_server
+    depends_on:
+      - postgres
+    restart: always
+  nginx:
+    image: nginx
+    networks:
+      - buddhism-net
+    container_name: nginx
+    depends_on:
+      - go_server
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - $PWD/nginx/Client:/usr/share/nginx/html
+      - $PWD/nginx/conf.d:/etc/nginx/conf.d
+  postgres:
+    image: postgres:11-alpine
+    networks:
+      - buddhism-net
+    container_name: pg_db
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: buddhism
+    volumes:
+      # - $PWD/postgres/data:/var/lib/postgresql/data
+      - $PWD/postgres/init_db:/docker-entrypoint-initdb.d/
